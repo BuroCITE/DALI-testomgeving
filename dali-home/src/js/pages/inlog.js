@@ -1,6 +1,7 @@
+import '../../css/Inlog.css';
 import React from 'react';
 
-export class Page extends React.Component {
+export class Login extends React.Component {
   constructor(props){
     super(props);
     this.state = {};
@@ -12,7 +13,7 @@ export class Page extends React.Component {
         <img src="https://random.imagecdn.app/1700/850"/>
         <div class="inlog-shadow">
           <div class="inlog-sidebar">
-            <img src="https://random.imagecdn.app/200/200"/>
+            <img src={`${process.env.PUBLIC_URL}/image/Dali-logo-white-bg.jpg`}/>
             <h1>DALI</h1>
           </div>
         </div>
