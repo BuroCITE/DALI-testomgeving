@@ -4,7 +4,7 @@ import {Home} from './js/pages/home'
 
 function App() {
   return (<>
-    <Home/>
+    <Login/>
   </>);
 }
 
