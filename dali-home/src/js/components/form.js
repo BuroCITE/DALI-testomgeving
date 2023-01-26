@@ -31,8 +31,6 @@ export class Form extends React.Component {
  * *this doc block contains param's that are used in almost all functions under it. so this doc block will serve as a legenda for these param's
  * @param props props is een React object waar alle data aan wordt meegegeven.
  * @param props.gridLocation verwacht een className waar de grid positie in staat. werkt alleen als deze in een grid zit.
- * TODO: make the css a scss by incorporating SASS.
- * TODO: make default styling options where developer can choice from (just like test-form-v2).
  * @param props.className verwacht een className met de gewenste styling van de input en label.
  * ? should props.name also be used for the input id
  * @param props.Name the name for the input and name used to connect the label.
@@ -67,7 +65,7 @@ export function Input(props) {
  */
 export function IconInput(props) {
   return (
-    <div className={`${props.gridLocation} ${props.className}`}>
+    <div className={`${props.gridLocation} ${props.className}-icon`}>
       <label htmlFor={props.name}>{props.label}</label>
       <span><i className={props.iconClass}></i></span>
       <input placeholder=" " id={props.name} name={props.name} type={props.type} onChange={props.handleChange} defaultValue={props.state.projectName}/>
@@ -105,7 +103,7 @@ export function Textarea(props) {
   return (
     <div className={`${props.gridLocation} ${props.className}`}>
       <label htmlFor={props.name}>{props.label}</label>
-      <textarea id={props.name} name={props.name} onChange={props.handleChange}/>
+      <textarea placeholder=" " id={props.name} name={props.name} onChange={props.handleChange}/>
     </div>
   );
 }
@@ -113,7 +111,7 @@ export function Textarea(props) {
 /**
  * *some param's are located in the doc block above.
  * this function exports a text area. the data that is expected is sent via props.
- * @param props.title here you can add a title to show in the upload
+ * @param props.title here you can add a title to show on hover of the element
  * @returns an upload field inside a div
  */
 export function Upload(props) {

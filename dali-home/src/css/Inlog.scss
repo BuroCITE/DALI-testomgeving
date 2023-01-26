@@ -1,0 +1,83 @@
+.inlog-shadow{
+  position: fixed;
+  top: 0;// ! this line doesn't seem to do anything but i'm not sure yet
+  right: 0;
+  height: 100%;
+  width: 32.5%;
+  background-color: rgba(0,0,0,.3);
+
+  *{
+    outline-color: white;
+  }
+}
+
+.inlog-sidebar{
+  height: 100%;
+  color: white;
+  background-color: rgba(0,0,0,.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header{
+  width: 100%;
+  
+    .header-image-container{
+    background-color: white;
+    width: 38%;
+    aspect-ratio: 1/1.3;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 1em;
+    
+    > img{
+      width: 70%;
+      margin-top: 25%;
+    }
+  }
+}
+
+.dali-slogan{
+  font-size: 1.1em;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  h1{
+    font-size: inherit;
+    font-weight: inherit;
+  }
+}
+
+// ! above this line the code is satisfactory while below is the code that is needed but needs some cleaning up.
+
+
+main{
+  width: 85%;
+}
+
+.icon-input{
+  margin-top: 2.5em;
+}
+
+button{
+  background-color: #7d7d7d;
+  height: 2.4em;
+  border-radius: 5px;
+  color: white;
+  margin-bottom: .65em;
+}
+
+button[type="submit"]{
+  background-color: #c84664;
+  margin: 1em 0;
+}
+
+footer{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}

@@ -1,4 +1,3 @@
-import '../../css/background.css';
 import React from 'react';
 
 export class Background extends React.Component {

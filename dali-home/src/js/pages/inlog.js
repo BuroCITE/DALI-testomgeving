@@ -1,4 +1,3 @@
-import '../../css/Inlog.css';
 import React from 'react';
 import { Background } from '../components/background';
 import {Form} from '../components/form';
@@ -31,8 +30,8 @@ export class Login extends React.Component {
 
             <main>
               <Form>
-                <IconInput gridLocation="" type="" name="username" className="icon-input" label="gebruikersnaam" iconClass="fa fa-users fa" handleChange="" state=""/>
-                <IconInput gridLocation="" type="password" name="password" className="icon-input" label="wachtwoord" iconClass="fa fa-users fa" handleChange="" state=""/>
+                <IconInput gridLocation="" type="" name="username" className="icon-input dali-input" label="gebruikersnaam" iconClass="fa fa-users fa" handleChange="" state=""/>
+                <IconInput gridLocation="" type="password" name="password" className="icon-input dali-input" label="wachtwoord" iconClass="fa fa-lock fa" handleChange="" state=""/>
                 <button type='submit'>Aanmelden</button>
                 <br/>
                 <button>Wachtwoord vergeten?</button>

@@ -1,4 +1,3 @@
-import '../../css/Home.css';
 import {Card} from '../components/card'
 import React from 'react';
 

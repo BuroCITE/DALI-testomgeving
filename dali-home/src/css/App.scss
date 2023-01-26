@@ -1,0 +1,26 @@
+// these styles are globaly used by all. (used trew element tags or other selectors except classes and id's
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:focus-visible{
+  outline: 2px solid black;
+  outline-offset: 2px;
+  transition: none;
+}
+
+body{
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.1;
+}
+
+// all styles here are specified syles for components (is re-used by the same component)
+@import '../css/background.scss';
+@import '../css/form.scss';
+
+// all styles here are specified styles for whole pages (cannot be re-used)
+@import '../css/Home.scss';
+@import '../css/Inlog.scss';
