@@ -70,6 +70,9 @@ label{
   font-weight: 550;
   text-transform: capitalize;
   margin: 4px 0;
+/* * dit gedeelte moet alleen voor form inputs gelden. */
+  position: absolute;
+  top: -1.7em;
 }
 
 .icon-input{
@@ -77,6 +80,9 @@ label{
   height: 2.3em;
   display: inline-flex;
   margin-bottom: 1em;
+/* * dit gedeelte moet alleen voor form inputs gelden. */
+  position: relative;
+  margin-bottom: 2.5em;
 }
 
 .icon-input span{
