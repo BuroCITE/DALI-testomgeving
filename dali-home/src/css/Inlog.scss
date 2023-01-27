@@ -5,15 +5,11 @@
   height: 100%;
   width: 32.5%;
   background-color: rgba(0,0,0,.3);
-
-  *{
-    outline-color: white;
-  }
 }
 
 .inlog-sidebar{
   height: 100%;
-  color: white;
+  color: $dali-white;
   background-color: rgba(0,0,0,.8);
   display: flex;
   flex-direction: column;
@@ -25,6 +21,7 @@ header{
   
     .header-image-container{
     background-color: white;
+    color: white;
     width: 38%;
     aspect-ratio: 1/1.3;
     margin: 0 auto;
@@ -64,16 +61,24 @@ main{
 }
 
 button{
-  background-color: #7d7d7d;
+  background-color: $dali-gray-2;
   height: 2.4em;
   border-radius: 5px;
-  color: white;
+  color: $dali-white;
   margin-bottom: .65em;
+  transition: background-color .3s ease;
+  &:hover{
+    background-color: $dali-red;
+  }
 }
 
 button[type="submit"]{
-  background-color: #c84664;
+  background-color: $dali-red;
   margin: 1em 0;
+
+  &:hover{
+    background-color: $dali-gray-2;
+  }
 }
 
 footer{

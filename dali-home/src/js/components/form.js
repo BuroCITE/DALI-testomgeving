@@ -1,26 +1,39 @@
 import React from 'react';
+import {Home} from '../pages/home'
+import ReactDOM from 'react-dom/client';
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
 export class Form extends React.Component {
   constructor(props){
     super(props);
     // TODO: state needs to be updated to something usefull
     this.state = {projectName: 'Anthony'};
-    this.handleChange = this.handleChange.bind(this);
   }
-  
-  /**
-   * changes the projectName in the state to whatever was in the event targets value
-   * @param evt een object with all data regarding the events of this class 
-   */
-  handleChange(evt){
-    this.setState(() => {
-      return {projectName: evt.target.value}; 
+
+  componentDidMount(){
+    let loginForm = document.getElementById("loginForm");
+
+    loginForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+    
+      let username = document.getElementById("username");
+      let password = document.getElementById("password");
+    
+      if (username.value !== "aramos" || password.value !== "password") {
+        alert("Ensure you input a value in both fields!");
+      } else {
+        root.render(
+          <>
+            <Home />
+          </>
+        );
+      }
     });
   }
   
   render() {
     return (
-      <form>
+      <form id="loginForm">
         {this.props.children}
       </form>
     );
