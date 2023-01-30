@@ -112,4 +112,19 @@ form{
     box-shadow: inset 0 0 0 1px $dali-white;
   }
 }
+// ! top has been desided on -1.4em based on login, but this might cause accidents later because of multiline errorMessages.
+.errormessage {
+  display: none;
+  position: absolute;
+  top: -1.4em;
+  right: 0;
+  color: red;
+  font-weight: 700;
+}
 
+[aria-invalid="true"] {
+  border: 2px solid red !important;
+  ~ .errormessage {
+    display: inline-block;
+  }
+}

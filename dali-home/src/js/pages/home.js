@@ -10,7 +10,7 @@ export class Home extends React.Component {
     return (
       <>
         <header>
-          <a class="invisible-link header-link" href="#main" tabIndex="1">skip navigation</a>
+          <a className="invisible-link header-link" href="#main" tabIndex="1">skip navigation</a>
           <nav>
             <a href="#" tabIndex="1"> link</a>
             <a href="#" tabIndex="1"> home</a>
@@ -21,7 +21,7 @@ export class Home extends React.Component {
         </header>
 
         <main id="main">
-          <a class="invisible-link card-link" href="#parag" tabIndex="2">skip cards</a>
+          <a className="invisible-link card-link" href="#parag" tabIndex="2">skip cards</a>
           <Card number="2" name="book" description="this is a description." color="rgba(200, 70, 100, 0.3)"/>
           <Card number="2" name="kaart" description="this is a description." color="rgba(255, 189, 51, 0.5)"/>
           <Card number="2" name="eisen" description="this is a description." color="rgba(23,127,117,0.3)"/>

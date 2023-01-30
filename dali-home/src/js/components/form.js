@@ -1,34 +1,9 @@
 import React from 'react';
-import {Home} from '../pages/home'
-import ReactDOM from 'react-dom/client';
-const root = ReactDOM.createRoot(document.getElementById('root'));
 
 export class Form extends React.Component {
   constructor(props){
     super(props);
-    // TODO: state needs to be updated to something usefull
-    this.state = {projectName: 'Anthony'};
-  }
-
-  componentDidMount(){
-    let loginForm = document.getElementById("loginForm");
-
-    loginForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-    
-      let username = document.getElementById("username");
-      let password = document.getElementById("password");
-    
-      if (username.value !== "aramos" || password.value !== "password") {
-        alert("Ensure you input a value in both fields!");
-      } else {
-        root.render(
-          <>
-            <Home />
-          </>
-        );
-      }
-    });
+    this.state = {};
   }
   
   render() {
@@ -65,7 +40,16 @@ export function Input(props) {
   return (
     <div className={`${props.gridLocation} ${props.className}`}>
       <label htmlFor={props.name}>{props.label}</label>
-      <input placeholder=" " id={props.name} name={props.name} type={props.type} onChange={props.handleChange} defaultValue={props.state.projectName}/>
+      <input 
+        placeholder=" " 
+        aria-errormessage={props.errorId} 
+        id={props.name} 
+        name={props.name} 
+        type={props.type} 
+        onChange={props.handleChange} 
+        defaultValue={props.state.projectName}
+      />
+      <p id={props.errorId} class="errormessage">{`Error: ${props.errorMessage}`}</p>
     </div>
   );
 }
@@ -80,8 +64,17 @@ export function IconInput(props) {
   return (
     <div className={`${props.gridLocation} ${props.className}-icon`}>
       <label htmlFor={props.name}>{props.label}</label>
-      <span><i className={props.iconClass}></i></span>
-      <input placeholder=" " id={props.name} name={props.name} type={props.type} onChange={props.handleChange} defaultValue={props.state.projectName}/>
+      <span><i aria-label={props.iconAriaLabel} className={props.iconClass}></i></span>
+      <input 
+        placeholder=" " 
+        aria-errormessage={props.errorId} 
+        id={props.name} 
+        name={props.name} 
+        type={props.type} 
+        onChange={props.handleChange} 
+        defaultValue={props.state.projectName}
+      />
+      <p id={props.errorId} class="errormessage">{`Error: ${props.errorMessage}`}</p>
     </div>
   );
 }
@@ -130,7 +123,14 @@ export function Textarea(props) {
 export function Upload(props) {
   return (
     <div className={props.gridLocation}>
-      <input title={props.title} type="file" id={props.idName} className={props.className} name={props.name} onChange={props.handleChange}/>
+      <input 
+      title={props.title} 
+      type="file" 
+      id={props.idName} 
+      className={props.className} 
+      name={props.name} 
+      onChange={props.handleChange}
+    />
     </div> 
   );
 }

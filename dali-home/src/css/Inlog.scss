@@ -1,6 +1,5 @@
 .inlog-shadow{
   position: fixed;
-  top: 0;// ! this line doesn't seem to do anything but i'm not sure yet
   right: 0;
   height: 100%;
   width: 32.5%;
@@ -14,75 +13,73 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
-header{
-  width: 100%;
-  
-    .header-image-container{
-    background-color: white;
-    color: white;
-    width: 38%;
-    aspect-ratio: 1/1.3;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 1em;
+  header{
+    width: 100%;
     
-    > img{
-      width: 70%;
-      margin-top: 25%;
+    .header-image-container{
+      background-color: white;
+      color: white;
+      width: 38%;
+      aspect-ratio: 1/1.3;
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 1em;
+      
+      > img{
+        width: 70%;
+        margin-top: 25%;
+      }
+    }
+    
+    .dali-slogan{
+      font-size: 1.1em;
+      text-transform: uppercase;
+      margin-bottom: 1em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    
+      h1{
+        font-size: inherit;
+        font-weight: inherit;
+      }
     }
   }
-}
 
-.dali-slogan{
-  font-size: 1.1em;
-  text-transform: uppercase;
-  margin-bottom: 1em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-  h1{
-    font-size: inherit;
-    font-weight: inherit;
+  main{
+    width: 85%;
+
+    .icon-input{
+      margin-top: 2.5em;
+    }    
+
+    button[type="submit"]{
+      background-color: $dali-red;
+      margin: 1em 0;
+    
+      &:hover{
+        background-color: $dali-gray-2;
+      }
+    }
+    
+    button{
+      background-color: $dali-gray-2;
+      height: 2.4em;
+      border-radius: 5px;
+      color: $dali-white;
+      margin-bottom: .65em;
+      transition: background-color .3s ease;
+
+      &:hover{
+        background-color: $dali-red;
+      }
+    }
   }
-}
 
-// ! above this line the code is satisfactory while below is the code that is needed but needs some cleaning up.
-
-
-main{
-  width: 85%;
-}
-
-.icon-input{
-  margin-top: 2.5em;
-}
-
-button{
-  background-color: $dali-gray-2;
-  height: 2.4em;
-  border-radius: 5px;
-  color: $dali-white;
-  margin-bottom: .65em;
-  transition: background-color .3s ease;
-  &:hover{
-    background-color: $dali-red;
+  footer{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
   }
-}
-
-button[type="submit"]{
-  background-color: $dali-red;
-  margin: 1em 0;
-
-  &:hover{
-    background-color: $dali-gray-2;
-  }
-}
-
-footer{
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
 }
