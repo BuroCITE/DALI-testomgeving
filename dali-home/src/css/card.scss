@@ -1,0 +1,55 @@
+.outerCard{
+  padding: 10px;
+  border-radius: 0;
+  display: grid;
+  color: $dali-black;
+  
+  transition: all 0.4s ease-out;
+}
+
+.card{
+  border-radius: inherit;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1.5px solid rgb(196, 196, 196);
+  background-color: $dali-red;// ! translate to rgb values so we can use background opacity
+  // background-color: rgba(var(--rgb), 0.3);
+  cursor: pointer;
+  box-shadow: none;
+  transition: inherit;
+}
+
+.outerCard:hover, .card:focus-visible{
+  padding: 0;
+  color: $dali-white;
+  // background-color: rgba(var(--rgb), 1);
+  // color: white;
+  // box-shadow: 0px 35px 77px -17px rgb(0 0 0 / 44%);
+}
+
+/* it would be nice if this would be dynamic but this is for now dry code. */
+.card:nth-child(2){
+  --rgb: 200, 70, 100;
+}
+
+.card:nth-child(3){
+  --rgb: 225, 189, 51;
+}
+
+.card:nth-child(4){
+  --rgb: 23, 127, 117;
+}
+
+.card:nth-child(5){
+  --rgb: 76, 175, 80;
+}
+
+.card:nth-child(6){
+  --rgb: 76, 175, 80;
+}
+
+.card:nth-child(7){
+  --rgb: 0, 148, 225;
+} 

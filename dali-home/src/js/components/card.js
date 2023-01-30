@@ -7,11 +7,13 @@ export class Card extends React.Component {
   }
   render() {
     return (
-      <div className="card" tabindex={this.state.number}>
-        <span className="material-symbols-outlined">menu_book</span>
-        <h1>{this.state.cardName}</h1>
-        <p>{this.state.description}</p>
-    </div>
+      <div className="outerCard">
+        <div className="card" tabIndex={this.state.number}>
+          <span className="material-symbols-outlined">menu_book</span>
+          <h1>{this.state.cardName}</h1>
+          <p>{this.state.description}</p>
+        </div>
+      </div>
     );
   }
 }
