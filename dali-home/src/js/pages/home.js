@@ -14,13 +14,14 @@ export class Home extends React.Component {
           <Header/>
 
           <main id="main">
-            <a className="invisible-link card-link" href="#parag" tabIndex="2">skip cards</a>
-            <Card number="2" name="book" description="this is a description." color="rgba(200, 70, 100, 0.3)"/>
-            <Card number="2" name="kaart" description="this is a description." color="rgba(255, 189, 51, 0.5)"/>
-            <Card number="2" name="eisen" description="this is a description." color="rgba(23,127,117,0.3)"/>
-            <Card number="2" name="bijlage" description="this is a description." color="rgba(76, 175, 80, 0.3)"/>
-            <Card number="2" name="bron" description="this is a description." color="rgba(76, 175, 80, 0.3)"/>
-            <Card number="2" name="externe" description="this is a description." color="rgba(0, 148, 255, 0.3)"/>
+            <a className="invisible-link card-link" href="#parag" tabIndex="0">skip cards</a>
+            <Card number="0" className="dali-card-red" icoon="fa-solid fa-book" cardName="handboek" notice="Volgende publicatie zomer 2023" description="Handboek Openbare Ruimte"/>
+            <Card number="0" className="dali-card-brown" icoon="fa-solid fa-location-dot" cardName="raadplegen via kaart" notice="" description="Raadplegen van het handboek via kaartweergave"/>
+            <Card number="0" className="dali-card-turquoise" icoon="fa-solid fa-copy" cardName="programma van eisen" notice="" description=""/>
+            <Card number="0" className="dali-card-purple" icoon="fa-solid fa-paperclip" cardName="bijlagen" notice="" description="Raadplegen van bijlagen"/>
+            <Card number="0" className="dali-card-green" icoon="fa-solid fa-link"cardName="bronverwijzingen" notice="" description="Raadplegen van bronverwijzingen"/>
+            <Card number="0" className="dali-card-blue" icoon="fa-solid fa-map" cardName="externe kaarten" notice="" description="Raadplegen van online kaarten" />
+            <Card number="0" className="dali-card-purple" icoon="fa-solid fa-users" cardName="accounts en rechten" notice="" description="Gebruikersadministratie" />
           </main>
         </div>
       </>

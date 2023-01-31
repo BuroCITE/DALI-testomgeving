@@ -1,55 +1,76 @@
-.outerCard{
-  padding: 10px;
+@mixin cards(){
+  padding: 5px;
   border-radius: 0;
   display: grid;
-  color: $dali-black;
+  transition: all 0.3s ease-out;
+  aspect-ratio: 1/.9;
+
+  .card{
+    border-radius: inherit;
+    // justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    border: 1.5px solid $dali-gray-3;
+    cursor: pointer;
+    box-shadow: none;
+    transition: inherit;
+    mix-blend-mode: normal;
+    outline: none;
+    overflow-wrap: anywhere;
+
+    span{
+      font-size: 3em;
+      margin: .5rem .5rem 1rem .5rem;
+    }
+
+    h2{
+      font-size: 1.3em;
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+
+    p{
+      font-size: .9em;
+      text-align: center
+    }
+
+    .notice{
+      font-size: .8em
+    }
+  }
+}
+
+.outerCard{
+  @include cards;
+
+  &:hover, &:focus-within{
+    padding: 0;
   
-  transition: all 0.4s ease-out;
-}
+    .card{
+      font-size: 1.1em;
+      box-shadow: 0px 35px 77px -17px rgb(0 0 0 / 44%);
+    }
+  }
+  
+  
+  @each $color, $value in $theme-colors {
+    $text-color: map-get($value, "foreground");
+    $background-color: map-get($value, "background");
 
-.card{
-  border-radius: inherit;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  border: 1.5px solid rgb(196, 196, 196);
-  background-color: $dali-red;// ! translate to rgb values so we can use background opacity
-  // background-color: rgba(var(--rgb), 0.3);
-  cursor: pointer;
-  box-shadow: none;
-  transition: inherit;
+    &[class*=dali-card-#{$color}] {
+      .card{
+        background-color: rgba($background-color, .3);
+        color: $dali-black;
+      }
+      &:hover, &:focus-within{
+        .card{
+          background-color: rgba($background-color, 1);
+          color: $text-color;
+        }
+      }
+    }
+  }
+  
 }
-
-.outerCard:hover, .card:focus-visible{
-  padding: 0;
-  color: $dali-white;
-  // background-color: rgba(var(--rgb), 1);
-  // color: white;
-  // box-shadow: 0px 35px 77px -17px rgb(0 0 0 / 44%);
-}
-
-/* it would be nice if this would be dynamic but this is for now dry code. */
-.card:nth-child(2){
-  --rgb: 200, 70, 100;
-}
-
-.card:nth-child(3){
-  --rgb: 225, 189, 51;
-}
-
-.card:nth-child(4){
-  --rgb: 23, 127, 117;
-}
-
-.card:nth-child(5){
-  --rgb: 76, 175, 80;
-}
-
-.card:nth-child(6){
-  --rgb: 76, 175, 80;
-}
-
-.card:nth-child(7){
-  --rgb: 0, 148, 225;
-} 
