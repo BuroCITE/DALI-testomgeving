@@ -1,0 +1,26 @@
+// color variables that can be used
+// these are different in from $theme-colors in the way that these do not produce variants
+$dali-black: #222;
+$dali-white: #eee;
+$dali-red: #bd3c5b;
+$dali-turquoise: #07786e;
+$dali-green: #017c21;
+$dali-blue: #0069ce;
+$dali-purple: #a700f4;
+$dali-brown: #8e6333;
+$dali-gray-1: #4c4c4c;
+$dali-gray-2: #6b6b6b;
+$dali-gray-3: #898989;
+
+$upload-text: "Select some files";
+
+// for every theme-color there will be made one variant of a component 
+// each variant has a object with 2 value's these values represent the color they are and the color the text should be to read it comfortable
+// this variable is still in a test fase and is only used in some places(_btn.scss, _modal.scss). results are very good.
+// you need one @each and 2 map.get() functions to use this variable butt this will not show in the web css file so it will reduce code and increase readablity
+$theme-colors : (
+  "primary": (
+    "foreground" : $dali-white,
+    "background" : $dali-red,
+	),
+);
