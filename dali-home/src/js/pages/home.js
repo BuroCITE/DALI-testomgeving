@@ -22,6 +22,8 @@ export class Home extends React.Component {
             <Card number="0" className="dali-card-green" icoon="fa-solid fa-link"cardName="bronverwijzingen" notice="" description="Raadplegen van bronverwijzingen"/>
             <Card number="0" className="dali-card-blue" icoon="fa-solid fa-map" cardName="externe kaarten" notice="" description="Raadplegen van online kaarten" />
             <Card number="0" className="dali-card-purple" icoon="fa-solid fa-users" cardName="accounts en rechten" notice="" description="Gebruikersadministratie" />
+            <Card number="0" className="dali-card-green" icoon="fa-solid fa-circle-question" cardName="ondersteuning" notice="" description="Stel vragen of geef wensen door aan de helpdesk van DALI" />
+
           </main>
         </div>
       </>

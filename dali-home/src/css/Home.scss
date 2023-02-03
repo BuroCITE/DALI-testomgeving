@@ -1,10 +1,4 @@
 .content-container{
-  
-  header{
-    box-shadow: rgb(0 0 0 / 50%) 1px 0px 5px; // * klopt
-    height: 57px; // * klopt volgens dali maar is niet netjes
-  }
-
   main{
       position: relative;
       display: grid;
@@ -18,9 +12,9 @@
     position: absolute;
     top: 5px;
     left: 5px;
-    background-color: black;
+    background-color: transparent;
     height: min-content;
-    color: white;
+    color: $dali-white;
     font-weight: 400;
     padding: 5px;
     z-index: 1000;

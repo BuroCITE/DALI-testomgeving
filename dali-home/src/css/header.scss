@@ -1,0 +1,107 @@
+.header{
+  box-shadow: rgb(0 0 0 / 50%) 1px 0px 5px;
+  height: 57px; // * klopt volgens dali maar is niet netjes
+  border-radius: 0;
+  position: relative;
+  
+  nav{
+    float: right;
+    height: 100%;
+    display: flex;
+    
+    .btn{
+      height: 100%;
+      aspect-ratio: 1/1;  
+      color: $dali-red;
+      font-size: 2rem;
+      border: none;
+      border-radius: inherit;
+      background-color: transparent;
+      transition: all .3s ease;
+      
+      &:hover, &:focus-visible, &:active, &[aria-expanded="true"]{
+        color: $dali-white;
+        background-color: $dali-red;
+        box-shadow: none;
+      }
+    }
+    :focus-visible{
+      mix-blend-mode: normal;
+    }
+  }
+
+  h1{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #222 !important;
+  }
+}
+
+.dropdown-menu{
+  box-shadow: 0 35px 77px -17px rgb(0 0 0 / 44%);
+  padding: .5em;
+  width: 250px;
+  border-radius: inherit;
+
+  .dali-user-profile{
+    text-align: center;
+    font-size: 5rem;
+
+    i{
+      color: $dali-red;
+    }
+
+    .dali-user-name{
+      font-size: 1rem;
+    }
+    .dali-user-role{
+      font-size: .8rem;
+      text-transform: capitalize;
+      font-style: italic;
+    }
+  }
+
+  .dali-dropdown-sidebutton{
+    padding: .5rem;
+    border-radius: 5px;
+
+    &:hover, &:focus-visible{
+      background-color: rgba($dali-red, 0.3);
+    }
+    &:active{
+      background-color: rgba($dali-red, 1);
+    }
+  }
+}
+
+// this is the header code for making the header look like DALI
+// .dropdown-menu{
+  
+//   box-shadow: 0px 35px 77px -17px rgb(0 0 0 / 44%);
+//   transform: translate3d(3px, -1px, 0px) !important;
+//   padding: 0;
+//   width: 500px;
+//   border-radius: inherit;
+//   .grid-container{
+//     display: grid;
+//     grid-template-columns: auto 4rem;
+//     grid-template-rows: 4rem 4rem 4rem;
+//   }
+
+//   #id1{
+//     grid-row: 1/4;
+//   }
+
+//   .dali-dropdown-sidebutton{
+//     border: 1px solid $dali-gray-1;
+//     border-bottom: none;
+//     border-right: none;
+//   }
+// }
+
