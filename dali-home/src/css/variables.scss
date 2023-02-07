@@ -31,6 +31,14 @@ $upload-text: "Select some files";
 // this variable is still in a test fase and is only used in some places(_btn.scss, _modal.scss). results are very good.
 // you need one @each and 2 map.get() functions to use this variable butt this will not show in the web css file so it will reduce code and increase readablity
 $theme-colors : (
+  "black": (
+    "foreground" : $dali-white,
+    "background" : $dali-black,
+	),
+  "white": (
+    "foreground" : $dali-black,
+    "background" : $dali-white,
+	),
   "red": (
     "foreground" : $dali-white,
     "background" : $dali-red,
@@ -66,14 +74,6 @@ $theme-colors : (
   "gray-3": (
     "foreground" : $dali-white,
     "background" : $dali-gray-3,
-	),
-  "white": (
-    "foreground" : $dali-black,
-    "background" : $dali-white,
-	),
-  "black": (
-    "foreground" : $dali-white,
-    "background" : $dali-black,
 	),
 );
 
