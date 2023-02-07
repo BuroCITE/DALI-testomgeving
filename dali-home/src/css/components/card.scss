@@ -3,7 +3,7 @@
   border-radius: 0;
   display: grid;
   transition: all 0.3s ease-out;
-  aspect-ratio: 1/.9;
+  aspect-ratio: 1/.83;
 
   .card{
     border-radius: inherit;
@@ -73,4 +73,10 @@
     }
   }
   
+}
+
+@media only screen and (max-width: 535px) {
+  .outerCard{
+    aspect-ratio: 1/.41;
+  }
 }

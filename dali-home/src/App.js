@@ -1,10 +1,9 @@
 import './css/App.scss';
-import {Login} from './js/pages/inlog'
-import {Home} from './js/pages/home'
+import { renderHome, renderInlog } from '.';
 
 function App() {
   return (<>
-    <Login/>
+    {renderInlog()}
   </>);
 }
 
