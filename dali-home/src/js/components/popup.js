@@ -1,40 +1,64 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 
 export class Popup extends React.Component {
   constructor(props){
     super(props);
     this.state = {};
+    this.melding = this.melding.bind(this);
   }
+
+  melding(){
+    alert('de melding wekr naar behoren.');
+  }
+
+  componentDidMount(){
+    let showModalButton = document.getElementById('showModalButton');
+    let modalBackdrop = document.getElementById('modalBackdrop');
+    let closeModalButton = document.getElementById('closeModalButton');
+
+    showModalButton.addEventListener('click', (event) => {
+      modalBackdrop.classList.add('show');
+    });
+
+    modalBackdrop.addEventListener('click', () => {
+      modalBackdrop.classList.remove('show');
+    });
+
+    closeModalButton.addEventListener('click', () => {
+      modalBackdrop.classList.remove('show');
+    });
+  }
+
   render() {
     return (
       <>
-        <section className="fade modal-backdrop show"></section>
-        <div aria-modal="true" className='fade dali-modal-dark modal show' tabIndex='0'>
-          <div class="modal-dialog modal-lg modal-dialog-centered">
-            <section class="modal-content">
-              <header class="dali-modal-header-sm modal-header">
-                <h1 class="modal-title h4">self made modal</h1>
-                <button type="button" class="btn-close" aria-label="Close"></button>
-              </header>
-              <div class="modal-body">
+        <Button id="showModalButton" className={this.props.showModalButtonClass}> {this.props.showModalButtonContents}</Button>
+        <section id="modalBackdrop" className="dali-modal-backdrop"/>
 
-              </div>
-              <div class="dali-modal-footer-xxl modal-footer">
-                <footer>
-                  <a>2022 - Buro CITE</a>
-                  <a>Visserlaan 18 2288ER Rijswijk</a>
-                  <a>Nederland</a>
-                  <a target="_blank" href="https://demo.dali-app.nl/#dashboard">www.dali-app.nl</a><a>by Anthony Inocencio Ramos</a>
-                </footer>
-              </div>
+        <section className={`dali-modal-popup-${this.props.modalFeatures}`}>
+          <div class="dali-modal-content">
+            <header class={`dali-modal-header-${this.props.modalHeaderFeatures}`}>
+              <h2>{this.props.modalHeaderTitle}</h2>
+              <button id="closeModalButton" class="dali-modal-close-button" aria-label="Close">x</button>
+            </header>
+
+            <section class="dali-modal-body">
+              {this.props.children}
             </section>
+
+            {this.props.modalFooterContent}
           </div>
-        </div>
+        </section>
       </>
     );
   }
 }
-// ! get rid of as many divs as possible and make the popup work.
-// ! at the time of writing this the popup has not been tested but expectations are that it will not.
-// ! make sure to add the css from the source 
-// ! source of the whole popup: test-form-v2
+
+export function ModalFooter(props) {
+  return (
+    <footer class={`dali-modal-footer-${props.modalFooterFeatures}`}>
+      {props.children}
+    </footer>
+  );
+}

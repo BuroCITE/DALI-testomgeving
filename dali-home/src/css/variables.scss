@@ -67,4 +67,47 @@ $theme-colors : (
     "foreground" : $dali-white,
     "background" : $dali-gray-3,
 	),
+  "white": (
+    "foreground" : $dali-black,
+    "background" : $dali-white,
+	),
+  "black": (
+    "foreground" : $dali-white,
+    "background" : $dali-black,
+	),
+);
+
+$modal-sizes: (
+	"sm": (
+    "width" : 25vw,
+    "height": 20vh,
+  ),
+	"md": (
+    "width" : 30vw,
+    "height": 30vh,
+  ),
+	"lg": (
+    "width" : 30vw,
+    "height": 40vh,
+  ),
+	"xl": (
+    "width" : 70vw,
+    "height": 60vh,
+  ),
+	"xxl": (
+    "width" : 95vw,
+    "height": 95vh,
+  ),
+  "fullscreen": (
+    "width" : 100vw,
+    "height": 100vh,
+  ),
+);
+
+$headerFooter-sizes: (
+	"sm": 5vh,
+	"md": 7vh,
+	"lg": 10vh,
+	"xl": 15vh,
+	"xxl": 20vh,
 );

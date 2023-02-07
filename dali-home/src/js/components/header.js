@@ -1,6 +1,7 @@
 import {Navbar, Nav, Button} from 'react-bootstrap';
 import React from 'react';
 import { Dropdown } from './dropdown';
+import { ModalFooter, Popup } from './popup';
 
 
 export class Header extends React.Component {
@@ -15,15 +16,32 @@ export class Header extends React.Component {
   }
 
   render(){
-    return(
+    return(<>
       <header className='header'>
         <a className="invisible-link header-link" href="#main" tabIndex="0">skip navigation</a>
         <h1>DALI - toepassingen</h1>
         <nav>
           <Dropdown buttonClass="header-buttons"/>
-          <Button className="header-buttons">?</Button>
+          <Popup 
+            showModalButtonClass="header-buttons"
+            showModalButtonContents="?"
+            modalHeaderFeatures="sm"
+            modalHeaderTitle="Help"
+            modalFeatures="gray-2-xxl"
+            modalFooterContent={
+            <ModalFooter modalFooterFeatures="xl">
+              <a>2022 - Buro CITE</a>
+              <a>Visserlaan 18 2288ER Rijswijk</a>
+              <a>Nederland</a>
+              <a target="_blank" href="https://demo.dali-app.nl/#dashboard">www.dali-app.nl</a><a>by Anthony Inocencio Ramos</a>
+            </ModalFooter>}
+          >
+            hello world!
+          </Popup>
         </nav>
       </header>
+      
+      </>
     );
   }
 } 

@@ -1,0 +1,136 @@
+.dali-modal-backdrop{
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background-color: $dali-black;
+  opacity: 0;
+
+
+  &[class*=show]{
+    top: 0;
+    display: block;
+    opacity: 0.5;
+    transition: opacity .15s linear;
+
+
+    &~ [class*=dali-modal-popup]{
+      display: block;
+      opacity: 1;
+      transition: opacity .15s linear;
+    }
+  }
+}
+
+[class*=dali-modal-popup]{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $dali-white;
+  color: $dali-black;
+  border-radius: 5px;
+  width: 80%;
+  height: 80%;
+  outline: 0;
+  z-index: 1001;
+  overflow: hidden;
+  display: none;
+  opacity: 0;
+  
+  .dali-modal-content{
+    max-height: 90vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    
+    [class*=dali-modal-header]{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: inherit;
+      border-bottom: 1px solid rgba($dali-black, 0.1);
+      box-shadow: 0 10px 8px -2px rgba($dali-black, 0.1);
+      
+      h2{
+        margin: 0 .5rem;
+        font-size: 1.2rem;
+      }
+    
+      .dali-modal-close-button{
+        height: 100%;
+        aspect-ratio: 1/1;
+        font-size: 1.8rem;
+        background-color: transparent;
+        color: inherit;
+        border: none;
+        outline: none;
+        &:hover, &:focus-visible{
+          background-color: $dali-red;
+          box-shadow: 0 0px 8px 4px rgba($dali-black, 0.2);
+        }
+      }
+    }
+
+    .dali-modal-body{
+      position: relative;
+      padding: 1rem;
+    }
+    
+    [class*=dali-modal-footer]{
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-top: 1px solid rgba($dali-black, 0.1);
+      box-shadow: 10px 0 8px 2px rgba($dali-black, 0.1);
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  $text-color: map-get($value, "foreground");
+  $background-color: map-get($value, "background");
+
+  [class*=dali-modal-popup][class*=-#{$color}]{
+    [class*=dali-modal-header],[class*=dali-modal-footer]{
+      background-color: $background-color;
+      color: $text-color;
+    }
+  }
+}
+
+@each $size, $value in $modal-sizes {
+  $width: map-get($value, "width");
+  $height: map-get($value, "height");
+
+  [class*=dali-modal-popup][class*=-#{$size}]{
+    width: $width;
+    height: $height;
+  }
+}
+
+@each $size, $value in $headerFooter-sizes {
+  [class*=dali-modal-header][class*=-#{$size}]{
+    height: $value;
+  }
+
+  [class*=dali-modal-footer][class*=-#{$size}]{
+    height: $value;
+  }
+}
+
+
+
+
+
+
+
+
