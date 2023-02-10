@@ -1,40 +1,45 @@
 import './css/App.scss';
-import { useState } from "react";
-import { renderHome, renderInlog } from '.';
-import { Route, Routes } from 'react-router-dom';
+import { Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  defer} from 'react-router-dom';
 import { Home } from './js/pages/home';
 import { Login } from './js/pages/inlog';
+import { ProtectedLayout } from './js/auth/protectedLayout';
+import { AuthProvider } from "./js/auth/useAuth";
+
+export const AuthLayout = () => {
+  const outlet = useOutlet();
+
+  return (
+    <AuthProvider>{outlet}</AuthProvider>
+  );
+};
+
+const getUserData = () =>
+  new Promise((resolve) =>
+    setTimeout(() => {
+      const user = window.localStorage.getItem("user");
+      resolve(user);
+    }, 3000)
+  );
+
+
+  export const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route element={<AuthLayout />}
+      >
+          <Route path="/" element={<ProtectedLayout>
+            <Home/>
+            </ProtectedLayout>
+            }>
+          </Route>
+      </Route>
+    )
+  );
 
 function App() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [isLoggedin, setIsLoggedin] = useState(false);
- 
-  const login = (e) => {
-    e.preventDefault();
-    console.log(username, password);
-    const userData = {
-      username,
-      password,
-    };
-    localStorage.setItem('token-info', JSON.stringify(userData));
-    setIsLoggedin(true);
-    setUsername('');
-    setPassword('');
-  };
- 
-  const logout = () => {
-    localStorage.removeItem('token-info');
-    setIsLoggedin(false);
-  };
- 
-  return (<>
-    <Routes>
-    {!isLoggedin ? <Route path='login' element={<Login/>} /> : <Route path='/' element={<Home/>} />}
-      <Route path='/' element={<Home/>} />
-      <Route exact path='login' element={<Login/>} />
-    </Routes>
-  </>);
+   return ( router );
 }
 
 export default App;

@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from "../auth/useAuth";
 import { Background } from '../components/background';
 import {Form, Input, IconInput, Select, Textarea, Upload} from '../components/form';
 
 export function Login() {
+  console.log(useAuth());
+
+  //const { login } = useAuth();
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -12,16 +17,23 @@ export function Login() {
     if(username.length <= 0 && password.length <= 0) return
     if(username.length > 1 && password.length >= 1){}
     else{
-      alert('error message');
+      //alert('error message');
       // password.setAttribute('aria-invalid', true);
     }
     return username.length > 0 && password.length > 0;
   }
   
-  function handleSubmit(event) {
+
+  const handleSubmit = (event) => {
     event.preventDefault();
-    navigate('/', { replace: true });
-  }
+    const data = new FormData(event.currentTarget);
+
+   
+    {/*login({
+      email: data.get("email"),
+      password: data.get("password")
+    });*/}
+  };
 
   return (
     <>
