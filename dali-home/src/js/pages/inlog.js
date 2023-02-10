@@ -1,51 +1,31 @@
-import React from 'react';
-import { renderHome } from '../..';
+import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import { Background } from '../components/background';
-import {Form} from '../components/form';
-import {Input, IconInput, Select, Textarea, Upload} from '../components/form';
+import {Form, Input, IconInput, Select, Textarea, Upload} from '../components/form';
 
-/**
- * this class is the intire login page.
- * to recreate the login page revere to this export.
- */
-export class Login extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      username: 'aramos',
-      password: 'password'
-    };
+export function Login() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  
+  function validateForm() {
+    if(username.length <= 0 && password.length <= 0) return
+    if(username.length > 1 && password.length >= 1){}
+    else{
+      alert('error message');
+      // password.setAttribute('aria-invalid', true);
+    }
+    return username.length > 0 && password.length > 0;
+  }
+  
+  function handleSubmit(event) {
+    event.preventDefault();
+    navigate('/', { replace: true });
   }
 
-  /**
-   * in this function lies a (temporary) login verifier. 
-   * ! this solution is hard coded
-   * ! the username and password are not dynamic
-   * ! the input fields are not dynamic
-   * ! the output location is not dynamic
-   * 
-   */
-  componentDidMount(){
-    let loginForm = document.getElementById("loginForm");
-
-    loginForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-      let username = event.target[0];
-      let password = event.target[1];
-    
-      if (username.value !== this.state.username || password.value !== this.state.password) {
-        username.setAttribute('aria-invalid', true);
-        password.setAttribute('aria-invalid', true);
-      } else {
-        renderHome();
-      }
-    });
-  }
-
-  render() {
-    return (
+  return (
     <>
-      <Background/>
+    <Background/>
       <aside className="inlog-shadow">
         <div className="inlog-sidebar">
           <header>
@@ -62,7 +42,7 @@ export class Login extends React.Component {
           </header>
 
           <div className='sidebar-main-content'>
-            <Form>
+            <Form onSubmit={handleSubmit}>
               <IconInput 
                 errorId="errorUsername" 
                 errorMessage="vul een geldige gebruikersnaam in." 
@@ -72,6 +52,8 @@ export class Login extends React.Component {
                 iconClass="fa fa-users fa" 
                 className="icon-input dali-input" 
                 state=""
+                value={username}
+                handleChange={(e) => setUsername(e.target.value)}
               />
               <IconInput 
                 errorId="errorPassword" 
@@ -83,8 +65,10 @@ export class Login extends React.Component {
                 className="icon-input dali-input" 
                 type="password" 
                 state=""
+                value={password}
+                handleChange={(e) => setPassword(e.target.value)}
               />
-              <button type='submit'>Aanmelden</button>
+              <button type='submit' disabled={!validateForm()}>Aanmelden</button>
               <br/>
               {/* ! these 2 buttons don't do anything yet and are pure astatics */}
               <button type="button">Wachtwoord vergeten?</button>
@@ -98,6 +82,5 @@ export class Login extends React.Component {
         </div>
       </aside>
     </>
-    );
-  }
+  );
 }
