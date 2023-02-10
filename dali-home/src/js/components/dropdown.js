@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { renderInlog } from '../..';
 
 export class Dropdown extends React.Component {
@@ -19,10 +20,6 @@ export class Dropdown extends React.Component {
     dropdownBtn.addEventListener('click', (event) => {
       dropdownBtn.setAttribute('aria-expanded', dropdownBtn.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
     })
-    
-    userLogoutButton.addEventListener('click', (event) => {
-      renderInlog()
-    })
   }
 
   render() {
@@ -38,6 +35,7 @@ export class Dropdown extends React.Component {
           </span>
           <button id="userSettingsButton" class="dali-dropdown-sidebutton"><i class="fa-solid fa-gear"></i> gebruikers instellingen</button>
           <button id="userLogoutButton" class="dali-dropdown-sidebutton"><i class="fa-solid fa-right-from-bracket"></i> log uit</button>
+          <Link to="login" class="dali-dropdown-sidebutton"><i class="fa-solid fa-right-from-bracket"></i> log uit</Link>
         </article>
       </section>
     );

@@ -48,7 +48,9 @@
       width: 100%;
       text-align: inherit;
       background-color: transparent;
+      color: inherit;
       border: 0;
+      text-decoration: none;
       
       &:hover, &:focus-visible{
         background-color: rgba($dali-red, 0.3);
