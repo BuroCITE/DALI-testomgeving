@@ -15,7 +15,7 @@ export function Dropdown(props) {
     })
 
     dropdownBtn.addEventListener('click', (event) => {
-      dropdownBtn.setAttribute('aria-expanded', dropdownBtn.getAttribute('aria-expanded') == 'true' ? 'false' : 'true');
+      dropdownBtn.setAttribute('aria-expanded', dropdownBtn.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
     })
   },[]);
 
