@@ -7,7 +7,7 @@ import {Form, Input, IconInput, Select, Textarea, Upload} from '../components/fo
 export function Login() {
   console.log(useAuth());
 
-  //const { login } = useAuth();
+  const { login } = useAuth();
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -29,10 +29,10 @@ export function Login() {
     const data = new FormData(event.currentTarget);
 
    
-    {/*login({
-      email: data.get("email"),
+    login({
+      username: data.get("username"),
       password: data.get("password")
-    });*/}
+    });
   };
 
   return (
