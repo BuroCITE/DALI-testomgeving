@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../auth/useAuth';
 
 export function Dropdown(props) {
@@ -23,12 +22,12 @@ export function Dropdown(props) {
     <section class="dropdown">
       <button id="dropdownItemButton" aria-expanded="false" class={`dropdown-button ${props.buttonClass}`}><i class="fa-solid fa-angle-down"></i></button>
       <article aria-labelledby="dropdown-item-button" class="dropdown-menu">
-        <span class="dali-user-profile">
+        <section class="dali-user-profile">
           <i class="fa-solid fa-circle-user"></i>
           <h3 class="dali-user-name">Anthony Inocêncio Ramos</h3>
           <p class="dali-user-role">Uitgever | Applicatiebeheerder</p>
           <hr/>
-        </span>
+        </section>
         <button id="userSettingsButton" class="dali-dropdown-sidebutton"><i class="fa-solid fa-gear"></i> gebruikers instellingen</button>
         <button onClick={logout} class="dali-dropdown-sidebutton"><i class="fa-solid fa-right-from-bracket"></i> log uit</button>
       </article>

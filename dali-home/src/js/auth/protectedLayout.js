@@ -4,7 +4,7 @@ import { useAuth } from "./useAuth";
 export const ProtectedLayout = () => {
   const { user } = useAuth();
   if (!user) {
-    return <Navigate to="/" />;
+    return <Navigate to="/dashboard/login" />;
   }
 
   return <Outlet />

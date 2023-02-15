@@ -8,17 +8,12 @@ export class Header extends React.Component {
   constructor(props){
     super(props);
     this.state = {}
-    this.handleSetting = this.handleSetting.bind(this);
-  }
-
-  handleSetting(event){
-    alert("hello people!");
   }
 
   render(){
     return(<>
       <header className='header'>
-        <a className="invisible-link header-link" href="#main" tabIndex="0">skip navigation</a>
+        <a className="invisible-link header-link" href="#main">skip navigation</a>
         <h1>DALI - toepassingen</h1>
         <nav>
           <Dropdown buttonClass="header-buttons"/>

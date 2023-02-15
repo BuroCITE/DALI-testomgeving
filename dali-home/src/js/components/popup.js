@@ -40,7 +40,7 @@ export class Popup extends React.Component {
           <div class="dali-modal-content">
             <header class={`dali-modal-header-${this.props.modalHeaderFeatures}`}>
               <h2>{this.props.modalHeaderTitle}</h2>
-              <button id="closeModalButton" class="dali-modal-close-button" aria-label="Close">x</button>
+              <button id="closeModalButton" class="dali-modal-close-button" aria-label="Close popup">x</button>
             </header>
 
             <section class="dali-modal-body">
