@@ -22,9 +22,13 @@ body{
 }
 
 // all styles here are specified syles for components (is re-used by the same component)
-@import '../css/background.scss';
-@import '../css/form.scss';
+@import '../css/components/background.scss';
+@import '../css/components/form.scss';
+@import '../css/components/card.scss';
+@import '../css/components/header.scss';
+@import '../css/components/dropdown.scss';
+@import '../css/components/popup.scss';
 
 // all styles here are specified styles for whole pages (cannot be re-used)
-@import '../css/Home.scss';
-@import '../css/Inlog.scss';
+@import '../css/pages/Home.scss';
+@import '../css/pages/Inlog.scss';

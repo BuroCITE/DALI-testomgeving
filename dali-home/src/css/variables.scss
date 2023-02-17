@@ -12,6 +12,18 @@ $dali-gray-1: #4c4c4c;
 $dali-gray-2: #6b6b6b;
 $dali-gray-3: #898989;
 
+$dali-rgb-black: 34, 34, 34;
+$dali-rgb-white: 238, 238, 238;
+$dali-rgb-red: 189, 60, 91;
+$dali-rgb-turquoise: 7, 120, 110;
+$dali-rgb-green: 1, 124, 33;
+$dali-rgb-blue: 0, 105, 206;
+$dali-rgb-purple: 167, 0, 244;
+$dali-rgb-brown: 142, 99, 51;
+$dali-rgb-gray-1: 76, 76, 76;
+$dali-rgb-gray-2: 107, 107, 107;
+$dali-rgb-gray-3: 137, 137, 137;
+
 $upload-text: "Select some files";
 
 // for every theme-color there will be made one variant of a component 
@@ -19,8 +31,83 @@ $upload-text: "Select some files";
 // this variable is still in a test fase and is only used in some places(_btn.scss, _modal.scss). results are very good.
 // you need one @each and 2 map.get() functions to use this variable butt this will not show in the web css file so it will reduce code and increase readablity
 $theme-colors : (
-  "primary": (
+  "black": (
+    "foreground" : $dali-white,
+    "background" : $dali-black,
+	),
+  "white": (
+    "foreground" : $dali-black,
+    "background" : $dali-white,
+	),
+  "red": (
     "foreground" : $dali-white,
     "background" : $dali-red,
 	),
+  "turquoise": (
+    "foreground" : $dali-white,
+    "background" : $dali-turquoise,
+	),
+  "green": (
+    "foreground" : $dali-white,
+    "background" : $dali-green,
+	),
+  "blue": (
+    "foreground" : $dali-white,
+    "background" : $dali-blue,
+	),
+  "purple": (
+    "foreground" : $dali-white,
+    "background" : $dali-purple,
+	),
+  "brown": (
+    "foreground" : $dali-white,
+    "background" : $dali-brown,
+	),
+  "gray-1": (
+    "foreground" : $dali-white,
+    "background" : $dali-gray-1,
+	),
+  "gray-2": (
+    "foreground" : $dali-white,
+    "background" : $dali-gray-2,
+	),
+  "gray-3": (
+    "foreground" : $dali-white,
+    "background" : $dali-gray-3,
+	),
+);
+
+$modal-sizes: (
+	"sm": (
+    "width" : 25vw,
+    "height": 20vh,
+  ),
+	"md": (
+    "width" : 30vw,
+    "height": 30vh,
+  ),
+	"lg": (
+    "width" : 30vw,
+    "height": 40vh,
+  ),
+	"xl": (
+    "width" : 70vw,
+    "height": 60vh,
+  ),
+	"xxl": (
+    "width" : 95vw,
+    "height": 95vh,
+  ),
+  "fullscreen": (
+    "width" : 100vw,
+    "height": 100vh,
+  ),
+);
+
+$headerFooter-sizes: (
+	"sm": 5vh,
+	"md": 7vh,
+	"lg": 10vh,
+	"xl": 15vh,
+	"xxl": 20vh,
 );

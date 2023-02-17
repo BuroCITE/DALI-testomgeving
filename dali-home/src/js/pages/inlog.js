@@ -61,7 +61,7 @@ export class Login extends React.Component {
             </article>
           </header>
 
-          <main>
+          <div className='sidebar-main-content'>
             <Form>
               <IconInput 
                 errorId="errorUsername" 
@@ -90,7 +90,7 @@ export class Login extends React.Component {
               <button type="button">Wachtwoord vergeten?</button>
               <button type="button"><i aria-label="icoon van een brief" className="fa fa-envelope fa"></i> Mail naar DALI-Helpdesk</button>
             </Form>
-          </main>
+          </div>
 
           <footer>
             <p>Versie: 5.0.0.0</p>

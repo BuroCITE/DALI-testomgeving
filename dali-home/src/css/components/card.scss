@@ -1,0 +1,82 @@
+@mixin cards(){
+  padding: 5px;
+  border-radius: 0;
+  display: grid;
+  transition: all 0.3s ease-out;
+  aspect-ratio: 1/.83;
+
+  .card{
+    border-radius: inherit;
+    // justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    border: 1.5px solid $dali-gray-3;
+    cursor: pointer;
+    box-shadow: none;
+    transition: inherit;
+    mix-blend-mode: normal;
+    outline: none;
+    overflow-wrap: anywhere;
+
+    span{
+      font-size: 3em;
+      margin: .5rem .5rem 1rem .5rem;
+    }
+
+    h2{
+      font-size: 1.3em;
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+
+    p{
+      font-size: .9em;
+      text-align: center
+    }
+
+    .notice{
+      font-size: .8em
+    }
+  }
+}
+
+.outerCard{
+  @include cards;
+
+  &:hover, &:focus-within{
+    padding: 0;
+  
+    .card{
+      font-size: 1.1em;
+      box-shadow: 0px 35px 77px -17px rgb(0 0 0 / 44%);
+    }
+  }
+  
+  
+  @each $color, $value in $theme-colors {
+    $text-color: map-get($value, "foreground");
+    $background-color: map-get($value, "background");
+
+    &[class*=dali-card-#{$color}] {
+      .card{
+        background-color: rgba($background-color, .3);
+        color: $dali-black;
+      }
+      &:hover, &:focus-within{
+        .card{
+          background-color: rgba($background-color, 1);
+          color: $text-color;
+        }
+      }
+    }
+  }
+  
+}
+
+@media only screen and (max-width: 535px) {
+  .outerCard{
+    aspect-ratio: 1/.41;
+  }
+}

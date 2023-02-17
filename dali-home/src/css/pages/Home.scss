@@ -1,0 +1,35 @@
+.content-container{
+  main{
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(244px, 1fr));
+      grid-gap: 10px; // * klopt
+      padding: 20px 10px; // * klopt
+
+  }
+  
+  .invisible-link{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: transparent;
+    height: min-content;
+    color: $dali-white;
+    font-weight: 400;
+    padding: 5px;
+    z-index: 1000;
+  }
+
+  .invisible-link:focus{
+    translate: 0;
+  }
+
+  .header-link{
+    translate: 0 -150%;
+  }
+
+  .card-link{
+    translate: -150% 0;
+  }
+
+}

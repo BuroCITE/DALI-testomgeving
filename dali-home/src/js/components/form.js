@@ -49,7 +49,7 @@ export function Input(props) {
         onChange={props.handleChange} 
         defaultValue={props.state.projectName}
       />
-      <p id={props.errorId} class="errormessage">{`Error: ${props.errorMessage}`}</p>
+      <p id={props.errorId} className="errormessage">{`Error: ${props.errorMessage}`}</p>
     </div>
   );
 }
@@ -74,7 +74,7 @@ export function IconInput(props) {
         onChange={props.handleChange} 
         defaultValue={props.state.projectName}
       />
-      <p id={props.errorId} class="errormessage">{`Error: ${props.errorMessage}`}</p>
+      <p id={props.errorId} className="errormessage">{`Error: ${props.errorMessage}`}</p>
     </div>
   );
 }

@@ -1,0 +1,52 @@
+.header{
+  box-shadow: rgb(0 0 0 / 50%) 1px 0px 5px;
+  height: 57px; // * klopt volgens dali maar is niet netjes
+  border-radius: 0;
+  position: relative;
+  
+  nav{
+    float: right;
+    height: 100%;
+    display: flex;
+    
+    .header-buttons{
+      height: 100%;
+      aspect-ratio: 1/1;  
+      color: $dali-red;
+      font-size: 2rem;
+      border: none;
+      border-radius: inherit;
+      background-color: transparent;
+      transition: all .3s ease;
+      
+      &:hover, &:focus-visible, &:active, &[aria-expanded="true"]{
+        color: $dali-white;
+        background-color: $dali-red;
+        box-shadow: none;
+      }
+    }
+    :focus-visible{
+      mix-blend-mode: normal;
+    }
+  }
+
+  h1{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #222 !important;
+  }
+}
+
+@media only screen and (max-width: 518px) {
+  .header h1{
+    margin-left: .5rem;
+    left: 0;
+    transform: translate(0%, -50%);
+  }
+}

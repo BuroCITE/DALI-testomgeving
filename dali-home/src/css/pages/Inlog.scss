@@ -2,14 +2,15 @@
   position: fixed;
   right: 0;
   height: 100%;
-  width: 32.5%;
+  min-width: 498px;
+  max-width: 32.5%;
   background-color: rgba(0,0,0,.3);
 }
 
 .inlog-sidebar{
   height: 100%;
   color: $dali-white;
-  background-color: rgba(0,0,0,.8);
+  background-color: rgba(0,0,0,.7);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,7 +39,7 @@
       margin-bottom: 1em;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      text-align: center;
     
       h1{
         font-size: inherit;
@@ -47,7 +48,7 @@
     }
   }
 
-  main{
+  .sidebar-main-content{
     width: 85%;
 
     .icon-input{
@@ -81,5 +82,17 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .inlog-shadow{
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .header-image-container{
+    width: 16% !important;
   }
 }
