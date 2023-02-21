@@ -1,13 +1,17 @@
 .header{
   box-shadow: rgb(0 0 0 / 50%) 1px 0px 5px;
-  height: 57px; // * klopt volgens dali maar is niet netjes
+  height: 7.65vh;
   border-radius: 0;
   position: relative;
   
   nav{
-    float: right;
+    float: left;
     height: 100%;
     display: flex;
+
+    &.nav-right{
+      float: right;
+    }
     
     .header-buttons{
       height: 100%;
