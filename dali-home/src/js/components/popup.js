@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 /**
  * 
  * @param {string} showModalButtonClass a class to style the show popup button
- * @param {string,icon} showModalButtonContents the contents of the show popup button
+ * @param {*} showModalButtonContents the contents of the show popup button
  * @param {string} modalFeatures expects a class attribute for the variants of the popup. can choose from: all colors in theme-colors, all sizes from modal-sizes; this can be found in the variables.scss
  * @param {string} modalHeaderFeatures expects a class attribute for the variants of the popup header. can choose from: headerFooter-sizes; this can be found in the variables.scss. size will default to 5vh (sm)
  * @param {string} modalHeaderTitle h2 title for the popup. will be shown in the header.
@@ -79,3 +79,4 @@ export function ModalFooter(props) {
     </footer>
   );
 }
+

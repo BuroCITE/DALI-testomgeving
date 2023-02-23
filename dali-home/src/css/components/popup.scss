@@ -49,6 +49,7 @@
     height: 100%;
     
     [class*=dali-modal-header]{
+      min-height: 2rem;
       height: 5vh;
       display: flex;
       align-items: center;
@@ -63,7 +64,7 @@
       }
     
       .dali-modal-close-button{
-        height: 100%;
+        height: 105%;
         aspect-ratio: 1/1;
         font-size: 1.8rem;
         background-color: transparent;

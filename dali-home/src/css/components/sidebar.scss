@@ -25,6 +25,11 @@
   }
 }
 
+[class*=dali-sidebar-][class*=right]{
+  right: 0;
+}
+
+
 @media only screen and (max-width: 1024px) {
   .inlog-shadow{
     min-width: 0;

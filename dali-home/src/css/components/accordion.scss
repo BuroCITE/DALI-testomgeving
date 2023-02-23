@@ -1,0 +1,107 @@
+.bronverwijzingen-contentbox{
+  padding: 2vh 12vh;
+
+  details{
+    width: 100%;
+    &[open]{
+      > summary{
+        > i{
+          transform: rotatex(180deg);
+        }
+      }
+      
+      details{
+        Summary{
+          background-color: $dali-gray-1;
+        }
+        details{
+          Summary{
+            background-color: $dali-gray-2;
+          }
+          details{
+            Summary{
+              background-color: $dali-gray-3;
+            }
+            details{
+              Summary{
+                background-color: $dali-white;
+                color: $dali-black;
+                border-bottom: 1px solid $dali-gray-2;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    summary{
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 2.25rem;
+      padding: .5rem;
+
+      background-color: $dali-red; //////////
+      color: $dali-white; ///////////////
+  
+      h3{
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+  
+      i{
+        position: absolute;
+        right: .5rem;
+        transition: all 0.3s;
+      }
+    }
+  }
+}
+
+
+
+span{
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+  padding-top: .25rem;
+  margin-right: 1.5rem;
+  font-size: 1rem;
+  background-color: $dali-gray-1;
+  border-radius: 50%;
+  &[data-usebadge=false]{
+    display: none;
+  }
+}
+
+.accordion-body{
+  padding: 1vw;
+  background-color: $dali-white;
+
+  
+}
+.accordion-item{
+  background-color: $dali-white;
+  padding: .5rem;
+  min-height: 3.5rem;
+  border: 1px solid $dali-gray-3;
+  border-radius: 2px;
+
+  .article-text, .button-box{
+    font-size: 1.3rem;
+    display: inline-block;
+  }
+
+  .button-box{
+    font-size: 1rem;
+    float: right;
+  }
+
+  .article-button{
+    width: 2rem;
+    aspect-ratio: 1/1;
+    margin: .2rem;
+  }
+}
