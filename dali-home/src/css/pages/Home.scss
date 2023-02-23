@@ -1,11 +1,32 @@
 .content-container{
+  .dali-user-profile{
+    text-align: center;
+    justify-content: center;
+    font-size: 5rem;
+    
+    i{
+      display: flex;
+      justify-content: center;
+      color: #bd3c5b;
+      margin: .5rem 0;
+    }
+    
+    .dali-user-name{
+      font-size: 1rem;
+    }
+    .dali-user-role{
+      font-size: .8rem;
+      text-transform: capitalize;
+      font-style: italic;
+    }
+  }
+  
   main{
       position: relative;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(244px, 1fr));
       grid-gap: 10px; // * klopt
       padding: 20px 10px; // * klopt
-
   }
   
   .invisible-link{
@@ -31,5 +52,4 @@
   .card-link{
     translate: -150% 0;
   }
-
 }

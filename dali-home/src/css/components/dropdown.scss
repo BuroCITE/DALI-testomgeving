@@ -18,37 +18,17 @@
     width: 250px;
     border-radius: inherit;
     right: 0;
-    
-    .dali-user-profile{
-      text-align: center;
-      justify-content: center;
-      font-size: 5rem;
-      
-      i{
-        display: flex;
-        justify-content: center;
-        color: #bd3c5b;
-        margin: .5rem 0;
-      }
-      
-      .dali-user-name{
-        font-size: 1rem;
-      }
-      .dali-user-role{
-        font-size: .8rem;
-        text-transform: capitalize;
-        font-style: italic;
-      }
-    }
   
-    .dali-dropdown-sidebutton{
+    .dali-dropdown-button{
       display: block;
       padding: .5rem;
       border-radius: 5px;
       width: 100%;
       text-align: inherit;
       background-color: transparent;
+      color: inherit;
       border: 0;
+      text-decoration: none;
       
       &:hover, &:focus-visible{
         background-color: rgba($dali-red, 0.3);

@@ -1,45 +1,34 @@
-import React from 'react';
-import { renderInlog } from '../..';
+import React, { useEffect, useState, useRef } from 'react';
+/**
+ * 
+ * @param {string} buttonClass a class that you can assign to the dropdown button. expects a string
+ * @param {element} buttonIcon the icon you want to use in the dropdown button. expects an element.
+ * @param {*} children all elements placed in between 2 dropdown tags will be send as children of this element and are placed inside the dropdown.
+ * @returns a fully functional dropdown.
+ */
+export function Dropdown(props) {
+  // useState and useRef are react functies that can be used in functional components. for an explanation, google is our friend.
+  const [expanded, setExpanded] = useState('false');
+  const ref_dib = useRef(null);
 
-export class Dropdown extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {};
-  }
+  useEffect(() => {
+    const dropdownBtn = ref_dib.current;
 
-  componentDidMount(){
-    let userSettingsButton = document.getElementById('userSettingsButton');
-    let dropdownBtn = document.getElementById('dropdownItemButton');
-    let userLogoutButton = document.getElementById('userLogoutButton');
-    
-    userSettingsButton.addEventListener('click', (event) => {
-      alert("settings still in development");
-    })
-
+    // this function will change the attribute {aria-expanded} to true or false depending on the current value.
     dropdownBtn.addEventListener('click', (event) => {
-      dropdownBtn.setAttribute('aria-expanded', dropdownBtn.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+      setExpanded(dropdownBtn.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')
     })
-    
-    userLogoutButton.addEventListener('click', (event) => {
-      renderInlog()
-    })
-  }
+  },[]);
 
-  render() {
-    return (
-      <section class="dropdown">
-        <button id="dropdownItemButton" aria-expanded="false" class={`dropdown-button ${this.props.buttonClass}`}><i class="fa-solid fa-angle-down"></i></button>
-        <article aria-labelledby="dropdown-item-button" class="dropdown-menu">
-          <span class="dali-user-profile">
-            <i class="fa-solid fa-circle-user"></i>
-            <h3 class="dali-user-name">Anthony Inocêncio Ramos</h3>
-            <p class="dali-user-role">Uitgever | Applicatiebeheerder</p>
-            <hr/>
-          </span>
-          <button id="userSettingsButton" class="dali-dropdown-sidebutton"><i class="fa-solid fa-gear"></i> gebruikers instellingen</button>
-          <button id="userLogoutButton" class="dali-dropdown-sidebutton"><i class="fa-solid fa-right-from-bracket"></i> log uit</button>
-        </article>
-      </section>
-    );
-  }
+  return (
+    // we use ref here bacause if we use id this component wouldn't be reusable in the same webpage because of 2 or more simular id's. but with ref we wont have this because it connects the event to the current ref holder and not all ref holders.
+    <section class="dropdown">
+      <button ref={ref_dib} aria-expanded={expanded} class={`dropdown-button ${props.buttonClass}`}>{props.buttonIcon}</button>
+
+      <article aria-labelledby="dropdown-item-button" class="dropdown-menu">
+        {/* when placing more then 1 element it is recommended to wrap it in a section first. */}
+        {props.children}
+      </article>
+    </section>
+  );
 }

@@ -1,33 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { ReactDOM, createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
-import { Home } from './js/pages/home';
-import { Login } from './js/pages/inlog';
+import { AuthProvider } from './js/auth/useAuth';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
 root.render(
-  <>
-    <App />
-  </>
+    <BrowserRouter>
+      <AuthProvider>
+        <App />
+      </AuthProvider>
+    </BrowserRouter>
 );
-
-export function renderHome(){
-  return(
-    root.render(
-      <>
-        <Home />
-      </>
-    )
-  );
-}
-
-export function renderInlog(){
-  return(
-    root.render(
-      <>
-        <Login/>
-      </>
-    )
-  );
-}

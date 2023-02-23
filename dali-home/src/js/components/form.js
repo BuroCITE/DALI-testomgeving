@@ -8,7 +8,7 @@ export class Form extends React.Component {
   
   render() {
     return (
-      <form id="loginForm">
+      <form id="loginForm" onSubmit={this.props.onSubmit}>
         {this.props.children}
       </form>
     );
@@ -71,8 +71,9 @@ export function IconInput(props) {
         id={props.name} 
         name={props.name} 
         type={props.type} 
-        onChange={props.handleChange} 
-        defaultValue={props.state.projectName}
+        value={props.value} // temporary for inlog hook test
+        onChange={props.handleChange} // temporary for inlog hook test
+        // defaultValue={props.state.projectName}
       />
       <p id={props.errorId} className="errormessage">{`Error: ${props.errorMessage}`}</p>
     </div>
