@@ -21,6 +21,12 @@ body{
   line-height: 1.1;
 }
 
+#root{
+  overflow: hidden;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
 // all styles here are specified syles for components (is re-used by the same component)
 @import '../css/components/background.scss';
 @import '../css/components/form.scss';

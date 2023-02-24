@@ -35,6 +35,7 @@ export function Login() {
     <>
     <Background/>
     <Sidebar
+      sidebarClass="inlog-shadow"
       sidebarFeatures="right"
       headerContent={
         <SidebarHeader>

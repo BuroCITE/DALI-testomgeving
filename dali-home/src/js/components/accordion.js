@@ -1,6 +1,4 @@
 import React from "react";
-import { Badge } from "react-bootstrap";
-import { Sidebar } from "./sidebar";
 
 export class Accordion extends React.Component{
   constructor(props){
@@ -21,10 +19,10 @@ export class Accordion extends React.Component{
   render(){
     return (
       <> 
-        <details ref={this.ref_details} data-has-badge={this.props.useBadge}>
-          <summary>
+        <details className={`dali-accordion${this.props.accordionFeatures}`} ref={this.ref_details} data-has-badge={this.props.useBadge}>
+          <summary >
             <h3>{this.props.title}</h3>
-            <span ref={this.ref_badge} data-usebadge={this.props.useBadge}></span>
+            <mark className="dali-badge" ref={this.ref_badge} data-usebadge={this.props.useBadge}></mark>
             <i class="fa-solid fa-angle-down"></i>
           </summary>
           {this.props.children}

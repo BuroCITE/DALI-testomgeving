@@ -1,7 +1,18 @@
-.inlog-sidebar{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.inlog-shadow{
+  position: fixed;
+  height: 100%;
+  min-width: 498px;
+  max-width: 32.5%;
+  background-color: rgba(0,0,0,.3);
+  
+
+  .inlog-sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    color: $dali-white;
+    background-color: rgba(0,0,0,.7);
     
     .header-image-container{
       background-color: white;
@@ -32,38 +43,39 @@
       }
     }
 
-  .sidebar-main-content{
+    .sidebar-main-content{
 
-    .icon-input{
-      margin-top: 2.5em;
-    }    
+      .icon-input{
+        margin-top: 2.5em;
+      }    
 
-    button[type="submit"]{
-      background-color: $dali-red;
-      margin: 1em 0;
-    
-      &:hover{
-        background-color: $dali-gray-2;
-      }
-    }
-    
-    button{
-      background-color: $dali-gray-2;
-      height: 2.4em;
-      border-radius: 5px;
-      color: $dali-white;
-      margin-bottom: .65em;
-      transition: background-color .3s ease;
-
-      &:hover{
+      button[type="submit"]{
         background-color: $dali-red;
+        margin: 1em 0;
+      
+        &:hover{
+          background-color: $dali-gray-2;
+        }
+      }
+      
+      button{
+        background-color: $dali-gray-2;
+        height: 2.4em;
+        border-radius: 5px;
+        color: $dali-white;
+        margin-bottom: .65em;
+        transition: background-color .3s ease;
+
+        &:hover{
+          background-color: $dali-red;
+        }
       }
     }
-  }
 
-  footer{
-    bottom: 20px;
-    right: 20px;
+    footer{
+      bottom: 20px;
+      right: 20px;
+    }
   }
 }
 

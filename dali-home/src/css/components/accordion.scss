@@ -1,8 +1,35 @@
-.bronverwijzingen-contentbox{
-  padding: 2vh 12vh;
+// .dali-sidebar-30{
+//   min-width: 300px;
+//   display: inline-block;
+// }
 
-  details{
+// .dali-sidebar-40{
+//   min-width: 300px;
+//   display: inline-block;
+//   float: right;
+// }
+.bronverwijzingen-contentbox{
+  width:100vw;
+  height:100vh; // u can set it as auto if you want
+  display:flex;
+}
+
+main{
+  flex-direction: column;
+  min-width: 300px;
+  width:100%;
+  height:100%;
+  padding: 2vh 2%;
+  overflow-y: auto;
+  transition: all .5s ease;
+  :focus-visible {
+    mix-blend-mode: normal;
+  }
+  
+
+  [class*=dali-accordion]{
     width: 100%;
+    margin-bottom: .1rem;
     &[open]{
       > summary{
         > i{
@@ -10,19 +37,24 @@
         }
       }
       
-      details{
+      [class*=dali-accordion]{
+        margin-bottom: 0;
         Summary{
           background-color: $dali-gray-1;
+          > .dali-badge{
+            background-color: $dali-white;
+            color: $dali-black;
+          }
         }
-        details{
+        [class*=dali-accordion]{
           Summary{
             background-color: $dali-gray-2;
           }
-          details{
+          [class*=dali-accordion]{
             Summary{
               background-color: $dali-gray-3;
             }
-            details{
+            [class*=dali-accordion]{
               Summary{
                 background-color: $dali-white;
                 color: $dali-black;
@@ -41,9 +73,6 @@
       justify-content: space-between;
       height: 2.25rem;
       padding: .5rem;
-
-      background-color: $dali-red; //////////
-      color: $dali-white; ///////////////
   
       h3{
         margin: 0;
@@ -62,15 +91,18 @@
 
 
 
-span{
-  width: 1.5rem;
-  height: 1.5rem;
+.dali-badge{
+  min-width: 1.6rem;
+  height: 1.6rem;
   text-align: center;
-  padding-top: .25rem;
   margin-right: 1.5rem;
   font-size: 1rem;
   background-color: $dali-gray-1;
-  border-radius: 50%;
+  color: $dali-white;
+  border: 2px solid transparent;
+  font-weight: 700;
+  border-radius: 1rem;
+
   &[data-usebadge=false]{
     display: none;
   }
@@ -79,9 +111,8 @@ span{
 .accordion-body{
   padding: 1vw;
   background-color: $dali-white;
-
-  
 }
+
 .accordion-item{
   background-color: $dali-white;
   padding: .5rem;
@@ -104,4 +135,63 @@ span{
     aspect-ratio: 1/1;
     margin: .2rem;
   }
+}
+
+//varianten
+@each $color, $value in $theme-colors {
+  [class*=dali-accordion][class*=#{$color}]{
+    $text-color: map-get($value, "foreground");
+    $background-color: map-get($value, "background");
+
+    summary{
+      background-color: $background-color;
+      color: $text-color;
+
+      &:focus-visible{
+        outline: none;
+        border: 2px solid $background-color;
+        background-color: $text-color;
+        color: $background-color; 
+      }
+    }
+
+    &[class*=color-nest]{
+      >*{
+        border-color: $background-color;
+      }
+    }
+
+    .article-button:focus-visible,
+    .article-button:hover{
+      background-color: $background-color;
+      color: $text-color;
+    }
+  }
+}
+
+[class*=dali-accordion][class*=color-nest]{
+  [class*=dali-accordion], >*{
+    border-left-width: 10px;
+    border-left-style: solid;
+  }
+  >*{
+    &[class*=dali-accordion]>*:not(summary){
+      border-bottom-width: 10px;
+      border-bottom-style: solid;
+      border-color: $dali-gray-1;
+
+      &[class*=dali-accordion]>*:not(summary){
+        border-color: $dali-gray-2;
+        
+        &[class*=dali-accordion]>*:not(summary){
+          border-color: $dali-gray-3;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1024px) {
+
 }
