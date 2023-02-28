@@ -10,11 +10,6 @@ import React, { createRef } from 'react';
 export class Sidebar extends React.Component {
   constructor(props){
     super(props);
-    this.state = {
-      sidebarVisible: this.props.sidebarVisible,
-      initialWidth: this.props.sidebarVisible,
-      open: false,
-    };
     this.ref_sidebar = React.createRef();
     this.ref_sidebarMenu = React.createRef();
   }
@@ -23,19 +18,30 @@ export class Sidebar extends React.Component {
     const sidebarMenu = this.ref_sidebarMenu.current;
     const sidebar = this.ref_sidebar.current;
     console.log(sidebarMenu)
+    const sidebarFeatures = this.props.sidebarFeatures;
 
-    sidebarMenu.addEventListener('click', () => {
-      sidebar.classList.toggle('open');
-    });
+    // the reason for first removing the class and then adding it is to prevent double adding a class. it will work without but could also bring problems.
+    if(this.props.sidebarIsVisible == false){
+      sidebar.classList.remove('closed');
+      sidebar.classList.add('closed');
+    }
+    
+    if(sidebarFeatures.includes('closeable')){
+      sidebarMenu.style.display="block";
+      
+      // make button toggle the sidebar
+      sidebarMenu.addEventListener('click', () => {
+        sidebar.classList.toggle('closed');
+      });
+    }
 
-    console.log(this.state.open)
   }
   
   render() {
     return (
       <>
         <aside ref={this.ref_sidebar} className={`${this.props.sidebarClass} dali-sidebar-${this.props.sidebarFeatures}`}>
-          <button ref={this.ref_sidebarMenu} data-open={this.state.open} className="sidebar-toggle"><i className="fa fa-solid fa-bars"></i></button>
+          <button ref={this.ref_sidebarMenu}  className="sidebar-toggle"><i className="fa fa-solid fa-bars"></i></button>
           <div className="inlog-sidebar">
             {this.props.headerContent}
 

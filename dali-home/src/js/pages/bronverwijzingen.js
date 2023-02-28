@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Accordion, AccordionBody, AccordionItem, AccordionButtonBox } from "../components/accordion";
 import { Header } from "../components/header";
 import { Sidebar } from "../components/sidebar";
@@ -7,15 +7,20 @@ export function Bronverwijzingen() {
 
   return (
     <>
-      <Header title="Bronverwijzing"/>
 
       <div className="bronverwijzingen-contentbox" aria-label="de bronverwijzingen webpagina">
-      <Sidebar sidebarFeatures="purple-closeable" sidebarVisible={true}/>
-        <main className="bronverwijzingen-contentbox sidebar-adjecent">
+        <Sidebar sidebarFeatures="gray-1-closeable" sidebarIsVisible={false}/>
+        <Header title="Bronverwijzing"/>
+        <main id="accordionWrapper" className="resultaten-contentbox sidebar-adjecent">
+          <section className="bronverwijzingen-buttonbox">
+            <button id="unfoldButton"><i class="fa-solid fa-angles-down"></i> uitklappen</button>
+          </section>
           <Accordion 
             title="0.1 hello worlds"
             useBadge={true}
-            accordionFeatures="red"
+            accordionFeatures="turquoise"
+            accordionWrapperId="accordionWrapper"
+            unfoldButtonId="unfoldButton"
           >
             <AccordionBody>
               <AccordionItem title="0.1 earth">

@@ -1,95 +1,63 @@
-// .dali-sidebar-30{
-//   min-width: 300px;
-//   display: inline-block;
-// }
-
-// .dali-sidebar-40{
-//   min-width: 300px;
-//   display: inline-block;
-//   float: right;
-// }
-.bronverwijzingen-contentbox{
-  width:100vw;
-  height:100vh; // u can set it as auto if you want
-  display:flex;
-}
-
-main{
-  flex-direction: column;
-  min-width: 300px;
-  width:100%;
-  height:100%;
-  padding: 2vh 2%;
-  overflow-y: auto;
-  transition: all .5s ease;
-  :focus-visible {
-    mix-blend-mode: normal;
-  }
-  
-
-  [class*=dali-accordion]{
-    width: 100%;
-    margin-bottom: .1rem;
-    &[open]{
-      > summary{
-        > i{
-          transform: rotatex(180deg);
-        }
-      }
-      
-      [class*=dali-accordion]{
-        margin-bottom: 0;
-        Summary{
-          background-color: $dali-gray-1;
-          > .dali-badge{
-            background-color: $dali-white;
-            color: $dali-black;
-          }
-        }
-        [class*=dali-accordion]{
-          Summary{
-            background-color: $dali-gray-2;
-          }
-          [class*=dali-accordion]{
-            Summary{
-              background-color: $dali-gray-3;
-            }
-            [class*=dali-accordion]{
-              Summary{
-                background-color: $dali-white;
-                color: $dali-black;
-                border-bottom: 1px solid $dali-gray-2;
-              }
-            }
-          }
-        }
+[class*=dali-accordion]{
+  width: 100%;
+  margin-bottom: .1rem;
+  &[open]{
+    > summary{
+      > i{
+        transform: rotatex(180deg);
       }
     }
     
-    summary{
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 2.25rem;
-      padding: .5rem;
-  
-      h3{
-        margin: 0;
-        font-size: 1rem;
-        font-weight: 700;
+    [class*=dali-accordion]{
+      margin-bottom: 0;
+      Summary{
+        background-color: $dali-gray-1;
+        > .dali-badge{
+          background-color: $dali-white;
+          color: $dali-black;
+        }
       }
-  
-      i{
-        position: absolute;
-        right: .5rem;
-        transition: all 0.3s;
+      [class*=dali-accordion]{
+        Summary{
+          background-color: $dali-gray-2;
+        }
+        [class*=dali-accordion]{
+          Summary{
+            background-color: $dali-gray-3;
+          }
+          [class*=dali-accordion]{
+            Summary{
+              background-color: $dali-white;
+              color: $dali-black;
+              border-bottom: 1px solid $dali-gray-2;
+            }
+          }
+        }
       }
     }
   }
+  
+  summary{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2.25rem;
+    padding: .5rem;
+
+    h3{
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    i{
+      position: absolute;
+      right: .5rem;
+      transition: all 0.3s;
+    }
+  }
 }
-
-
 
 .dali-badge{
   min-width: 1.6rem;
@@ -136,6 +104,7 @@ main{
     margin: .2rem;
   }
 }
+
 
 //varianten
 @each $color, $value in $theme-colors {

@@ -7,7 +7,6 @@ import { ProtectedLayout } from './js/auth/protectedLayout';
 import { UnProtectedLayout } from './js/auth/unProtectedLayout';
 
 
-
 function App() {
    return ( 
     <Routes>

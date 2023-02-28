@@ -23,8 +23,8 @@ body{
 
 #root{
   overflow: hidden;
-  max-width: 100vw;
-  max-height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 // all styles here are specified syles for components (is re-used by the same component)
@@ -40,3 +40,5 @@ body{
 // all styles here are specified styles for whole pages (cannot be re-used)
 @import '../css/pages/Home.scss';
 @import '../css/pages/Inlog.scss';
+@import '../css/pages/Bronverwijzingen.scss';
+

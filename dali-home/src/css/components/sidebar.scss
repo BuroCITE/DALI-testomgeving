@@ -1,20 +1,24 @@
 [class*=dali-sidebar-]{
-  min-width: 300px;
-  width:30%;
+  position: absolute;
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
   height:100%;
   background-color: $dali-black;
   box-shadow: rgb(0 0 0 / 50%) 4px 4px 4px -1px;
+  z-index: 10;
 
   .sidebar-toggle{
+    display: none;
     font-size: 1.5rem;
     position: absolute;
     top: 0;
-    right: -3rem;
+    right: 0rem;
     width: 3rem;
     height: 3rem;
     border: none;
+    background-color: transparent;
     z-index: 10;
-    box-shadow: rgb(0 0 0 / 50%) 2px 4px 4px -2px;
   }
 
   header{
@@ -36,15 +40,16 @@
   right: 0;
 }
 
+// opage bg - this is the standard opage if no color is defined.
 [class*=dali-sidebar-]{
   transition: all .5s ease;
-  position: relative;
 
   &[class*=opage-bg]{
     background-color: rgba($dali-black, 0.5);
   }
 }
 
+// colored sidebar - sidebars in all the colors defined in theme-colors. will also change the default color of opage bg and sidebar toggle.
 @each $color, $value in $theme-colors {
   [class*=dali-sidebar][class*=#{$color}]{
     $text-color: map-get($value, "foreground");
@@ -53,25 +58,35 @@
     background-color: $background-color;
     color: $text-color;
 
-    &[class*=opage-bg]{
-      background-color: rgba($background-color, 0.5);
+    .sidebar-toggle{
+      color: $text-color;
     }
 
-    .sidebar-toggle{
-      background-color: $background-color;
+    &[class*=opage-bg]{
+      background-color: rgba($background-color, 0.5);
     }
   }
 }
 
-[class*=dali-sidebar][class*=closeable].open{
+// closeable sidebar - will allow the sidebar to open and close.
+[class*=dali-sidebar][class*=closeable].closed{
   width:0%;
   min-width:0%;
+
+  .sidebar-toggle{
+    right: -3rem;
+    color: $dali-black;
+  }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   [class*=dali-sidebar]{
-    min-width: 0;
-    max-width: 100%;
-    width: 100%;
+    min-width: 300px;
+    width:30%;
+
+    &[class*=closeable] .sidebar-toggle{
+      right: -3rem;
+      color: $dali-black;
+    }
   }
 }
