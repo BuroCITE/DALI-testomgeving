@@ -10,7 +10,10 @@ export function Bronverwijzingen() {
 
       <div className="bronverwijzingen-contentbox" aria-label="de bronverwijzingen webpagina">
         <Sidebar sidebarFeatures="gray-1-closeable" sidebarIsVisible={false}/>
-        <Header title="Bronverwijzing"/>
+        <Header 
+          title="Bronverwijzing" 
+          navLeft={<a href="/" class="fa-solid fa-house-chimney header-buttons"></a>}
+        />
         <main id="accordionWrapper" className="resultaten-contentbox sidebar-adjecent">
           <section className="bronverwijzingen-buttonbox">
             <button id="unfoldButton"><i class="fa-solid fa-angles-down"></i> uitklappen</button>

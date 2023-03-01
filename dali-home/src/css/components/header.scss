@@ -10,6 +10,10 @@
     float: left;
     height: 100%;
     display: flex;
+    
+    a{
+      text-decoration: none;
+    }
 
     &.nav-right{
       float: right;

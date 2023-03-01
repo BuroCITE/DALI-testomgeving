@@ -19,7 +19,7 @@ export function Home(props){
 
     return (
       <>
-        <div className="content-container">
+        <div aria-label='content container' className="content-container">
           <Header 
             title="DALI - toepassingen"
             navRight={
@@ -44,6 +44,7 @@ export function Home(props){
                   modalFeatures="gray-2-xxl"
                   modalHeaderFeatures="sm"
                   modalHeaderTitle="Help"
+                  modalBodyClass="ondersteuning-popup-body"
                   modalFooterContent={
                   <ModalFooter modalFooterFeatures="xl">
                     <a>2022 - Buro CITE</a>
@@ -52,7 +53,37 @@ export function Home(props){
                     <a target="_blank" href="https://demo.dali-app.nl/#dashboard">www.dali-app.nl</a><a>by Anthony Inocencio Ramos</a>
                   </ModalFooter>}
                 >
-                  hello world!
+                  <section className="gebruikshandleidingen">
+                    <h3 className="title">Gebruikershandleiding</h3>
+                    <ul>
+                      <li>Gebruikshandleidingen Handboek 
+                        <nav className="button-box">
+                          <a 
+                            href="%PUBLIC_URL%/huisstijl.docx" download="huisstijl.docx" 
+                            class="fa-solid fa-download"
+                          ></a>
+                          <a href="" class="fa-solid fa-eye"></a>
+                        </nav>
+                      </li>
+                      <li>Gebruikshandleidingen Projecten
+                        <nav className="button-box">
+                          <a 
+                            href="%PUBLIC_URL%/huisstijl.docx" download="huisstijl.docx" 
+                            class="fa-solid fa-download"
+                          ></a>
+                          <a href="" class="fa-solid fa-eye"></a>
+                        </nav>
+                      </li>
+                    </ul>
+                  </section>
+                </Popup>
+                <Popup 
+                  showModalButtonClass="header-buttons"
+                  showModalButtonContents="!"
+                  modalHeaderTitle="welkom"
+                  modalFeatures="turquoise"
+                >
+                  hello world! :)
                 </Popup>
               </>
             }
@@ -60,15 +91,70 @@ export function Home(props){
 
           <main id="main">
             <a className="invisible-link card-link" href="#parag">skip cards</a>
-            <Card cardFeatures="red" cardHref="" icon={<i class="fa-solid fa-book"></i>} cardName="handboek" notice="Volgende publicatie zomer 2023" description="Handboek Openbare Ruimte"/>
-            <Card cardFeatures="brown" cardHref="" icon={<i class="fa-solid fa-location-dot"></i>} cardName="raadplegen via kaart" notice="" description="Raadplegen van het handboek via kaartweergave"/>
-            <Card cardFeatures="turquoise" cardHref="" icon={<i class="fa-solid fa-copy"></i>} cardName="programma van eisen" notice="" description=""/>
-            <Card cardFeatures="purple" cardHref="" icon={<i class="fa-solid fa-paperclip"></i>} cardName="bijlagen" notice="" description="Raadplegen van bijlagen"/>
-            <Card cardFeatures="green" cardHref="bronverwijzingen" icon={<i class="fa-solid fa-link"></i>} cardName="bronverwijzingen" notice="" description="Raadplegen van bronverwijzingen"/>
-            <Card cardFeatures="blue" cardHref="" icon={<i class="fa-solid fa-map"></i>} cardName="externe kaarten" notice="" description="Raadplegen van online kaarten" />
-            <Card cardFeatures="purple" cardHref="" icon={<i class="fa-solid fa-users"></i>} cardName="accounts en rechten" notice="" description="Gebruikersadministratie" />
-            <Card cardFeatures="green" cardHref="" icon={<i class="fa-solid fa-circle-question"></i>} cardName="ondersteuning" notice="" description="Stel vragen of geef wensen door aan de helpdesk van DALI" />
-
+            <Card 
+              icon={<i class="fa-solid fa-book"></i>} 
+              cardName="handboek" 
+              description="Handboek Openbare Ruimte"
+              notice="Volgende publicatie zomer 2023" 
+              cardFeatures="red" 
+              cardHref="" 
+            />
+            <Card 
+              icon={<i class="fa-solid fa-location-dot"></i>} 
+              cardName="raadplegen via kaart" 
+              description="Raadplegen van het handboek via kaartweergave"
+              notice="" 
+              cardFeatures="brown" 
+              cardHref="" 
+            />
+            <Card 
+              icon={<i class="fa-solid fa-copy"></i>} 
+              cardName="programma van eisen" 
+              description=""
+              notice="" 
+              cardFeatures="turquoise" 
+              cardHref="" 
+            />
+            <Card 
+              icon={<i class="fa-solid fa-paperclip"></i>} 
+              cardName="bijlagen" 
+              description="Raadplegen van bijlagen"
+              notice="" 
+              cardFeatures="purple" 
+              cardHref="" 
+            />
+            <Card 
+              icon={<i class="fa-solid fa-link"></i>} 
+              cardName="bronverwijzingen" 
+              description="Raadplegen van bronverwijzingen"
+              notice="" 
+              cardFeatures="green" 
+              cardHref="bronverwijzingen" 
+            />
+            <Card 
+              icon={<i class="fa-solid fa-map"></i>} 
+              cardName="externe kaarten" 
+              description="Raadplegen van online kaarten" 
+              notice="" 
+              cardFeatures="blue" 
+              cardHref="" 
+            />
+            <Card 
+              icon={<i class="fa-solid fa-users"></i>} 
+              cardName="accounts en rechten" 
+              description="Gebruikersadministratie" 
+              notice="" 
+              cardFeatures="purple" 
+              cardHref="" 
+              />
+            <Card 
+              icon={<i class="fa-solid fa-circle-question"></i>} 
+              cardName="ondersteuning" 
+              description="Stel vragen of geef wensen door aan de helpdesk van DALI" 
+              notice="" 
+              cardFeatures="green" 
+              cardHref="" 
+            />
           </main>
         </div>
       </>
