@@ -37,6 +37,8 @@ body{
 @import '../css/components/sidebar.scss';
 @import '../css/components/accordion.scss';
 
+@import '../css/externalComponents/pdfCiewerComponent.scss';
+
 // all styles here are specified styles for whole pages (cannot be re-used)
 @import '../css/pages/Home.scss';
 @import '../css/pages/Inlog.scss';

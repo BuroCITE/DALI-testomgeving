@@ -4,6 +4,9 @@ import { Dropdown } from '../components/dropdown';
 import { ModalFooter, Popup } from '../components/popup';
 import {Card} from '../components/card'
 import { useAuth } from '../auth/useAuth';
+import PdfViewerComponent from '../externalComponents/pdfViewerComponent';
+
+
 
 export function Home(props){
   const { logout } = useAuth();
@@ -62,7 +65,19 @@ export function Home(props){
                             href="%PUBLIC_URL%/huisstijl.docx" download="huisstijl.docx" 
                             class="fa-solid fa-download"
                           ></a>
-                          <a href="" class="fa-solid fa-eye"></a>
+                          <Popup 
+                            showModalButtonClass=""
+                            showModalButtonContents={<i class="fa-solid fa-eye"></i>}
+                            modalHeaderTitle="welkom"
+                            modalFeatures="turquoise"
+                            modalBodyClass="ondersteuning-popup-body"
+                          >
+                            <PdfViewerComponent 
+                              document="huisstijl.pdf"
+                              pdfViewerClass=""
+                              pdfViewerFeatures=""
+                            />
+                          </Popup>
                         </nav>
                       </li>
                       <li>Gebruikshandleidingen Projecten
@@ -71,7 +86,19 @@ export function Home(props){
                             href="%PUBLIC_URL%/huisstijl.docx" download="huisstijl.docx" 
                             class="fa-solid fa-download"
                           ></a>
-                          <a href="" class="fa-solid fa-eye"></a>
+                          <Popup 
+                            showModalButtonClass=""
+                            showModalButtonContents={<i class="fa-solid fa-eye"></i>}
+                            modalHeaderTitle="welkom"
+                            modalFeatures="turquoise"
+                            modalBodyClass="ondersteuning-popup-body"
+                          >
+                            <PdfViewerComponent 
+                              document="huisstijl.pdf"
+                              pdfViewerClass=""
+                              pdfViewerFeatures=""
+                            />
+                          </Popup>
                         </nav>
                       </li>
                     </ul>
@@ -84,6 +111,7 @@ export function Home(props){
                   modalFeatures="turquoise"
                 >
                   hello world! :)
+                  
                 </Popup>
               </>
             }
