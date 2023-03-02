@@ -45,7 +45,7 @@ export class Popup extends React.Component {
   render() {
     return (
       <>
-        <Button ref={this.ref_smb} className={this.props.showModalButtonClass}> {this.props.showModalButtonContents}</Button>
+        <button ref={this.ref_smb} className={this.props.showModalButtonClass}> {this.props.showModalButtonContents}</button>
         <section ref={this.ref_mb} className="dali-modal-backdrop"/>
 
         <section className={`dali-modal-popup-${this.props.modalFeatures}`}>
