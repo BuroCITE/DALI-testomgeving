@@ -1,13 +1,15 @@
 .header{
   box-shadow: rgb(0 0 0 / 50%) 1px 0px 5px;
   min-height: 2rem;
-  height: 7.65vh;
+  height: 6.65vh;
   border-radius: 0;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   
   
   nav{
-    float: left;
     height: 100%;
     display: flex;
     
@@ -16,7 +18,8 @@
     }
 
     &.nav-right{
-      float: right;
+      right: 0;
+      position: absolute;
     }
     
     .header-buttons{
@@ -45,11 +48,8 @@
   }
 
   h1{
-    position: absolute;
-    top:50%;
+    margin: 0;
     margin-left: .5rem;
-    left: 0;
-    transform: translate(0%, -50%);
     display: inline;
     font-size: 1rem;
     text-transform: uppercase;
@@ -60,25 +60,29 @@
 
 [class*=dali-sidebar]:not([class*=right]) + .header{
   h1{
-    left: 2.5rem;
+    transform: translate(3rem);
+  }
+
+  &>*:first-child{
+    transform: translate(3rem);
+    position: static;
   }
 }
 
 @media only screen and (min-width: 518px) {
-  .header h1{
-    margin-left: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .header{
+    height: 7.65vh;
+    justify-content: center;
   }
 
   [class*=dali-sidebar]:not([class*=right]) + .header{
-    h1{
-      left: 50%;
-    }
-  
     &>*:first-child{
-      margin-left: 3rem;
+      position: absolute;
+      left: 0;
+    }
+
+    h1{
+      transform: translate(0rem);
     }
   }
-  
 }
