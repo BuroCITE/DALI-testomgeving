@@ -30,8 +30,15 @@
   }
 
   footer{
-    position: fixed;
-    bottom: 0;
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    p{
+      margin: 0;
+    }
   }
 }
 
