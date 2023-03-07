@@ -19,6 +19,7 @@
     mix-blend-mode: normal;
     outline: none;
     overflow-wrap: anywhere;
+    text-decoration: none;
 
     span{
       font-size: 3em;
@@ -75,7 +76,7 @@
   
 }
 
-@media only screen and (max-width: 535px) {
+@media only screen and (max-width: 518px) {
   .outerCard{
     aspect-ratio: 1/.41;
   }

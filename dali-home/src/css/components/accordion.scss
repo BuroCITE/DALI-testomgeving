@@ -1,0 +1,166 @@
+[class*=dali-accordion]{
+  width: 100%;
+  margin-bottom: .1rem;
+  &[open]{
+    > summary{
+      > i{
+        transform: rotatex(180deg);
+      }
+    }
+    
+    [class*=dali-accordion]{
+      margin-bottom: 0;
+      Summary{
+        background-color: $dali-gray-1;
+        > .dali-badge{
+          background-color: $dali-white;
+          color: $dali-black;
+        }
+      }
+      [class*=dali-accordion]{
+        Summary{
+          background-color: $dali-gray-2;
+        }
+        [class*=dali-accordion]{
+          Summary{
+            background-color: $dali-gray-3;
+          }
+          [class*=dali-accordion]{
+            Summary{
+              background-color: $dali-white;
+              color: $dali-black;
+              border-bottom: 1px solid $dali-gray-2;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  summary{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2.25rem;
+    padding: .5rem;
+
+    h3{
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    i{
+      position: absolute;
+      right: .5rem;
+      transition: all 0.3s;
+    }
+  }
+}
+
+.dali-badge{
+  min-width: 1.6rem;
+  height: 1.6rem;
+  text-align: center;
+  margin-right: 1.5rem;
+  font-size: 1rem;
+  background-color: $dali-gray-1;
+  color: $dali-white;
+  border: 2px solid transparent;
+  font-weight: 700;
+  border-radius: 1rem;
+
+  &[data-usebadge=false]{
+    display: none;
+  }
+}
+
+.accordion-body{
+  padding: 1vw;
+  background-color: $dali-white;
+}
+
+.accordion-item{
+  background-color: $dali-white;
+  padding: .5rem;
+  min-height: 3.5rem;
+  border: 1px solid $dali-gray-3;
+  border-radius: 2px;
+
+  .article-text, .button-box{
+    font-size: 1.3rem;
+    display: inline-block;
+  }
+
+  .button-box{
+    font-size: 1rem;
+    float: right;
+  }
+
+  .article-button{
+    width: 2rem;
+    aspect-ratio: 1/1;
+    margin: .2rem;
+  }
+}
+
+
+//varianten
+@each $color, $value in $theme-colors {
+  [class*=dali-accordion][class*=#{$color}]{
+    $text-color: map-get($value, "foreground");
+    $background-color: map-get($value, "background");
+
+    summary{
+      background-color: $background-color;
+      color: $text-color;
+
+      &:focus-visible{
+        outline: none;
+        border: 2px solid $background-color;
+        background-color: $text-color;
+        color: $background-color; 
+      }
+    }
+
+    &[class*=color-nest]{
+      >*{
+        border-color: $background-color;
+      }
+    }
+
+    .article-button:focus-visible,
+    .article-button:hover{
+      background-color: $background-color;
+      color: $text-color;
+    }
+  }
+}
+
+[class*=dali-accordion][class*=color-nest]{
+  [class*=dali-accordion], >*{
+    border-left-width: 10px;
+    border-left-style: solid;
+  }
+  >*{
+    &[class*=dali-accordion]>*:not(summary){
+      border-bottom-width: 10px;
+      border-bottom-style: solid;
+      border-color: $dali-gray-1;
+
+      &[class*=dali-accordion]>*:not(summary){
+        border-color: $dali-gray-2;
+        
+        &[class*=dali-accordion]>*:not(summary){
+          border-color: $dali-gray-3;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+}

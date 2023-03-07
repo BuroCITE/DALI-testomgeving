@@ -4,10 +4,11 @@ import { Button } from 'react-bootstrap';
 /**
  * 
  * @param {string} showModalButtonClass a class to style the show popup button
- * @param {string,icon} showModalButtonContents the contents of the show popup button
+ * @param {*} showModalButtonContents the contents of the show popup button
  * @param {string} modalFeatures expects a class attribute for the variants of the popup. can choose from: all colors in theme-colors, all sizes from modal-sizes; this can be found in the variables.scss
  * @param {string} modalHeaderFeatures expects a class attribute for the variants of the popup header. can choose from: headerFooter-sizes; this can be found in the variables.scss. size will default to 5vh (sm)
  * @param {string} modalHeaderTitle h2 title for the popup. will be shown in the header.
+ * @param {string} modalBodyClass a class that can be added to the body of the popup.
  * @param {*} children all elements placed in between 2 popup tags will be send as children of this element and are placed inside the popup under the header
  * @param {function} modalFooterContent expects the ModalFooter component.
  * @returns an functional popup with custom content
@@ -44,7 +45,7 @@ export class Popup extends React.Component {
   render() {
     return (
       <>
-        <Button ref={this.ref_smb} className={this.props.showModalButtonClass}> {this.props.showModalButtonContents}</Button>
+        <button ref={this.ref_smb} className={this.props.showModalButtonClass}> {this.props.showModalButtonContents}</button>
         <section ref={this.ref_mb} className="dali-modal-backdrop"/>
 
         <section className={`dali-modal-popup-${this.props.modalFeatures}`}>
@@ -54,7 +55,7 @@ export class Popup extends React.Component {
               <button ref={this.ref_cmb} class="dali-modal-close-button" aria-label="Close popup">x</button>
             </header>
 
-            <section class="dali-modal-body">
+            <section class={`dali-modal-body ${this.props.modalBodyClass}`}>
               {this.props.children}
             </section>
 
@@ -79,3 +80,4 @@ export function ModalFooter(props) {
     </footer>
   );
 }
+

@@ -12,7 +12,7 @@ export function Header(props) {
     <>
       <header className='header'>
         {/* invisible link is a link only visible by getting focus. this is for people who don't use mouses to easily skip the navigation and go to the main */}
-        <a className="invisible-link header-link"   href="#main">skip navigation</a>
+        {/* <a className="invisible-link header-link"   href="#main">skip navigation</a> */}
         <nav>
           {props.navLeft}
         </nav>

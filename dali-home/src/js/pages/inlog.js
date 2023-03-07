@@ -5,8 +5,6 @@ import {Form, Input, IconInput, Select, Textarea, Upload} from '../components/fo
 import { Sidebar, SidebarFooter, SidebarHeader } from "../components/sidebar";
 
 export function Login() {
-  console.log(useAuth());
-
   const { login } = useAuth();
 
   const [username, setUsername] = useState("");
@@ -36,8 +34,9 @@ export function Login() {
   return (
     <>
     <Background/>
-    <Sidebar id="real"/>
     <Sidebar
+      sidebarClass="inlog-shadow"
+      sidebarFeatures="right"
       headerContent={
         <SidebarHeader>
           <figure className="header-image-container">

@@ -1,0 +1,14 @@
+[class*=dali-pdf-viewer]{
+  height: 100%;
+  
+  article{
+    width: 100%;
+    height: 100%;
+  }
+
+  &[class*=headerless]{
+    #dali-test-toolbar{
+      display: none;
+    }
+  }
+}

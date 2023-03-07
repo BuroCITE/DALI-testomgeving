@@ -1,24 +1,58 @@
-import React from 'react';
+import React, { createRef } from 'react';
 
+/**
+ * @param {string} sidebarFeatures expects a class attribute for the variants of the Sidebar. can choose from: right;
+ * @param {element} headerContent a header that sits on the top of the sidebar
+ * @param {*} children all elements placed in between 2 Sidebar tags will be send as children of this element and are placed inside the Sidebar under the header
+ * @param {element} footerContent a footer that sits on the bottom of the sidebar
+ * @returns a black sidebar which will default to the left side with a width of 30% and height of 100%.
+ */
 export class Sidebar extends React.Component {
   constructor(props){
     super(props);
-    this.state = {};
+    this.ref_sidebar = React.createRef();
+    this.ref_sidebarMenu = React.createRef();
+  }
+
+  componentDidMount(){
+    const sidebarMenu = this.ref_sidebarMenu.current;
+    const sidebar = this.ref_sidebar.current;
+    console.log(sidebarMenu)
+    const sidebarFeatures = this.props.sidebarFeatures;
+
+    // the reason for first removing the class and then adding it is to prevent double adding a class. it will work without but could also bring problems.
+    if(this.props.sidebarIsVisible == false){
+      sidebar.classList.remove('closed');
+      sidebar.classList.add('closed');
+    }
+    
+    if(sidebarFeatures.includes('closeable')){
+      sidebarMenu.style.display="block";
+      
+      // make button toggle the sidebar
+      sidebarMenu.addEventListener('click', () => {
+        sidebar.classList.toggle('closed');
+      });
+    }
+
   }
   
   render() {
     return (
-      <aside id={this.props.id} className="inlog-shadow">
-        <div className="inlog-sidebar">
-          {this.props.headerContent}
+      <>
+        <aside ref={this.ref_sidebar} className={`${this.props.sidebarClass} dali-sidebar-${this.props.sidebarFeatures}`}>
+          <button ref={this.ref_sidebarMenu}  className="sidebar-toggle"><i className="fa fa-solid fa-bars"></i></button>
+          <div className="inlog-sidebar">
+            {this.props.headerContent}
 
-          <section className='sidebar-main-content'>
-            {this.props.children}
-          </section>
+            <section className='sidebar-main-content'>
+              {this.props.children}
+            </section>
 
-          {this.props.footerContent}
-        </div>
-      </aside>
+            {this.props.footerContent}
+          </div>
+        </aside>
+      </>
     );
   }
 }

@@ -1,25 +1,38 @@
 .header{
   box-shadow: rgb(0 0 0 / 50%) 1px 0px 5px;
-  height: 7.65vh;
+  min-height: 2rem;
+  height: 6.65vh;
   border-radius: 0;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  
   
   nav{
-    float: left;
     height: 100%;
     display: flex;
+    
+    a{
+      text-decoration: none;
+    }
 
     &.nav-right{
-      float: right;
+      right: 0;
+      position: absolute;
     }
     
     .header-buttons{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
       height: 100%;
       aspect-ratio: 1/1;  
-      color: $dali-red;
-      font-size: 2rem;
+      padding: 0;
       border: none;
       border-radius: inherit;
+      color: $dali-red;
       background-color: transparent;
       transition: all .3s ease;
       
@@ -35,10 +48,8 @@
   }
 
   h1{
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 0;
+    margin-left: .5rem;
     display: inline;
     font-size: 1rem;
     text-transform: uppercase;
@@ -47,10 +58,31 @@
   }
 }
 
-@media only screen and (max-width: 518px) {
-  .header h1{
-    margin-left: .5rem;
-    left: 0;
-    transform: translate(0%, -50%);
+[class*=dali-sidebar]:not([class*=right]) + .header{
+  h1{
+    transform: translate(3rem);
+  }
+
+  &>*:first-child{
+    transform: translate(3rem);
+    position: static;
+  }
+}
+
+@media only screen and (min-width: 518px) {
+  .header{
+    height: 7.65vh;
+    justify-content: center;
+  }
+
+  [class*=dali-sidebar]:not([class*=right]) + .header{
+    &>*:first-child{
+      position: absolute;
+      left: 0;
+    }
+
+    h1{
+      transform: translate(0rem);
+    }
   }
 }

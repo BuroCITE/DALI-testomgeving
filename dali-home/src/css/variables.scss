@@ -1,3 +1,7 @@
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
 // color variables that can be used
 // these are different in from $theme-colors in the way that these do not produce variants
 $dali-black: #222;
@@ -12,17 +16,17 @@ $dali-gray-1: #4c4c4c;
 $dali-gray-2: #6b6b6b;
 $dali-gray-3: #898989;
 
-$dali-rgb-black: 34, 34, 34;
-$dali-rgb-white: 238, 238, 238;
-$dali-rgb-red: 189, 60, 91;
-$dali-rgb-turquoise: 7, 120, 110;
-$dali-rgb-green: 1, 124, 33;
-$dali-rgb-blue: 0, 105, 206;
-$dali-rgb-purple: 167, 0, 244;
-$dali-rgb-brown: 142, 99, 51;
-$dali-rgb-gray-1: 76, 76, 76;
-$dali-rgb-gray-2: 107, 107, 107;
-$dali-rgb-gray-3: 137, 137, 137;
+$dali-rgb-black: #{hexToRGB($dali-black)};
+$dali-rgb-white: #{hexToRGB($dali-white)};
+$dali-rgb-red: #{hexToRGB($dali-red)};
+$dali-rgb-turquoise: #{hexToRGB($dali-turquoise)};
+$dali-rgb-green: #{hexToRGB($dali-green)};
+$dali-rgb-blue: #{hexToRGB($dali-blue)};
+$dali-rgb-purple: #{hexToRGB($dali-purple)};
+$dali-rgb-brown: #{hexToRGB($dali-brown)};
+$dali-rgb-gray-1: #{hexToRGB($dali-gray-1)};
+$dali-rgb-gray-2: #{hexToRGB($dali-gray-2)};
+$dali-rgb-gray-3: #{hexToRGB($dali-gray-3)};
 
 $upload-text: "Select some files";
 
