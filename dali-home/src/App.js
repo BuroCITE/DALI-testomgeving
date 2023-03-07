@@ -12,7 +12,7 @@ function App() {
     <Routes>
       <Route element={<ProtectedLayout/>}>
         <Route path="/" element={<Home />}/>
-        <Route path="bronverwijzingen" element={<Bronverwijzingen/>}/>
+        <Route path="/bronverwijzingen" element={<Bronverwijzingen/>}/>
       </Route>
 
       <Route path="/dashboard" element={<UnProtectedLayout />}>

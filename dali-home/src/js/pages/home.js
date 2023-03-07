@@ -157,7 +157,7 @@ export function Home(props){
               description="Raadplegen van bronverwijzingen"
               notice="" 
               cardFeatures="green" 
-              cardHref="bronverwijzingen" 
+              cardHref="/#/bronverwijzingen" 
             />
             <Card 
               icon={<i class="fa-solid fa-map"></i>} 

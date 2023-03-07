@@ -12,7 +12,7 @@ export function Bronverwijzingen() {
         <Sidebar sidebarFeatures="gray-1-closeable" sidebarIsVisible={false}/>
         <Header 
           title="Bronverwijzing" 
-          navLeft={<a href="/" class="fa-solid fa-house-chimney header-buttons"></a>}
+          navLeft={<a href="/#/" class="fa-solid fa-house-chimney header-buttons"></a>}
         />
         <main id="accordionWrapper" className="resultaten-contentbox sidebar-adjecent">
           <section className="bronverwijzingen-buttonbox">
