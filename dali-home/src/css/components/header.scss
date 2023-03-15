@@ -1,4 +1,4 @@
-.header{
+[class*=dali-header]{
   box-shadow: rgb(0 0 0 / 50%) 1px 0px 5px;
   min-height: 2rem;
   height: 6.65vh;
@@ -32,13 +32,10 @@
       padding: 0;
       border: none;
       border-radius: inherit;
-      color: $dali-red;
       background-color: transparent;
       transition: all .3s ease;
       
       &:hover, &:focus-visible, &:active, &[aria-expanded="true"]{
-        color: $dali-white;
-        background-color: $dali-red;
         box-shadow: none;
       }
     }
@@ -58,7 +55,23 @@
   }
 }
 
-[class*=dali-sidebar]:not([class*=right]) + .header{
+@each $color, $value in $theme-colors{
+  [class*=dali-header][class*=#{$color}]{
+    $background-color: map-get($value, 'background');
+    $text-color: map-get($value, 'foreground');
+
+    .header-buttons{
+      color: $background-color;
+
+      &:hover, &:focus-visible, &:active, &[aria-expanded="true"]{
+        color: $text-color;
+        background-color: $background-color;
+      }
+    }
+  }
+}
+
+[class*=dali-sidebar]:not([class*=right]) + [class*=dali-header]{
   h1{
     transform: translate(3rem);
   }
@@ -70,12 +83,12 @@
 }
 
 @media only screen and (min-width: 518px) {
-  .header{
+  [class*=dali-header]{
     height: 7.65vh;
     justify-content: center;
   }
 
-  [class*=dali-sidebar]:not([class*=right]) + .header{
+  [class*=dali-sidebar]:not([class*=right]) + [class*=dali-header]{
     &>*:first-child{
       position: absolute;
       left: 0;

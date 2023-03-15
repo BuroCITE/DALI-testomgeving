@@ -1,12 +1,13 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
 
 /**
  * 
  * @param {string} showModalButtonClass a class to style the show popup button
+ * @param {string} showModalButtonAriaText REQUIRED (for accesibility) - the text that wil be loaded in the aria label of the show modal button.
  * @param {*} showModalButtonContents the contents of the show popup button
- * @param {string} modalFeatures expects a class attribute for the variants of the popup. can choose from: all colors in theme-colors, all sizes from modal-sizes; this can be found in the variables.scss
- * @param {string} modalHeaderFeatures expects a class attribute for the variants of the popup header. can choose from: headerFooter-sizes; this can be found in the variables.scss. size will default to 5vh (sm)
+ * @param {string} modalAriaText REQUIRED (for accesibility) - the text that wil be loaded in the aria label of the popup.
+ * @param {string} modalFeatures expects a class attribute for the variants of the popup. can choose from: all colors in theme-colors, all sizes from modal-sizes; (this can be found in the variables.scss) this will default to red-md
+ * @param {string} modalHeaderFeatures expects a class attribute for the variants of the popup header. can choose from: all colors in theme-colors, headerFooter-sizes; (this can be found in the variables.scss). size will default to 5vh (sm). color will default to gray-2
  * @param {string} modalHeaderTitle h2 title for the popup. will be shown in the header.
  * @param {string} modalBodyClass a class that can be added to the body of the popup.
  * @param {*} children all elements placed in between 2 popup tags will be send as children of this element and are placed inside the popup under the header
@@ -45,17 +46,17 @@ export class Popup extends React.Component {
   render() {
     return (
       <>
-        <button ref={this.ref_smb} className={this.props.showModalButtonClass}> {this.props.showModalButtonContents}</button>
-        <section ref={this.ref_mb} className="dali-modal-backdrop"/>
+        <button ref={this.ref_smb} aria-label={this.props.showModalButtonAriaText} className={this.props.showModalButtonClass}> {this.props.showModalButtonContents}</button>
+        <section ref={this.ref_mb} aria-hidden="true" className="dali-modal-backdrop"/>
 
-        <section className={`dali-modal-popup-${this.props.modalFeatures}`}>
+        <section aria-label={this.props.modalAriaText} className={`dali-modal-popup-${this.props.modalFeatures}`}>
           <div class="dali-modal-content">
-            <header class={`dali-modal-header-${this.props.modalHeaderFeatures}`}>
-              <h2>{this.props.modalHeaderTitle}</h2>
-              <button ref={this.ref_cmb} class="dali-modal-close-button" aria-label="Close popup">x</button>
+            <header aria-label="popup header" class={`dali-modal-header-${this.props.modalHeaderFeatures}`}>
+              <h2 aria-label="title">{this.props.modalHeaderTitle}</h2>
+              <button ref={this.ref_cmb} class="dali-modal-close-button" aria-label="Close popup"><i aria-hidden="true" class="fa-sharp fa-solid fa-xmark"></i></button>
             </header>
 
-            <section class={`dali-modal-body ${this.props.modalBodyClass}`}>
+            <section aria-label="popup main content" class={`dali-modal-body ${this.props.modalBodyClass}`}>
               {this.props.children}
             </section>
 
@@ -66,18 +67,25 @@ export class Popup extends React.Component {
     );
   }
 }
+Popup.defaultProps = {
+  modalFeatures: "red-md",
+  modalHeaderFeatures: "gray-2-sm",
+}
 
 /**
  * 
- * @param {string} modalFooterFeatures expects a class attribute for the variants of the popup footer. can choose from: headerFooter-sizes; this can be found in the variables.scss. size will default to none, meaning that footer wil not show if no size is given.
+ * @param {string} modalFooterFeatures expects a class attribute for the variants of the popup footer. can choose from: all colors in theme-colors, headerFooter-sizes; (this can be found in the variables.scss). size will default to none, meaning that footer wil not show if no size is given. color will default to gray-2.
  * @param {*} children all elements placed in between 2 ModalFooter tags will be send as children of this element and are placed inside the footer.
  * @returns a footer that can be used inside the Popup class. 
  */
 export function ModalFooter(props) {
   return (
-    <footer class={`dali-modal-footer-${props.modalFooterFeatures}`}>
+    <footer aria-label="popup footer" class={`dali-modal-footer-${props.modalFooterFeatures}`}>
       {props.children}
     </footer>
   );
+}
+ModalFooter.defaultProps = {
+  modalFooterFeatures: "gray-2",
 }
 

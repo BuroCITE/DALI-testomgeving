@@ -3,6 +3,9 @@ import { useAuth } from "../auth/useAuth";
 import { Background } from '../components/background';
 import {Form, Input, IconInput, Select, Textarea, Upload} from '../components/form';
 import { Sidebar, SidebarFooter, SidebarHeader } from "../components/sidebar";
+import { TaalbestandNL } from '../../library/res';
+import { icons } from '../../library/res';
+const text = TaalbestandNL.login;
 
 export function Login() {
   const { login } = useAuth();
@@ -36,59 +39,69 @@ export function Login() {
     <Background/>
     <Sidebar
       sidebarClass="inlog-shadow"
+      sidebarAriaText={text.sidebarAriaText}
       sidebarFeatures="right"
       headerContent={
         <SidebarHeader>
           <figure className="header-image-container">
-            <img aria-label="Het logo van dali" src={`${process.env.PUBLIC_URL}/image/Dali-logo-white-bg.jpg`}/>
-            <figcaption>Het logo van dali</figcaption>
+            {TaalbestandNL.buroCite.logo.whiteSM}
+            <figcaption>{TaalbestandNL.buroCite.logo.caption}</figcaption>
           </figure>
 
-          <article className="dali-slogan">
-            <p>de oplossing voor buitenruimtemanagement</p>
+          <article aria-label="het dali slogan" className="dali-slogan">
+            <p>{TaalbestandNL.buroCite.slogan}</p>
             <br/>
-            <h1>DALI v5 demo</h1>
+            <h1>
+              {TaalbestandNL.buroCite.productName}
+              {TaalbestandNL.buroCite.productVersion}
+              {TaalbestandNL.buroCite.productInviroment}
+            </h1>
           </article>
         </SidebarHeader>
       }
 
       footerContent={
         <SidebarFooter>
-          <p>Versie: 5.0.0.0</p>
+          <p>{TaalbestandNL.buroCite.productFullVersion}</p>
         </SidebarFooter>
       }
     >
-      <Form onSubmit={handleSubmit}>
-        <IconInput 
-          errorId="errorUsername" 
-          errorMessage="vul een geldige gebruikersnaam in." 
-          name="username" 
-          label="gebruikersnaam" 
-          iconAriaLabel="icoon van een gebruiker"
-          iconClass="fa fa-users fa" 
-          className="icon-input dali-input" 
-          state=""
-          value={username}
-          handleChange={(e) => setUsername(e.target.value)}
-        />
-        <IconInput 
-          errorId="errorPassword" 
-          errorMessage="wachtwoord is verkeerd" 
-          name="password" 
-          label="wachtwoord" 
-          iconAriaLabel="icoon van een slot"
-          iconClass="fa fa-lock fa" 
-          className="icon-input dali-input" 
-          type="password" 
-          state=""
-          value={password}
-          handleChange={(e) => setPassword(e.target.value)}
-        />
-        <button type='submit' disabled={!validateForm()}>Aanmelden</button>
-        <br/>
-        {/* ! these 2 buttons don't do anything yet and are pure astatics */}
-        <button type="button">Wachtwoord vergeten?</button>
-        <button type="button"><i aria-label="icoon van een brief" className="fa fa-envelope fa"></i> Mail naar DALI-Helpdesk</button>
+      <Form 
+        onSubmit={handleSubmit} 
+        formId="loginForm" 
+        formAriaText={text.formAriaText}>
+          <IconInput 
+            errorId="errorUsername" 
+            errorMessage={text.userNameInput.errorMessage}
+            name="username"
+            label={text.userNameInput.label}
+            iconAriaLabel={text.userNameInput.iconAriaText}
+            iconClass={icons.iClass.users} 
+            className="icon-input dali-input" 
+            state=""
+            value={username}
+            handleChange={(e) => setUsername(e.target.value)}
+          />
+          <IconInput 
+            errorId="errorPassword" 
+            errorMessage={text.passwordInput.errorMessage}
+            name="password" 
+            label={text.passwordInput.label}
+            iconAriaLabel={text.passwordInput.iconAriaText}
+            iconClass={icons.iClass.lock}
+            className="icon-input dali-input" 
+            type="password" 
+            state=""
+            value={password}
+            handleChange={(e) => setPassword(e.target.value)}
+          />
+          <button type='submit' disabled={!validateForm()}>
+            {text.submitButtonText}
+          </button>
+          <br/>
+          {/* ! these 2 buttons don't do anything yet and are pure astatics */}
+          <button type="button">{text.forgotPasswordButtonText}</button>
+          <button type="button">{icons.iElement.envelope} {text.mailButtonText}</button>
       </Form>
     </Sidebar>
     </>

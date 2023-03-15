@@ -1,16 +1,16 @@
-.dropdown{
-  position: relative;
-
-  .dropdown-button[aria-expanded="true"]{
-    color: $dali-white;
-    background-color: $dali-red;
-    box-shadow: none;
-    
-    &~ .dropdown-menu, .dropdown-menu:focus-within{
+.dropdown-button[aria-expanded="true"]{
+  
+  &~ [class*=dali-dropdown] {
+    top: 100%;
+    .dropdown-menu, .dropdown-menu:focus-within{
       display: block;
       top: initial;
     }
   }
+}
+
+[class*=dali-dropdown]{
+  position: relative;
 
   .dropdown-menu{
     box-shadow: 0 35px 77px -17px rgb(0 0 0 / 44%);
@@ -18,7 +18,7 @@
     width: 250px;
     border-radius: inherit;
     right: 0;
-  
+
     .dali-dropdown-button{
       display: block;
       padding: .5rem;
@@ -29,12 +29,22 @@
       color: inherit;
       border: 0;
       text-decoration: none;
-      
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  [class*=dali-dropdown][class*=#{$color}]{
+    $text-color: map-get($value, "foreground");
+    $background-color: map-get($value, "background");
+
+    .dali-dropdown-button{
       &:hover, &:focus-visible{
-        background-color: rgba($dali-red, 0.3);
+        background-color: rgba($background-color, 0.3);
       }
       &:active{
-        background-color: rgba($dali-red, 1);
+        background-color: rgba($background-color, 1);
+        color: rgba($text-color, 1);
       }
     }
   }
