@@ -50,11 +50,9 @@
     
     [class*=dali-modal-header]{
       min-height: 2rem;
-      height: 5vh;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      color: inherit;
       border-bottom: 1px solid rgba($dali-black, 0.1);
       box-shadow: 0 10px 8px -2px rgba($dali-black, 0.1);
       
@@ -68,11 +66,9 @@
         aspect-ratio: 1/1;
         font-size: 1.8rem;
         background-color: transparent;
-        color: inherit;
         border: none;
         outline: none;
         &:hover, &:focus-visible{
-          background-color: $dali-red;
           box-shadow: 0 0px 8px 4px rgba($dali-black, 0.2);
         }
       }
@@ -100,15 +96,27 @@
 }
 
 // variants //
+@each $color, $value in $theme-colors {
+  $text-color: map-get($value, "foreground");
+  $background-color: map-get($value, "background");
+
+    [class*=dali-modal-header][class*=-#{$color}],[class*=dali-modal-footer][class*=-#{$color}],
+    .dali-modal-close-button{
+      background-color: $background-color;
+      color: $text-color;
+    }
+}
 
 @each $color, $value in $theme-colors {
   $text-color: map-get($value, "foreground");
   $background-color: map-get($value, "background");
 
   [class*=dali-modal-popup][class*=-#{$color}]{
-    [class*=dali-modal-header],[class*=dali-modal-footer]{
-      background-color: $background-color;
-      color: $text-color;
+    .dali-modal-close-button, .dali-modal-body .dali-modal-accent{
+      &:hover, &:focus-visible{
+        background-color: $background-color;
+        color: $text-color;
+      }
     }
   }
 }

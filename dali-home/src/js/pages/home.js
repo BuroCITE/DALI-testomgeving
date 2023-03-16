@@ -1,16 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Header } from '../components/header';
 import { Dropdown } from '../components/dropdown';
 import { ModalFooter, Popup } from '../components/popup';
 import {Card} from '../components/card'
 import { useAuth } from '../auth/useAuth';
 import PdfViewerComponent from '../externalComponents/pdfViewerComponent';
+import { TaalbestandNL } from '../../library/res';
+import { icons } from '../../library/res';
+const text = TaalbestandNL.home;
 
 
 
 export function Home(props){
   const { logout } = useAuth();
-    const { user } = useAuth();
+  const { user } = useAuth();
+  const [pageAccent, setPageAccent] = useState('purple');
 
     useEffect(() => {
       let userSettingsButton = document.getElementById('userSettingsButton');
@@ -24,164 +28,199 @@ export function Home(props){
       <>
         <div aria-label='content container' className="content-container">
           <Header 
-            title="DALI - toepassingen"
+            headerFeatures={`${pageAccent}`}
+            title={text.heading.title}
             navRight={
               <>
                 <Dropdown 
+                  dropdownFeatures={`${pageAccent}`}
                   buttonClass="header-buttons"
-                  buttonIcon={<i class="fa-solid fa-angle-down"></i>}
+                  buttonIcon={icons.iElement.downArrow}
                 >
-                  <section class="dali-user-profile">
-                    <i class="fa-solid fa-circle-user"></i>
-                    <h3 class="dali-user-name">{user.username}</h3>
-                    <p class="dali-user-role">Uitgever | Applicatiebeheerder</p>
-                    <hr/>
+                  <section 
+                    aria-label="gebruikers informatie"   className="dali-user-profile">
+                      {icons.iElement.roundUser}
+                      <h3 
+                        aria-label="gebruikers naam" 
+                        className="dali-user-name">
+                          {user.username}
+                      </h3>
+                      <p 
+                        aria-label="gebruikers rol" 
+                        className="dali-user-role">
+                          {text.userProfile.userRole.publisher} | 
+                          {text.userProfile.userRole.admin}
+                      </p>
+                      <hr/>
                   </section>
-                  <button id="userSettingsButton"   class="dali-dropdown-button"><i class="fa-solid fa-gear"></ i> gebruikers instellingen</button>
-                  <button onClick={logout} class="dali-dropdown-button"><i class="fa-solid fa-right-from-bracket"></i> log uit</button>
+                  <button 
+                    id="userSettingsButton" 
+                    className="dali-dropdown-button">
+                      {icons.iElement.settings} 
+                      {text.userProfile.userSettings.buttonText}
+                  </button>
+                  <button 
+                    onClick={logout} 
+                    className="dali-dropdown-button">
+                      {icons.iElement.logout}
+                      {text.userProfile.logout.buttonText}
+                  </button>
                 </Dropdown>
   
                 <Popup 
                   showModalButtonClass="header-buttons"
-                  showModalButtonContents="?"
-                  modalFeatures="gray-2-xxl"
-                  modalHeaderFeatures="sm"
-                  modalHeaderTitle="Help"
+                  showModalButtonAriaText={text.ondersteuningPopup.showPopupButtonAriaText}
+                  showModalButtonContents={text.ondersteuningPopup.showPopupButtonText}
+                  modalAriaText = {text.ondersteuningPopup.popupAriaText}
+                  modalFeatures={`${pageAccent}-xxl`}
+                  modalHeaderFeatures="gray-2-sm"
+                  modalHeaderTitle={text.ondersteuningPopup.popupheaderTitle}
                   modalBodyClass="ondersteuning-popup-body"
                   modalFooterContent={
-                  <ModalFooter modalFooterFeatures="xl">
-                    <a>2022 - Buro CITE</a>
-                    <a>Visserlaan 18 2288ER Rijswijk</a>
-                    <a>Nederland</a>
-                    <a target="_blank" href="https://demo.dali-app.nl/#dashboard">www.dali-app.nl</a><a>by Anthony Inocencio Ramos</a>
-                  </ModalFooter>}
-                >
-                  <section className="gebruikshandleidingen">
-                    <h3 className="title">Gebruikershandleiding</h3>
-                    <ul>
-                      <li>Gebruikshandleidingen Handboek 
-                        <nav className="button-box">
-                          <a 
-                            href="%PUBLIC_URL%/huisstijl.docx" download="huisstijl.docx" 
-                            class="fa-solid fa-download"
-                          ></a>
-                          <Popup 
-                            showModalButtonClass=""
-                            showModalButtonContents={<i class="fa-solid fa-eye"></i>}
-                            modalHeaderTitle="welkom"
-                            modalFeatures="turquoise"
-                            modalBodyClass="ondersteuning-popup-body"
-                          >
-                            <PdfViewerComponent 
-                              document="huisstijl.pdf"
-                              pdfViewerClass=""
-                              pdfViewerFeatures=""
-                            />
-                          </Popup>
-                        </nav>
-                      </li>
-                      <li>Gebruikshandleidingen Projecten
-                        <nav className="button-box">
-                          <a 
-                            href="%PUBLIC_URL%/huisstijl.docx" download="huisstijl.docx" 
-                            class="fa-solid fa-download"
-                          ></a>
-                          <Popup 
-                            showModalButtonClass=""
-                            showModalButtonContents={<i class="fa-solid fa-eye"></i>}
-                            modalHeaderTitle="welkom"
-                            modalFeatures="turquoise"
-                            modalBodyClass="ondersteuning-popup-body"
-                          >
-                            <PdfViewerComponent 
-                              document="huisstijl.pdf"
-                              pdfViewerClass=""
-                              pdfViewerFeatures=""
-                            />
-                          </Popup>
-                        </nav>
-                      </li>
-                    </ul>
-                  </section>
-                </Popup>
-                <Popup 
-                  showModalButtonClass="header-buttons"
-                  showModalButtonContents="!"
-                  modalHeaderTitle="welkom"
-                  modalFeatures="turquoise"
-                >
-                  hello world! :)
-                  
+                  <ModalFooter modalFooterFeatures="gray-2-xl">
+                    <a>{TaalbestandNL.buroCite.contactInfo.startYear}</a>
+                    <a>{TaalbestandNL.buroCite.contactInfo.address}</a>
+                    <a>{TaalbestandNL.buroCite.contactInfo.country}</a>
+                    <a 
+                      target="_blank" 
+                      href={TaalbestandNL.buroCite.contactInfo.website.link}>
+                        {TaalbestandNL.buroCite.contactInfo.website.text}
+                    </a>
+                  </ModalFooter>}>
+                    <section className="gebruikshandleidingen">
+                      <h3 
+                        className="title">
+                          {text.ondersteuningPopup.userManuals.title}
+                      </h3>
+                      <ul>
+                        <li>
+                          {text.ondersteuningPopup.userManuals.liorManual.title} 
+                          <nav className="button-box">
+                            <a
+                              href={text.liorManualPopup.downloadLink}
+                              download={text.liorManualPopup.download} 
+                              className={`dali-modal-accent ${icons.iClass.download}`}
+                            ></a>
+                            <Popup 
+                              showModalButtonClass="dali-modal-accent"
+                              showModalButtonContents={icons.iElement.eye}
+                              modalHeaderTitle={text.liorManualPopup.popupheaderTitle}
+                              modalFeatures={`${pageAccent}`}
+                              modalBodyClass="ondersteuning-popup-body">
+                                <PdfViewerComponent 
+                                  document={text.liorManualPopup.pdf}
+                                  pdfViewerClass=""
+                                  pdfViewerFeatures=""
+                                />
+                            </Popup>
+                          </nav>
+                        </li>
+                        <li>
+                          {text.ondersteuningPopup.userManuals.pveManual.title}
+                          <nav className="button-box">
+                            <a 
+                              href={text.pveManualPopup.downloadLink}
+                              download={text.pveManualPopup.download}
+                              className={`dali-modal-accent ${icons.iClass.download}`}
+                            ></a>
+                            <Popup 
+                              showModalButtonClass="dali-modal-accent"
+                              showModalButtonContents={icons.iElement.eye}
+                              modalHeaderTitle={text.pveManualPopup.popupheaderTitle}
+                              modalFeatures={`${pageAccent}`}
+                              modalBodyClass="ondersteuning-popup-body">
+                                <PdfViewerComponent 
+                                  document={text.pveManualPopup.pdf}
+                                  pdfViewerClass=""
+                                  pdfViewerFeatures=""
+                                />
+                            </Popup>
+                          </nav>
+                        </li>
+                      </ul>
+                    </section>
                 </Popup>
               </>
             }
           />
 
           <main id="main">
-            <a className="invisible-link card-link" href="#parag">skip cards</a>
+            <a 
+              className="invisible-link card-link" 
+              href="">
+                {text.main.skipCardLink}
+            </a>
             <Card 
-              icon={<i class="fa-solid fa-book"></i>} 
-              cardName="handboek" 
-              description="Handboek Openbare Ruimte"
-              notice="Volgende publicatie zomer 2023" 
+              icon={icons.iElement.book} 
+              cardName={text.main.cards.lior.title}
+              description={text.main.cards.lior.description}
+              notice={text.main.cards.lior.notice}
               cardFeatures="red" 
-              cardHref="" 
+              cardHref="/#/Handboek"
+              ariaText={text.main.cards.lior.ariaText}
             />
             <Card 
-              icon={<i class="fa-solid fa-location-dot"></i>} 
-              cardName="raadplegen via kaart" 
-              description="Raadplegen van het handboek via kaartweergave"
-              notice="" 
-              cardFeatures="brown" 
+              icon={icons.iElement.location}
+              cardName={text.main.cards.adviceFromMaps.title}
+              description={text.main.cards.adviceFromMaps.description}
+              notice={text.main.cards.adviceFromMaps.notice}
+              cardFeatures="brown-disabled" 
               cardHref="" 
+              ariaText={text.main.cards.adviceFromMaps.ariaText}
             />
             <Card 
-              icon={<i class="fa-solid fa-copy"></i>} 
-              cardName="programma van eisen" 
-              description=""
-              notice="" 
-              cardFeatures="turquoise" 
-              cardHref="" 
+              icon={icons.iElement.copy} 
+              cardName={text.main.cards.pve.title}
+              description={text.main.cards.pve.description}
+              notice={text.main.cards.pve.notice}
+              cardFeatures="turquoise-disabled" 
+              cardHref=""
+              ariaText={text.main.cards.pve.ariaText}
             />
             <Card 
-              icon={<i class="fa-solid fa-paperclip"></i>} 
-              cardName="bijlagen" 
-              description="Raadplegen van bijlagen"
-              notice="" 
-              cardFeatures="purple" 
+              icon={icons.iElement.paperclip}
+              cardName={text.main.cards.Appendix.title}
+              description={text.main.cards.Appendix.description}
+              notice={text.main.cards.Appendix.notice}
+              cardFeatures="purple-disabled" 
               cardHref="" 
+              ariaText={text.main.cards.Appendix.ariaText}
             />
             <Card 
-              icon={<i class="fa-solid fa-link"></i>} 
-              cardName="bronverwijzingen" 
-              description="Raadplegen van bronverwijzingen"
-              notice="" 
+              icon={icons.iElement.link}
+              cardName={text.main.cards.sourceReferences.title}
+              description={text.main.cards.sourceReferences.description}
+              notice={text.main.cards.sourceReferences.notice}
               cardFeatures="green" 
               cardHref="/#/bronverwijzingen" 
+              ariaText={text.main.cards.sourceReferences.ariaText}
             />
             <Card 
-              icon={<i class="fa-solid fa-map"></i>} 
-              cardName="externe kaarten" 
-              description="Raadplegen van online kaarten" 
-              notice="" 
-              cardFeatures="blue" 
+              icon={icons.iElement.map}
+              cardName={text.main.cards.externalMaps.title}
+              description={text.main.cards.externalMaps.description}
+              notice={text.main.cards.externalMaps.notice}
+              cardFeatures="blue-disabled" 
               cardHref="" 
+              ariaText={text.main.cards.externalMaps.ariaText}
             />
             <Card 
-              icon={<i class="fa-solid fa-users"></i>} 
-              cardName="accounts en rechten" 
-              description="Gebruikersadministratie" 
-              notice="" 
-              cardFeatures="purple" 
+              icon={icons.iElement.users}
+              cardName={text.main.cards.accountsAndRights.title}
+              description={text.main.cards.accountsAndRights.description}
+              notice={text.main.cards.accountsAndRights.notice}
+              cardFeatures="purple-disabled" 
               cardHref="" 
+              ariaText={text.main.cards.accountsAndRights.ariaText}
               />
             <Card 
-              icon={<i class="fa-solid fa-circle-question"></i>} 
-              cardName="ondersteuning" 
-              description="Stel vragen of geef wensen door aan de helpdesk van DALI" 
-              notice="" 
-              cardFeatures="green" 
+              icon={icons.iElement.roundQuestion} 
+              cardName={text.main.cards.support.title}
+              description={text.main.cards.support.description}
+              notice={text.main.cards.support.notice}
+              cardFeatures="green-disabled" 
               cardHref="" 
+              ariaText={text.main.cards.support.ariaText}
             />
           </main>
         </div>

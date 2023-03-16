@@ -8,7 +8,7 @@ export class Form extends React.Component {
   
   render() {
     return (
-      <form id="loginForm" onSubmit={this.props.onSubmit}>
+      <form aria-label={this.props.formAriaText} id={this.props.formId} onSubmit={this.props.onSubmit}>
         {this.props.children}
       </form>
     );

@@ -37,7 +37,7 @@ export class Accordion extends React.Component{
   render(){
     return (
       <> 
-        <details className={`dali-accordion${this.props.accordionFeatures}`} ref={this.ref_details} data-has-badge={this.props.useBadge}>
+        <details className={`dali-accordion${this.props.accordionFeatures}`} ref={this.ref_details} data-has-badge={this.props.useBadge} open>
           <summary >
             <h3>{this.props.title}</h3>
             <mark className="dali-badge" ref={this.ref_badge} data-usebadge={this.props.useBadge}></mark>
@@ -98,4 +98,16 @@ export function AccordionButtonBox(props){
       {props.children}
     </section>
   );
+}
+
+export function AccordionLoader(){
+  
+  return (
+    <section aria-label="loading" className="accordion-loader">
+      <span aria-hidden={true}>loading</span>
+      <span aria-hidden={true}/>
+      <span aria-hidden={true}/>
+      <span aria-hidden={true}/>
+    </section>
+  )
 }

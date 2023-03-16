@@ -99,9 +99,16 @@
   }
 
   .article-button{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     width: 2rem;
     aspect-ratio: 1/1;
     margin: .2rem;
+    border: 2px solid $dali-gray-1;
+    color: $dali-black;
+    text-decoration: none;
+    cursor: pointer;
   }
 }
 
@@ -121,6 +128,16 @@
         border: 2px solid $background-color;
         background-color: $text-color;
         color: $background-color; 
+      }
+    }
+
+    .accordion-loader {
+      span{
+        background-color: $background-color;
+        &:first-child{
+          // background-color: transparent;
+          color: $background-color;
+        }
       }
     }
 
@@ -159,7 +176,47 @@
     }
   }
 }
+// loader
+[class*=dali-accordion]{
+  .accordion-loader{
+    span:first-child{
+      font-weight: 700;
+      background-color: transparent;
+      font-size: 1.5rem;
+      margin-right: .5rem;
+    }
 
+    span:not(:first-child){
+      display: inline-block;
+      position: relative;
+      bottom: 0px;
+      width: .7rem;
+      height: .7rem;
+      margin: 2rem .25rem 0 .25rem;
+      border-radius: 50%;
+      animation: bounce .5s infinite ease-in-out alternate;
+    }
+
+    span:nth-child(3){
+      animation-delay: .15s;
+    }
+    span:nth-child(4){
+      animation-delay: .3s;
+    }
+  }
+}
+
+@keyframes bounce {
+  0%{
+    bottom: 0rem;
+  }
+  90%{
+    bottom: 1rem;
+  }  
+  100%{ 
+    bottom: 1rem;
+  }
+}
 
 @media only screen and (max-width: 1024px) {
 
