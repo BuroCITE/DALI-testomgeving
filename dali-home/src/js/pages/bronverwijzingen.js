@@ -70,7 +70,7 @@ export function Bronverwijzingen() {
             </section>
 
             <Accordion 
-              title="0.1 hello worlds"
+              title="alle bronnen"
               useBadge={true}
               accordionFeatures={`${pageAccent}`}
               accordionWrapperId="accordionWrapper"

@@ -26,7 +26,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2rem;
+      font-size: 1.5rem;
       height: 100%;
       aspect-ratio: 1/1;  
       padding: 0;
@@ -97,5 +97,13 @@
     h1{
       transform: translate(0rem);
     }
+  }
+}
+
+@media only screen and (min-height: 632px) {
+  [class*=dali-header] nav{
+    .header-buttons{
+      font-size: 2rem;
+    }  
   }
 }

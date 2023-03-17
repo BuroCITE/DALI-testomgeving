@@ -37,7 +37,7 @@ export class Accordion extends React.Component{
   render(){
     return (
       <> 
-        <details className={`dali-accordion${this.props.accordionFeatures}`} ref={this.ref_details} data-has-badge={this.props.useBadge} open>
+        <details className={`dali-accordion${this.props.accordionFeatures}`} ref={this.ref_details} data-has-badge={this.props.useBadge}>
           <summary >
             <h3>{this.props.title}</h3>
             <mark className="dali-badge" ref={this.ref_badge} data-usebadge={this.props.useBadge}></mark>
@@ -61,9 +61,9 @@ Accordion.defaultProps = {
 export function AccordionBody(props){
   
   return (
-    <section className="accordion-body">
+    <ul className="accordion-body">
       {props.children}
-    </section>
+    </ul>
   )
 }
 
@@ -76,13 +76,13 @@ export function AccordionBody(props){
 export function AccordionItem(props){
 
   return (
-    <article className="accordion-item">
+    <li className="accordion-item">
       <h4 className="article-text">
         {props.title}
       </h4>
 
       {props.children}
-    </article>
+    </li>
   );
 }
 
