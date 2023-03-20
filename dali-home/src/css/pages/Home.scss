@@ -34,30 +34,6 @@
       padding: 20px 10px;
       overflow: auto;
   }
-  
-  .invisible-link{
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    background-color: transparent;
-    height: min-content;
-    color: $dali-white;
-    font-weight: 400;
-    padding: 5px;
-    z-index: 1000;
-  }
-
-  .invisible-link:focus{
-    translate: 0;
-  }
-
-  .header-link{
-    translate: 0 -150%;
-  }
-
-  .card-link{
-    translate: -150% 0;
-  }
 }
 
 .ondersteuning-popup-body{
@@ -116,6 +92,32 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 320px) {
+  .content-container{
+    .dali-user-profile{
+      text-align: start;
+      justify-content: start;
+      font-size: 5rem;
+      
+      i{
+        display: inline-flex;
+        justify-content: start;
+        color: $dali-purple;
+        margin: .5rem 0;
+      }
+      
+      .dali-user-name{
+        font-size: 1rem;
+      }
+      .dali-user-role{
+        font-size: .8rem;
+        text-transform: capitalize;
+        font-style: italic;
       }
     }
   }

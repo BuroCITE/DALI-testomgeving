@@ -23,10 +23,10 @@ export function Dropdown(props) {
   return (
     // we use ref here bacause if we use id this component wouldn't be reusable in the same webpage because of 2 or more simular id's. but with ref we wont have this because it connects the event to the current ref holder and not all ref holders.
     <>
-      <button ref={ref_dib} aria-expanded={expanded} class={`dropdown-button ${props.buttonClass}`}>{props.buttonIcon}</button>
+      <button ref={ref_dib} aria-expanded={expanded} className={`dropdown-button ${props.buttonClass}`}>{props.buttonIcon}</button>
       <section className={`dali-dropdown-${props.dropdownFeatures}`} aria-label="dropdown">
 
-        <article aria-label="dropdown body" class="dropdown-menu">
+        <article aria-label="dropdown body" className="dropdown-menu">
           {/* when placing more then 1 element it is recommended to wrap it in a section first. */}
           {props.children}
         </article>
