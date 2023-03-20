@@ -7,6 +7,7 @@ import { useAuth } from '../auth/useAuth';
 import PdfViewerComponent from '../externalComponents/pdfViewerComponent';
 import { TaalbestandNL } from '../../library/res';
 import { icons } from '../../library/res';
+import { InvisibleLink } from '../components/invisibleLink';
 const text = TaalbestandNL.home;
 
 
@@ -26,13 +27,13 @@ export function Home(props){
 
     return (
       <>
-        <div aria-label='content container' className="content-container">
+        <div id="home-content-container" aria-label='content container' className="content-container">
           <Header 
             headerFeatures={`${pageAccent}`}
             title={text.heading.title}
             navRight={
               <>
-                <Dropdown 
+                <Dropdown
                   dropdownFeatures={`${pageAccent}`}
                   buttonClass="header-buttons"
                   buttonIcon={icons.iElement.downArrow}
@@ -145,11 +146,7 @@ export function Home(props){
           />
 
           <main id="main">
-            <a 
-              className="invisible-link card-link" 
-              href="">
-                {text.main.skipCardLink}
-            </a>
+            <InvisibleLink targetId="home-content-container" linkText={text.main.skipCardLink}/>
             <Card 
               icon={icons.iElement.book} 
               cardName={text.main.cards.lior.title}
