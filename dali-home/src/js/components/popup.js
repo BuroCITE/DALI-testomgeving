@@ -51,10 +51,10 @@ export class Popup extends React.Component {
 
         <section aria-label={this.props.modalAriaText} className={`dali-modal-popup-${this.props.modalFeatures}`}>
           <div class="dali-modal-content">
-            <header aria-label="popup header" class={`dali-modal-header-${this.props.modalHeaderFeatures}`}>
+            <section aria-label="popup header" class={`dali-modal-header-${this.props.modalHeaderFeatures}`}>
               <h2 aria-label="title">{this.props.modalHeaderTitle}</h2>
               <button ref={this.ref_cmb} class="dali-modal-close-button" aria-label="Close popup"><i aria-hidden="true" class="fa-sharp fa-solid fa-xmark"></i></button>
-            </header>
+            </section>
 
             <section aria-label="popup main content" class={`dali-modal-body ${this.props.modalBodyClass}`}>
               {this.props.children}
@@ -80,9 +80,9 @@ Popup.defaultProps = {
  */
 export function ModalFooter(props) {
   return (
-    <footer aria-label="popup footer" class={`dali-modal-footer-${props.modalFooterFeatures}`}>
+    <div aria-label="popup footer" class={`dali-modal-footer-${props.modalFooterFeatures}`}>
       {props.children}
-    </footer>
+    </div>
   );
 }
 ModalFooter.defaultProps = {

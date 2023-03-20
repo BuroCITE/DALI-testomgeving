@@ -124,10 +124,11 @@
       background-color: $background-color;
       color: $text-color;
 
-      &:focus-visible{
+      &:focus-visible,
+      [class*=dali-accordion]:focus-visible{
         outline: none;
         border: 2px solid $background-color;
-        background-color: $text-color;
+        background-color: $text-color !important;
         color: $background-color; 
       }
     }
@@ -136,7 +137,6 @@
       span{
         background-color: $background-color;
         &:first-child{
-          // background-color: transparent;
           color: $background-color;
         }
       }
