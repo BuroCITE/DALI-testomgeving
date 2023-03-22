@@ -6,9 +6,9 @@ export class AllBijlage extends React.Component {
     super(props);
   }
 
-  render() {
-    return (
-      this.props.data.map((item, key) => (
+  elementToRender(item){
+    if(item.isAanwezig){
+      return(
         <AccordionItem key={item.id} title={item.omschrijving}>
           <AccordionButtonBox>
             <a href={item.webUrl} target="_blank" className="article-button">
@@ -16,6 +16,26 @@ export class AllBijlage extends React.Component {
             </a>
           </AccordionButtonBox>
         </AccordionItem>
+      )
+    }
+    else{
+      return(
+        <AccordionItem key={item.id} title={item.omschrijving}>
+          <AccordionButtonBox>
+            <a target="_blank" className="article-button-disabled">
+              <i class="fa-solid fa-eye"></i>
+            </a>
+          </AccordionButtonBox>
+        </AccordionItem>
+      ); 
+  }
+    
+  }
+
+  render() {
+    return (
+      this.props.data.map((item, key) => (
+        this.elementToRender(item)
       ))
     )
   }

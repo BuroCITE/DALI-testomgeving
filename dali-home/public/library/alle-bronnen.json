@@ -39,13 +39,13 @@
     "id": 505,
     "omschrijving": "BRL 6000",
     "webUrl": "https://www.sikb.nl/richtlijnen/brl-6000",
-    "isAanwezig": true
+    "isAanwezig": false
   },
   {
     "id": 506,
     "omschrijving": "BRL 7000",
     "webUrl": "https://www.sikb.nl/bodembeheer/richtlijnen/brl-7000",
-    "isAanwezig": true
+    "isAanwezig": false
   },
   {
     "id": 520,
@@ -57,7 +57,7 @@
     "id": 518,
     "omschrijving": "Convenant klimaatadaptief bouwen - PvE",
     "webUrl": "https://bouwadaptief.nl/minimale-eisen/",
-    "isAanwezig": true
+    "isAanwezig": false
   },
   {
     "id": 511,
@@ -123,13 +123,13 @@
     "id": 502,
     "omschrijving": "NVN5720:2017",
     "webUrl": "https://www.nen.nl/NEN-Shop/Norm/NEN-57202017-nl.htm",
-    "isAanwezig": true
+    "isAanwezig": false
   },
   {
     "id": 515,
     "omschrijving": "Omgevingsbeleid Provincie Zuid-Holland",
     "webUrl": "https://omgevingsbeleidpzh.mendixcloud.com/p/",
-    "isAanwezig": true
+    "isAanwezig": false
   },
   {
     "id": 508,
