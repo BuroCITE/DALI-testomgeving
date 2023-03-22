@@ -2,19 +2,25 @@
   box-shadow: rgb(0 0 0 / 50%) 1px 0px 5px;
   min-height: 2rem;
   height: 6.65vh;
+  width: 100%;
   border-radius: 0;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  transition: all .5s ease;
   
-  
-  nav{
+  > nav{
+    position: absolute;
     height: 100%;
     display: flex;
     
     a{
       text-decoration: none;
+    }
+
+    &:first-child {
+      left: 0;
     }
 
     &.nav-right{

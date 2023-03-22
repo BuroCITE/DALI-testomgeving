@@ -39,7 +39,8 @@
     }
   }
 }
-.header{
+
+[class*=dali-header]{
   width: 100%;
   transition: all .5s ease;
 }
@@ -47,7 +48,7 @@
 @media only screen and (min-width: 1024px) {
   [class*=dali-sidebar]:not(.closed){
     &:not([class*=right]) ~ .resultaten-contentbox,
-    &:not([class*=right]) ~ .header{
+    &:not([class*=right]) ~ [class*=dali-header]{
       margin-left: 30%;
       width: 70%;
     }

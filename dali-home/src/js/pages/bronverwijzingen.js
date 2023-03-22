@@ -5,6 +5,9 @@ import { Sidebar } from "../components/sidebar";
 import { icons } from '../../library/res';
 import { AllBijlage, GetData, GetOrientation } from "../components/AllBijlage";
 import { LoadingScreen } from "../components/loadingScreen";
+import { TaalbestandNL } from '../../library/res';
+import { HeaderUserNav } from "../components/prefilled/headerUserNav";
+const text = TaalbestandNL.home;
 
 
 export function Bronverwijzingen() {
@@ -47,11 +50,7 @@ export function Bronverwijzingen() {
     <>
       <div className="bronverwijzingen-contentbox" aria-label="de bronverwijzingen webpagina">
         <Sidebar sidebarFeatures="gray-1-closeable" sidebarIsVisible={false}/>
-        <Header 
-          headerFeatures={`${pageAccent}`}
-          title="Bronverwijzing" 
-          navLeft={<a href="/#/" class="fa-solid fa-house-chimney header-buttons"></a>}
-        />
+        <HeaderUserNav title="Bronverwijzing" navLeft={<a href="/#/" class="fa-solid fa-house-chimney header-buttons"></a>} pageAccent={pageAccent} text={text} taalBestand={TaalbestandNL} icons={icons}/>
         <main className="resultaten-contentbox sidebar-adjecent">
           <WrappedAccordion sort={sortBtn}>
             <Accordion 

@@ -1,0 +1,21 @@
+.dali-user-profile{
+  text-align: center;
+  justify-content: center;
+  font-size: 5rem;
+  
+  i{
+    display: flex;
+    justify-content: center;
+    color: #bd3c5b;
+    margin: .5rem 0;
+  }
+  
+  .dali-user-name{
+    font-size: 1rem;
+  }
+  .dali-user-role{
+    font-size: .8rem;
+    text-transform: capitalize;
+    font-style: italic;
+  }
+}

@@ -1,7 +1,12 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
+import { HeaderUserNav } from "../components/prefilled/headerUserNav";
 
 export function Handboek() {
+  const [pageAccent, setPageAccent] = useState('red');
+
+
   return(
-    <h1>hello word, it's handboek</h1>
+    <HeaderUserNav title="handboek" navLeft={<a href="/#/" class="fa-solid fa-house-chimney header-buttons"></a>} pageAccent={pageAccent}/>
+
   );
 }

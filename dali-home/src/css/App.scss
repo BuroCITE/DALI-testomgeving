@@ -39,6 +39,10 @@ body{
 @import '../css/components/loadingScreen.scss';
 @import '../css/components/invisibleLink.scss';
 
+// all styles here are specified styles for prefilled components.
+@import '../css/components/prefilled/dropdownUserInfo.scss';
+@import '../css/components/prefilled/popupOndersteuning.scss';
+
 @import '../css/externalComponents/pdfCiewerComponent.scss';
 
 // all styles here are specified styles for whole pages (cannot be re-used)
