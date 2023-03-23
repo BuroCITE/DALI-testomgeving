@@ -7,6 +7,7 @@ import { AllBijlage, GetData, GetOrientation } from "../components/AllBijlage";
 import { LoadingScreen } from "../components/loadingScreen";
 import { TaalbestandNL } from '../../library/res';
 import { HeaderUserNav } from "../components/prefilled/headerUserNav";
+import { PopupGoHome } from "../components/prefilled/popupGoHome";
 const text = TaalbestandNL.home;
 
 
@@ -50,7 +51,7 @@ export function Bronverwijzingen() {
     <>
       <div className="bronverwijzingen-contentbox" aria-label="de bronverwijzingen webpagina">
         <Sidebar sidebarFeatures="gray-1-closeable" sidebarIsVisible={false}/>
-        <HeaderUserNav title="Bronverwijzing" navLeft={<a href="/#/" class="fa-solid fa-house-chimney header-buttons"></a>} pageAccent={pageAccent} text={text} taalBestand={TaalbestandNL} icons={icons}/>
+        <HeaderUserNav title="Bronverwijzing" navLeft={<PopupGoHome pageAccent={pageAccent}/>} pageAccent={pageAccent} text={text} taalBestand={TaalbestandNL} icons={icons}/>
         <main className="resultaten-contentbox sidebar-adjecent">
           <WrappedAccordion sort={sortBtn}>
             <Accordion 

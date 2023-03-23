@@ -23,17 +23,21 @@
   margin-top: -250px;
   transform-origin: 50% 48%;
   border-radius: 43%;
-  animation: drift 7000ms infinite linear;
+  animation: drift 7000ms infinite linear -4s;
+  animation-play-state: paused;
 }
 
 .wave.-three {
-  animation: drift 7500ms infinite linear;
+  animation: drift 7500ms infinite linear -3s;
+  animation-play-state: paused;
+
 	position: fixed;
 	background-color: #77daff;
 }
 
 .wave.-two {
-  animation: drift 3000ms infinite linear;
+  animation: drift 3000ms infinite linear -1.5s;
+  animation-play-state: paused;
   opacity: .1;
   background: black;
 	position: fixed;

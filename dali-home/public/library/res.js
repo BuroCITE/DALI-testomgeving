@@ -139,6 +139,7 @@ export const TaalbestandNL = {
 
 export const icons = {
   iClass: {
+    home: "fa-solid fa-house-chimney",
     downArrow: "fa-solid fa-angle-down",
     doubleDownArrow: "fa-solid fa-angles-down",
     sort: "fa-solid fa-bars-sort",
@@ -159,6 +160,7 @@ export const icons = {
     envelope: "fa fa-envelope fa",
   },
   iElement: {
+    home: <i class="fa-solid fa-house-chimney"></i>,
     downArrow: <i class="fa-solid fa-angle-down"></i>,
     doubleDownArrow: <i class="fa-solid fa-angles-down"></i>,
     downArrowShortWide: <i class="fa-solid fa-arrow-down-short-wide"></i>,
