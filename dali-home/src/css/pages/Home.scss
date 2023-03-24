@@ -13,29 +13,3 @@
       overflow: auto;
   }
 }
-
-@media only screen and (max-height: 320px) {
-  .content-container{
-    .dali-user-profile{
-      text-align: start;
-      justify-content: start;
-      font-size: 5rem;
-      
-      i{
-        display: inline-flex;
-        justify-content: start;
-        color: $dali-purple;
-        margin: .5rem 0;
-      }
-      
-      .dali-user-name{
-        font-size: 1rem;
-      }
-      .dali-user-role{
-        font-size: .8rem;
-        text-transform: capitalize;
-        font-style: italic;
-      }
-    }
-  }
-}

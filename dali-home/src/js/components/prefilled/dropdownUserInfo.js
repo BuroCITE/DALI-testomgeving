@@ -25,8 +25,8 @@ export function DropdownUserInfo(props){
           {props.text.userProfile.userRole.publisher} | 
           {props.text.userProfile.userRole.admin}
         </p>
-        <hr/>
       </section>
+      <hr/>
       
       <button 
         id="userSettingsButton" 

@@ -58,9 +58,9 @@ export class Popup extends React.Component {
 
             <section aria-label="popup main content" class={`dali-modal-body ${this.props.modalBodyClass}`}>
               {this.props.children}
+              {this.props.modalFooterContent}
             </section>
 
-            {this.props.modalFooterContent}
           </div>
         </section>
       </>

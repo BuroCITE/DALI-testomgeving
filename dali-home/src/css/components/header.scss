@@ -11,7 +11,6 @@
   transition: all .5s ease;
   
   > nav{
-    position: absolute;
     height: 100%;
     display: flex;
     
@@ -78,9 +77,6 @@
 }
 
 [class*=dali-sidebar]:not([class*=right]) + [class*=dali-header]{
-  h1{
-    transform: translate(3rem);
-  }
 
   &>*:first-child{
     margin-left: 3rem;
