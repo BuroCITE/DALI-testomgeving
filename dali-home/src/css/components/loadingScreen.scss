@@ -7,7 +7,7 @@
   >section{
     display: inline-flex;
     justify-content: center;
-    transform: translate(0, -3rem);
+    transform: translate(0, -0);
     height: 20%;
     width: 50%;
     align-items: center;
@@ -48,7 +48,7 @@
 // loading variations
 [class*=dali-loadingScreen]{
   &[class*=fading-dots] .loader-box{
-    width: 15%;
+    width: 5rem;
     aspect-ratio: 1/1;
     display: inline-flex;
     align-items: center;
@@ -58,7 +58,7 @@
     [class*=loader]{
       display: inline-block;
       width: 30%;
-      height: 30%;
+      aspect-ratio: 1/1;
       border-radius: 50%;
       transform: scale(0);
       animation: scale-up-down var(--fading-load-time) infinite 
