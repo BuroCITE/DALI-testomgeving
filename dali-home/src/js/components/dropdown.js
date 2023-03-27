@@ -2,8 +2,10 @@ import React, { useEffect, useState, useRef } from 'react';
 /**
  * @param {string} dropdownFeatures expects a class attribute for the variants of the dropdown. can choose from: all colors in theme-colors (this can be found in the variables.scss) this will default to red.
  * @param {string} buttonClass a class that you can assign to the dropdown button. expects a string
+ * @param {string} dropdownClass a class that you can assign to the dropdown body. expects a string
  * @param {element} buttonIcon the icon you want to use in the dropdown button. expects an element.
  * @param {*} children all elements placed in between 2 dropdown tags will be send as children of this element and are placed inside the dropdown.
+ * @static has the added possibility to use the class "dali-dropdown-button" to make buttons have a nice style.
  * @returns a fully functional dropdown.
  */
 export function Dropdown(props) {
@@ -26,7 +28,7 @@ export function Dropdown(props) {
       <button ref={ref_dib} aria-expanded={expanded} className={`dropdown-button ${props.buttonClass}`}>{props.buttonIcon}</button>
       <section className={`dali-dropdown-${props.dropdownFeatures}`} aria-label="dropdown">
 
-        <article aria-label="dropdown body" className="dropdown-menu">
+        <article aria-label="dropdown body" className={`dropdown-menu ${props.dropdownClass}`}>
           {/* when placing more then 1 element it is recommended to wrap it in a section first. */}
           {props.children}
         </article>

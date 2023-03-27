@@ -24,7 +24,7 @@ useEffect(() => {
 }, []);
 
 return (
-	<section className={`PDF-viewer dali-pdf-viewer-headerless${props.pdfViewerFeatures}`}>
+	<section className={`PDF-viewer dali-pdf-viewer-headerless-${props.pdfViewerFeatures}`}>
 		<article className={props.pdfViewerClass} ref={containerRef}/>
 	</section>
 

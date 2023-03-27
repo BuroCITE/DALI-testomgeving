@@ -1,9 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { WrappedAccordion, Accordion, AccordionBody, AccordionItem, AccordionButtonBox } from "../components/accordion";
-import { Header } from "../components/header";
 import { Sidebar } from "../components/sidebar";
 import { icons } from '../../library/res';
-import { AllBijlage, GetData, GetOrientation } from "../components/AllBijlage";
+import { AllBijlage, DataPerChapter, GetData, GetOrientation, getOrientatedData } from "../components/AllBijlage";
 import { LoadingScreen } from "../components/loadingScreen";
 import { TaalbestandNL } from '../../library/res';
 import { HeaderUserNav } from "../components/prefilled/headerUserNav";
@@ -13,34 +12,75 @@ const text = TaalbestandNL.home;
 
 export function Bronverwijzingen() {
   const sortBtn = useRef(null);
-  const [orientation, setOrientation] = useState('desc');
+  const sortAscBtn = useRef(null);
+  const sortChapter = useRef(null)
+  const [orientation, setOrientation] = useState('perChapter');
   const [pageAccent, setPageAccent] = useState('green');
 
   var { data } = GetData('library/alle-bronnen.json');
+  var allBronnen = data;
+  var { data } = GetData('library/bronnen-per-chapter.json');
+  var bronnenPerChapter = data;
   
-  const changeOrientation = (newOrientation) => {
-    setOrientation(newOrientation)
+
+  const dataOrientation = () => {
+    if(orientation == "perChapter"){
+      return (
+        <DataPerChapter
+        accordionFeatures={`${pageAccent}`}
+        data={bronnenPerChapter} />
+      )
+    }
+
+    else if(orientation == "desc"){
+      const { data } = getOrientatedData(allBronnen, orientation);
+      return (
+        <AllBijlage pageAccent={pageAccent} data={data} />
+      );
+    }
+
+    else if(orientation == "asc"){
+      const { data } = getOrientatedData(allBronnen, orientation);
+      return (
+        <AllBijlage pageAccent={pageAccent} data={data} />
+      );
+    }
   }
   
   useEffect(() => {
-    const sortButton = sortBtn.current; 
+    const sortDescButton = sortBtn.current; 
+    const sortAscButton = sortAscBtn.current;
+    const sortPerChapter = sortChapter.current; 
     
-    if(!data) return
+    if(!bronnenPerChapter || !allBronnen) return
 
-    GetOrientation(data, orientation, changeOrientation);
-
-    const getNewData = () => {
-      changeOrientation(orientation === 'desc' ? 'asc' : 'desc')
+    const setOrientationPerChapter = () => {
+      setOrientation('perChapter');
     }
 
-    sortButton.addEventListener('click', getNewData);
-    
+    const setOrientationDesc = () => {
+      setOrientation('desc');
+    }
+
+    const setOrientationAsc = () => {
+      setOrientation('asc');
+    }
+
+    sortDescButton.addEventListener('click', setOrientationDesc);
+    sortAscButton.addEventListener('click', setOrientationAsc);
+    sortPerChapter.addEventListener('click', setOrientationPerChapter); 
+
     return () => {
-      sortButton.removeEventListener('click', getNewData);
-    }
-  },[orientation, data]); 
-  
-  if(!data) {
+      sortDescButton.removeEventListener('click', setOrientationDesc);
+      sortAscButton.removeEventListener('click', setOrientationAsc);
+      sortPerChapter.removeEventListener('click', setOrientationPerChapter); 
+    } 
+
+  },[orientation, allBronnen, bronnenPerChapter]); 
+
+
+
+  if(!bronnenPerChapter || !allBronnen) {
     return(
       <LoadingScreen loadingScreenFeatures={`${pageAccent}flipping-down-right-square`}
       title="loading..."/>
@@ -53,16 +93,9 @@ export function Bronverwijzingen() {
         <Sidebar sidebarFeatures="gray-1-closeable" sidebarIsVisible={false}/>
         <HeaderUserNav title="Bronverwijzing" navLeft={<PopupGoHome pageAccent={pageAccent}/>} pageAccent={pageAccent} text={text} taalBestand={TaalbestandNL} icons={icons}/>
         <main className="resultaten-contentbox sidebar-adjecent">
-          <WrappedAccordion sort={sortBtn}>
-            <Accordion 
-              title="alle bronnen"
-              useBadge={true}
-              accordionFeatures={`${pageAccent}`}
-              accordionWrapperId="accordionWrapper"
-              unfoldButtonId="unfoldButton">
-                <AllBijlage data={data} />
-            </Accordion>
 
+          <WrappedAccordion sortPerChapter={sortChapter} sortAsc={sortAscBtn} sort={sortBtn}>
+            {dataOrientation()}
             <Accordion 
                 title="galaxy" 
                 useBadge={true}

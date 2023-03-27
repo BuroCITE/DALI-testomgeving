@@ -9,7 +9,7 @@ export class AllBijlage extends React.Component {
   elementToRender(item){
     if(item.isAanwezig){
       return(
-        <AccordionItem key={item.id} title={item.omschrijving}>
+        <AccordionItem key={item.id} title={item.omschrijving} accordionItemFeatures={this.props.pageAccent}>
           <AccordionButtonBox>
             <a href={item.webUrl} target="_blank" className="article-button">
               <i class="fa-solid fa-eye"></i>
@@ -41,6 +41,30 @@ export class AllBijlage extends React.Component {
   }
 }
 
+export class DataPerChapter extends React.Component {
+  constructor(props){
+    super(props);
+  }
+
+  elementToRender(item){
+    if(item.items.length > 0){
+      return(
+        <Accordion useBadge={true} title={item.groepsNaam} accordionFeatures={this.props.accordionFeatures}>
+          <AllBijlage data={item.items}/>
+        </Accordion>
+      )
+    }
+  }
+
+  render() {
+    return (
+      this.props.data.map((item, key) => (
+        this.elementToRender(item)
+      ))
+    );
+  }
+}
+
 // good for getting data from one url
 export function GetData(url) {
   const [state, setState] = useState();
@@ -61,6 +85,22 @@ export function GetData(url) {
   }, [url]);
 
   return {data: state};
+}
+
+export function getOrientatedData(data, orientation){
+  const order = {
+    desc: (a, b) => (a.omschrijving > b.omschrijving ? -1 : 1),
+    asc: (a, b) => (a.omschrijving > b.omschrijving ? 1 : -1)
+  }
+  
+  const sortData = (receivedData, orientation) => {
+    receivedData.sort(order[orientation]);
+    return receivedData;
+  }
+
+  var newData = sortData(data, orientation);
+
+return {data: newData};
 }
 
 export function GetOrientation(data, orientation, changeOrientation = null){

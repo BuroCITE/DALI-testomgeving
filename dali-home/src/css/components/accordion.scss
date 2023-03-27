@@ -59,6 +59,13 @@
   }
 }
 
+[class*=dali-accordionWrapper] [class*=wrapper-buttonbox]{
+
+  [class*=accordion-dropdown-sort]{
+    left: 0;
+  }
+}
+
 .dali-badge{
   min-width: 1.6rem;
   height: 1.6rem;
@@ -82,7 +89,7 @@
   background-color: $dali-white;
 }
 
-.accordion-item{
+[class*=accordion-item]{
   background-color: $dali-white;
   padding: .5rem;
   min-height: 3.5rem;
@@ -135,9 +142,10 @@
 
 //varianten
 @each $color, $value in $theme-colors {
+  $text-color: map-get($value, "foreground");
+  $background-color: map-get($value, "background");
+
   [class*=dali-accordion][class*=#{$color}]{
-    $text-color: map-get($value, "foreground");
-    $background-color: map-get($value, "background");
 
     summary{
       background-color: $background-color;
@@ -167,10 +175,14 @@
       }
     }
 
+    
+  }
+
+  [class*=accordion-item][class*=#{$color}]{
     .article-button:focus-visible,
     .article-button:hover{
       background-color: $background-color;
-      color: $text-color;
+      color: $text-color; 
     }
   }
 }
@@ -239,7 +251,7 @@
 }
 
 @media only screen and (min-width: 512px) {
-  .accordion-item{
+  [class*=accordion-item]{
     .article-text{
       max-width: 30ch;
     }
@@ -247,7 +259,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .accordion-item{
+  [class*=accordion-item]{
     .article-text{
       max-width: 52ch;
     }
@@ -255,7 +267,7 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .accordion-item{
+  [class*=accordion-item]{
     .article-text{
       max-width: 74ch;
     }

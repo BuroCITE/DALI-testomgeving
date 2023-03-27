@@ -142,6 +142,9 @@ export const icons = {
     home: "fa-solid fa-house-chimney",
     downArrow: "fa-solid fa-angle-down",
     doubleDownArrow: "fa-solid fa-angles-down",
+    downArrowShortWide: "fa-solid fa-arrow-down-short-wide",
+    downArrowWideShort: "fa-solid fa-arrow-down-wide-short",
+    list: "fa-solid fa-list",
     sort: "fa-solid fa-bars-sort",
     settings: "fa-solid fa-gear",
     logout: "fa-solid fa-right-drom-bracket",
@@ -164,6 +167,8 @@ export const icons = {
     downArrow: <i class="fa-solid fa-angle-down"></i>,
     doubleDownArrow: <i class="fa-solid fa-angles-down"></i>,
     downArrowShortWide: <i class="fa-solid fa-arrow-down-short-wide"></i>,
+    downArrowWideShort: <i class="fa-solid fa-arrow-down-wide-short"></i>,
+    list: <i class="fa-solid fa-list"></i>,
     settings: <i aria-hidden="true" class="fa-solid fa-gear"></i>,
     logout: <i aria-hidden="true" class="fa-solid fa-right-from-bracket"></i>,
     roundUser:<i aria-label="gebruikers icoon" class="fa-solid fa-circle-user">
