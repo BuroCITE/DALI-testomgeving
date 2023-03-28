@@ -60,9 +60,27 @@
 }
 
 [class*=dali-accordionWrapper] [class*=wrapper-buttonbox]{
+  display: grid;
+  justify-content: start;
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  column-gap: 0.5rem;
 
   [class*=accordion-dropdown-sort]{
     left: 0;
+  }
+
+  .dropdown-button{
+    z-index: 10;
+
+    &, ~[class*=dali-dropdown]{
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+  }
+
+  button{
+    grid-column: 2/3;
+    grid-row: 1/2;
   }
 }
 

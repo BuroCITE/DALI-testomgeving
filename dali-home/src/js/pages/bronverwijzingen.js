@@ -82,7 +82,7 @@ export function Bronverwijzingen() {
 
   if(!bronnenPerChapter || !allBronnen) {
     return(
-      <LoadingScreen loadingScreenFeatures={`${pageAccent}flipping-down-right-square`}
+      <LoadingScreen loadingScreenFeatures={`${pageAccent}-flipping-down-right-square`}
       title="loading..."/>
     );
   }
@@ -94,7 +94,7 @@ export function Bronverwijzingen() {
         <HeaderUserNav title="Bronverwijzing" navLeft={<PopupGoHome pageAccent={pageAccent}/>} pageAccent={pageAccent} text={text} taalBestand={TaalbestandNL} icons={icons}/>
         <main className="resultaten-contentbox sidebar-adjecent">
 
-          <WrappedAccordion sortPerChapter={sortChapter} sortAsc={sortAscBtn} sort={sortBtn}>
+          <WrappedAccordion pageAccent={`${pageAccent}`} sortPerChapter={sortChapter} sortAsc={sortAscBtn} sort={sortBtn}>
             {dataOrientation()}
             <Accordion 
                 title="galaxy" 

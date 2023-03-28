@@ -51,7 +51,7 @@ export function WrappedAccordion(props){
   const ref_sortPerChapter = props.sortPerChapter;
   const ref_unfoldButton = useRef();
   const [state, setState] = useState('per Hoofdstuk');
-  
+
   useEffect( () => {
     const accordionWrapper = ref_wrapper.current;
     const sortChapterButton = ref_sortPerChapter.current;
@@ -97,7 +97,7 @@ export function WrappedAccordion(props){
   return(
     <section className="dali-accordionWrapper" ref={ref_wrapper}>
       <section className="bronverwijzingen-buttonbox wrapper-buttonbox">
-        <Dropdown dropdownClass="accordion-dropdown-sort" dropdownFeatures={props.PageAccent} buttonIcon={state}>
+        <Dropdown dropdownClass="accordion-dropdown-sort" dropdownFeatures={props.pageAccent} buttonIcon={state}>
           <button className="dali-dropdown-button" ref={ref_sortPerChapter}>
             {icons.iElement.list} Per Hoofdstuk
           </button>
