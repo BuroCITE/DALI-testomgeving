@@ -65,8 +65,8 @@ export function Home(props){
               cardName={text.main.cards.Appendix.title}
               description={text.main.cards.Appendix.description}
               notice={text.main.cards.Appendix.notice}
-              cardFeatures="purple-disabled" 
-              cardHref="" 
+              cardFeatures="purple" 
+              cardHref="/#/Bijlagen" 
               ariaText={text.main.cards.Appendix.ariaText}
             />
             <Card 

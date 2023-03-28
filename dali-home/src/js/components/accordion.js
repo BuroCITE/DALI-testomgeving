@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { icons } from '../../library/res';
+import { AllBijlage, DataPerChapter, getOrientatedData } from "./AllBijlage";
 import { Dropdown } from "./dropdown";
 /**
  * @param {string} accordionWrapperId provide a current ref from the accordion wrapper where all the accordions are children from. by providing values for this and unfoldButtonRef will result in the creation of an unfold button. if one of the two is missing or incorrect the button will not be made.
@@ -46,11 +47,36 @@ Accordion.defaultProps = {
 
 export function WrappedAccordion(props){
   const ref_wrapper = useRef();
-  const ref_sortButton = props.sort;
-  const ref_sortAscButton = props.sortAsc;
-  const ref_sortPerChapter = props.sortPerChapter;
+  const ref_sortButton = useRef(null);
+  const ref_sortAscButton = useRef(null);
+  const ref_sortPerChapter = useRef(null);
   const ref_unfoldButton = useRef();
+  const [orientation, setOrientation] = useState('perChapter');
   const [state, setState] = useState('per Hoofdstuk');
+
+  const dataOrientation = () => {
+    if(orientation == "perChapter"){
+      return (
+        <DataPerChapter
+        accordionFeatures={`${props.pageAccent}`}
+        data={props.chapterData} />
+      )
+    }
+
+    else if(orientation == "desc"){
+      const { data } = getOrientatedData(props.allData, orientation);
+      return (
+        <AllBijlage pageAccent={props.pageAccent} data={data} />
+      );
+    }
+
+    else if(orientation == "asc"){
+      const { data } = getOrientatedData(props.allData, orientation);
+      return (
+        <AllBijlage pageAccent={props.pageAccent} data={data} />
+      );
+    }
+  }
 
   useEffect( () => {
     const accordionWrapper = ref_wrapper.current;
@@ -59,21 +85,24 @@ export function WrappedAccordion(props){
     const sortAscButton = ref_sortAscButton.current;
     const unfoldButton = ref_unfoldButton.current;
 
-    const setDropdownNameChapter = () => {
+    const setOrientationPerChapter = () => {
+      setOrientation('perChapter');
       setState('per Hoofdstuk');
     }
-    
-    const setDropdownNameAsc = () => {
-      setState('Oplopend (a-z)');
-    }
-    
-    const setDropdownNameDesc = () => {
+
+    const setOrientationDesc = () => {
+      setOrientation('desc');
       setState('Aflopend (z-a)');
     }
 
-    sortChapterButton.addEventListener('click', setDropdownNameChapter);
-    sortDescButton.addEventListener('click', setDropdownNameDesc);
-    sortAscButton.addEventListener('click', setDropdownNameAsc);
+    const setOrientationAsc = () => {
+      setOrientation('asc');
+      setState('Oplopend (a-z)');
+    }
+
+    sortDescButton.addEventListener('click', setOrientationDesc);
+    sortAscButton.addEventListener('click', setOrientationAsc);
+    sortChapterButton.addEventListener('click', setOrientationPerChapter); 
 
     if(accordionWrapper != undefined 
     && unfoldButton != undefined){
@@ -84,18 +113,18 @@ export function WrappedAccordion(props){
           oneDetail.toggleAttribute('open');
         });
       });
-
-      return () => {
-        sortChapterButton.removeEventListener('click', setDropdownNameChapter);
-        sortDescButton.removeEventListener('click', setDropdownNameDesc);
-        sortAscButton.removeEventListener('click', setDropdownNameAsc);
-      }
     }
-  }, [])
+
+    return () => {
+      sortDescButton.removeEventListener('click', setOrientationDesc);
+      sortAscButton.removeEventListener('click', setOrientationAsc);
+      sortChapterButton.removeEventListener('click', setOrientationPerChapter); 
+    }
+  }, [orientation]);
 
 
   return(
-    <section className="dali-accordionWrapper" ref={ref_wrapper}>
+    <section className={`dali-accordionWrapper-${props.pageAccent}`} ref={ref_wrapper}>
       <section className="bronverwijzingen-buttonbox wrapper-buttonbox">
         <Dropdown dropdownClass="accordion-dropdown-sort" dropdownFeatures={props.pageAccent} buttonIcon={state}>
           <button className="dali-dropdown-button" ref={ref_sortPerChapter}>
@@ -113,7 +142,7 @@ export function WrappedAccordion(props){
           {icons.iElement.doubleDownArrow} uitklappen
         </button>
       </section>
-
+      {dataOrientation()}
       {props.children}
 
     </section>

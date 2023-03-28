@@ -1,5 +1,4 @@
-// if display flex is removed, header height won't be counted as taken. this will result in the loss of some content.
-.bronverwijzingen-contentbox{
+.bijlagen-contentbox{
   height: 100vh;
   display: flex;
   flex-direction: column;

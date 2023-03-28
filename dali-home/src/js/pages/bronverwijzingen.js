@@ -11,10 +11,6 @@ const text = TaalbestandNL.home;
 
 
 export function Bronverwijzingen() {
-  const sortBtn = useRef(null);
-  const sortAscBtn = useRef(null);
-  const sortChapter = useRef(null)
-  const [orientation, setOrientation] = useState('perChapter');
   const [pageAccent, setPageAccent] = useState('green');
 
   var { data } = GetData('library/alle-bronnen.json');
@@ -22,64 +18,6 @@ export function Bronverwijzingen() {
   var { data } = GetData('library/bronnen-per-chapter.json');
   var bronnenPerChapter = data;
   
-
-  const dataOrientation = () => {
-    if(orientation == "perChapter"){
-      return (
-        <DataPerChapter
-        accordionFeatures={`${pageAccent}`}
-        data={bronnenPerChapter} />
-      )
-    }
-
-    else if(orientation == "desc"){
-      const { data } = getOrientatedData(allBronnen, orientation);
-      return (
-        <AllBijlage pageAccent={pageAccent} data={data} />
-      );
-    }
-
-    else if(orientation == "asc"){
-      const { data } = getOrientatedData(allBronnen, orientation);
-      return (
-        <AllBijlage pageAccent={pageAccent} data={data} />
-      );
-    }
-  }
-  
-  useEffect(() => {
-    const sortDescButton = sortBtn.current; 
-    const sortAscButton = sortAscBtn.current;
-    const sortPerChapter = sortChapter.current; 
-    
-    if(!bronnenPerChapter || !allBronnen) return
-
-    const setOrientationPerChapter = () => {
-      setOrientation('perChapter');
-    }
-
-    const setOrientationDesc = () => {
-      setOrientation('desc');
-    }
-
-    const setOrientationAsc = () => {
-      setOrientation('asc');
-    }
-
-    sortDescButton.addEventListener('click', setOrientationDesc);
-    sortAscButton.addEventListener('click', setOrientationAsc);
-    sortPerChapter.addEventListener('click', setOrientationPerChapter); 
-
-    return () => {
-      sortDescButton.removeEventListener('click', setOrientationDesc);
-      sortAscButton.removeEventListener('click', setOrientationAsc);
-      sortPerChapter.removeEventListener('click', setOrientationPerChapter); 
-    } 
-
-  },[orientation, allBronnen, bronnenPerChapter]); 
-
-
-
   if(!bronnenPerChapter || !allBronnen) {
     return(
       <LoadingScreen loadingScreenFeatures={`${pageAccent}-flipping-down-right-square`}
@@ -94,8 +32,7 @@ export function Bronverwijzingen() {
         <HeaderUserNav title="Bronverwijzing" navLeft={<PopupGoHome pageAccent={pageAccent}/>} pageAccent={pageAccent} text={text} taalBestand={TaalbestandNL} icons={icons}/>
         <main className="resultaten-contentbox sidebar-adjecent">
 
-          <WrappedAccordion pageAccent={`${pageAccent}`} sortPerChapter={sortChapter} sortAsc={sortAscBtn} sort={sortBtn}>
-            {dataOrientation()}
+          <WrappedAccordion chapterData={bronnenPerChapter} allData={allBronnen} pageAccent={`${pageAccent}`}>
             <Accordion 
                 title="galaxy" 
                 useBadge={true}

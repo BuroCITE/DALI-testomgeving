@@ -9,35 +9,30 @@
     "groepsNaam": "02. Klimaatadaptatie",
     "items": [
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 516,
         "omschrijving": "Beleidsnota beperken en voorkomen wateroverlast (HHS Delfland).",
         "webUrl": "https://www.hhdelfland.nl/over-ons/beleid/beleid/",
         "isAanwezig": true
       },
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 520,
         "omschrijving": "Convenant klimaatadaptief bouwen - Maatregelen",
         "webUrl": "https://bouwadaptief.nl/maatregelen/",
         "isAanwezig": true
       },
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 519,
         "omschrijving": "Deltawet waterveiligheid en zoetwatervoorziening",
         "webUrl": "https://wetten.overheid.nl/BWBR0030836/2012-01-01",
         "isAanwezig": true
       },
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 521,
         "omschrijving": "Kaderrichtlijn Water",
         "webUrl": "https://www.helpdeskwater.nl/onderwerpen/wetgeving-beleid/kaderrichtlijn-water/",
         "isAanwezig": true
       },
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 522,
         "omschrijving": "Netwerkkaart van natte ecologische zones",
         "webUrl": "https://hhdelfland.maps.arcgis.com/apps/MapSeries/index.html?appid=f1f9f3f370ee45b0a8ed9252f16fb0b1",
@@ -50,49 +45,42 @@
     "groepsNaam": "03. Grondwerk",
     "items": [
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 503,
         "omschrijving": "Besluit bodemkwaliteit",
         "webUrl": "http://wetten.overheid.nl/BWBR0022929/2016-05-24",
         "isAanwezig": true
       },
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 505,
         "omschrijving": "BRL 6000",
         "webUrl": "https://www.sikb.nl/richtlijnen/brl-6000",
         "isAanwezig": true
       },
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 506,
         "omschrijving": "BRL 7000",
         "webUrl": "https://www.sikb.nl/bodembeheer/richtlijnen/brl-7000",
         "isAanwezig": true
       },
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 507,
         "omschrijving": "Maatschappelijk verantwoord inkopen - criteria tool",
         "webUrl": "https://www.mvicriteria.nl/nl/webtool?cluster=3#///3//nl",
         "isAanwezig": true
       },
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 504,
         "omschrijving": "Meldpunt bodemkwaliteit",
         "webUrl": "https://www.meldpuntbodemkwaliteit.nl/Voorportaal.aspx",
         "isAanwezig": true
       },
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 501,
         "omschrijving": "NEN",
         "webUrl": "https://www.nen.nl",
         "isAanwezig": true
       },
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 502,
         "omschrijving": "NVN5720:2017",
         "webUrl": "https://www.nen.nl/NEN-Shop/Norm/NEN-57202017-nl.htm",
@@ -105,21 +93,18 @@
     "groepsNaam": "04. Riolering",
     "items": [
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 507,
         "omschrijving": "Maatschappelijk verantwoord inkopen - criteria tool",
         "webUrl": "https://www.mvicriteria.nl/nl/webtool?cluster=3#///3//nl",
         "isAanwezig": true
       },
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 501,
         "omschrijving": "NEN",
         "webUrl": "https://www.nen.nl",
         "isAanwezig": true
       },
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 508,
         "omschrijving": "Verordening Afvalwaterverwerking gemeente Westland",
         "webUrl": "https://zoek.officielebekendmakingen.nl/gmb-2014-61694.html",
@@ -132,14 +117,12 @@
     "groepsNaam": "05. Nutsvoorzieningen",
     "items": [
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 509,
         "omschrijving": "AVKL gemeenten Westland en Midden-Delfland",
         "webUrl": "https://www.gemeentewestland.nl/wonen-bouwen-en-verbouwen/bouwen-en-verbouwen/kabels-en-leidingen-aanbrengen-in-openbare-grond.html",
         "isAanwezig": true
       },
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 501,
         "omschrijving": "NEN",
         "webUrl": "https://www.nen.nl",
@@ -152,7 +135,6 @@
     "groepsNaam": "06. Openbare verlichting",
     "items": [
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 507,
         "omschrijving": "Maatschappelijk verantwoord inkopen - criteria tool",
         "webUrl": "https://www.mvicriteria.nl/nl/webtool?cluster=3#///3//nl",
@@ -165,14 +147,12 @@
     "groepsNaam": "07. Verkeerstechniek",
     "items": [
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 512,
         "omschrijving": "ASVV",
         "webUrl": "https://www.crow.nl/publicaties",
         "isAanwezig": true
       },
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 511,
         "omschrijving": "CROW",
         "webUrl": "https://www.crow.nl/publicaties",
@@ -185,14 +165,12 @@
     "groepsNaam": "08. Verhardingen",
     "items": [
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 511,
         "omschrijving": "CROW",
         "webUrl": "https://www.crow.nl/publicaties",
         "isAanwezig": true
       },
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 501,
         "omschrijving": "NEN",
         "webUrl": "https://www.nen.nl",
@@ -205,49 +183,42 @@
     "groepsNaam": "09. Waterhuishouding",
     "items": [
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 512,
         "omschrijving": "ASVV",
         "webUrl": "https://www.crow.nl/publicaties",
         "isAanwezig": true
       },
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 524,
         "omschrijving": "Berekenen met de watersleutel",
         "webUrl": "https://www.hhdelfland.nl/regelen/watertoets-ruimtelijke-plannen/berekenen-watersleutel/",
         "isAanwezig": true
       },
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 525,
         "omschrijving": "Een netwerk van waternatuur",
         "webUrl": "https://www.hhdelfland.nl/ontdek-werk/schoon-gezond-water/water-natuur/netwerk-waternatuur/",
         "isAanwezig": true
       },
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 507,
         "omschrijving": "Maatschappelijk verantwoord inkopen - criteria tool",
         "webUrl": "https://www.mvicriteria.nl/nl/webtool?cluster=3#///3//nl",
         "isAanwezig": true
       },
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 501,
         "omschrijving": "NEN",
         "webUrl": "https://www.nen.nl",
         "isAanwezig": true
       },
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 522,
         "omschrijving": "Netwerkkaart van natte ecologische zones",
         "webUrl": "https://hhdelfland.maps.arcgis.com/apps/MapSeries/index.html?appid=f1f9f3f370ee45b0a8ed9252f16fb0b1",
         "isAanwezig": true
       },
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 523,
         "omschrijving": "Watertoets ruimtelijke plannen",
         "webUrl": "https://www.hhdelfland.nl/regelen/watertoets-ruimtelijke-plannen/",
@@ -260,14 +231,12 @@
     "groepsNaam": "10. Groentechniek",
     "items": [
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 513,
         "omschrijving": "NAK",
         "webUrl": "https://www.nak.nl/",
         "isAanwezig": true
       },
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 501,
         "omschrijving": "NEN",
         "webUrl": "https://www.nen.nl",
@@ -280,14 +249,12 @@
     "groepsNaam": "11. Speelvoorzieningen",
     "items": [
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 507,
         "omschrijving": "Maatschappelijk verantwoord inkopen - criteria tool",
         "webUrl": "https://www.mvicriteria.nl/nl/webtool?cluster=3#///3//nl",
         "isAanwezig": true
       },
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 501,
         "omschrijving": "NEN",
         "webUrl": "https://www.nen.nl",
@@ -300,7 +267,6 @@
     "groepsNaam": "12. Straatmeubilair",
     "items": [
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 501,
         "omschrijving": "NEN",
         "webUrl": "https://www.nen.nl",
@@ -318,7 +284,6 @@
     "groepsNaam": "14. Huishoudelijk afval",
     "items": [
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 514,
         "omschrijving": "Afvalstoffen verordening",
         "webUrl": "http://decentrale.regelgeving.overheid.nl/cvdr/XHTMLoutput/Historie/Westland/127702/127702_1.html",
@@ -336,7 +301,6 @@
     "groepsNaam": "16. Werken in de openbare ruimte",
     "items": [
       {
-        "$type": "DALI.MediaContent.BusinessObjectEntities.BronverwijzingBusinessObjectEntity, DALI.MediaContent.BusinessObjectEntities",
         "id": 511,
         "omschrijving": "CROW",
         "webUrl": "https://www.crow.nl/publicaties",
