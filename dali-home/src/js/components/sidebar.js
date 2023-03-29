@@ -57,6 +57,9 @@ export class Sidebar extends React.Component {
     );
   }
 }
+Sidebar.defaultProps = {
+  sidebarFeatures: "",
+}
 
 export function SidebarHeader(props) {
   return (

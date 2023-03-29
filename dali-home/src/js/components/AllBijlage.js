@@ -6,14 +6,38 @@ export class AllBijlage extends React.Component {
     super(props);
   }
 
+  buttonsToRender(item){
+    if(item.webUrl != undefined){
+      return(
+      <a href={item.webUrl} target="_blank" className="article-button">
+        <i class="fa-solid fa-eye"></i>
+      </a>
+      );
+    }
+    else if(item.bestandsnaam  != undefined){
+      console.log('works');
+      return(
+      <a href={item.bestandsnaam} target="_blank" className="article-button">
+        <i class="fa-solid fa-download"></i>
+      </a>
+      );
+    }
+    else{
+      console.log('hello');
+      return(
+      <a target="_blank" className="article-button-disabled">
+        <i class="fa-solid fa-eye"></i>
+      </a>
+      );
+    }
+  }
+
   elementToRender(item){
     if(item.isAanwezig){
       return(
         <AccordionItem key={item.id} title={item.omschrijving} accordionItemFeatures={this.props.pageAccent}>
           <AccordionButtonBox>
-            <a href={item.webUrl} target="_blank" className="article-button">
-              <i class="fa-solid fa-eye"></i>
-            </a>
+            {this.buttonsToRender(item)}
           </AccordionButtonBox>
         </AccordionItem>
       )

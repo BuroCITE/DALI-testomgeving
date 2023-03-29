@@ -30,3 +30,6 @@ return (
 
 );
 }
+PdfViewerComponent.defaultProps = {
+	pdfViewerFeatures: "",
+}

@@ -58,7 +58,7 @@ export function WrappedAccordion(props){
     if(orientation == "perChapter"){
       return (
         <DataPerChapter
-        accordionFeatures={`${props.pageAccent}`}
+        accordionFeatures={`opage-${props.pageAccent}`}
         data={props.chapterData} />
       )
     }
@@ -100,26 +100,24 @@ export function WrappedAccordion(props){
       setState('Oplopend (a-z)');
     }
 
+    const toggleAllAccordions = () => {
+      const allDetails = accordionWrapper.querySelectorAll('[class*=dali-accordion]');
+      allDetails.forEach(oneDetail => {
+        oneDetail.toggleAttribute('open');
+      });
+    } 
+
     sortDescButton.addEventListener('click', setOrientationDesc);
     sortAscButton.addEventListener('click', setOrientationAsc);
     sortChapterButton.addEventListener('click', setOrientationPerChapter); 
-
-    if(accordionWrapper != undefined 
-    && unfoldButton != undefined){
-
-      unfoldButton.addEventListener('click', () => {
-        const allDetails = accordionWrapper.querySelectorAll('[class*=dali-accordion]');
-        allDetails.forEach(oneDetail => {
-          oneDetail.toggleAttribute('open');
-        });
-      });
-    }
+    unfoldButton.addEventListener('click', toggleAllAccordions);
 
     return () => {
       sortDescButton.removeEventListener('click', setOrientationDesc);
       sortAscButton.removeEventListener('click', setOrientationAsc);
       sortChapterButton.removeEventListener('click', setOrientationPerChapter); 
-    }
+      unfoldButton.removeEventListener('click', toggleAllAccordions);
+    } 
   }, [orientation]);
 
 

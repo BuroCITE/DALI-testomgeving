@@ -1,8 +1,10 @@
 [class*=dali-accordion]{
   width: 100%;
-  margin-bottom: .1rem;
+  margin-bottom: .125rem;
+
   &[open]{
     > summary{
+      border-radius: 10px 10px 0 0;
       > i{
         transform: rotatex(180deg);
       }
@@ -44,6 +46,7 @@
     justify-content: space-between;
     height: 2.25rem;
     padding: .5rem;
+    border-radius: 10px;
 
     h3{
       margin: 0;
@@ -64,7 +67,7 @@
   justify-content: start;
   grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
   column-gap: 0.5rem;
-  margin: .5rem;
+  margin: 0 0.5rem 1rem .5rem;
   margin-left: 0;
   
   >button{
@@ -188,7 +191,7 @@
       [class*=dali-accordion]:focus-visible{
         outline: none;
         border: 2px solid $background-color;
-        background-color: $text-color !important;
+        background-color: $text-color;
         color: $background-color; 
       }
     }
@@ -208,7 +211,28 @@
       }
     }
 
-    
+    &[class*=opage] >summary{
+      background-color: rgba($background-color, .3);
+      color: $dali-black;
+
+      &:hover,
+      &:active,
+      &:focus-visible{
+        background-color: $background-color;
+        color: $text-color;
+      }
+    }
+
+    &[class*=opage][open] >summary{
+      background-color: $background-color;
+        color: $text-color;
+    }
+
+    .article-button:focus-visible,
+    .article-button:hover{
+      background-color: $background-color;
+      color: $text-color; 
+    }
   }
 
   [class*=accordion-item][class*=#{$color}]{
