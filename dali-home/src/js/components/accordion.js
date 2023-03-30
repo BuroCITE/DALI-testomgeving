@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { icons } from '../../library/res';
-import { AllBijlage, DataPerChapter, getOrientatedData } from "./AllBijlage";
+import { DataPerItem, DataPerChapter } from "./AccordionFunctions";
+import {getOrientatedData} from "../functions/dataFunctions"
 import { Dropdown } from "./dropdown";
 /**
  * @param {string} accordionWrapperId provide a current ref from the accordion wrapper where all the accordions are children from. by providing values for this and unfoldButtonRef will result in the creation of an unfold button. if one of the two is missing or incorrect the button will not be made.
@@ -66,14 +67,14 @@ export function WrappedAccordion(props){
     else if(orientation == "desc"){
       const { data } = getOrientatedData(props.allData, orientation);
       return (
-        <AllBijlage pageAccent={props.pageAccent} data={data} />
+        <DataPerItem pageAccent={props.pageAccent} data={data} />
       );
     }
 
     else if(orientation == "asc"){
       const { data } = getOrientatedData(props.allData, orientation);
       return (
-        <AllBijlage pageAccent={props.pageAccent} data={data} />
+        <DataPerItem pageAccent={props.pageAccent} data={data} />
       );
     }
   }
@@ -164,7 +165,7 @@ export function AccordionBody(props){
 
 /**
  * 
- * @param {string} accordionItemFeatures 
+ * @param {string} accordionItemFeatures for when the accordionItem is used without a parent accordion. when giving a color from theme-colors in variables.scss the buttons in this element will have that color as focus, hover and active state's.
  * @param {*} title the small heading of the item. will be loaded as h4.
  * @param {*} children all elements placed in between 2 of the components tags will be send as children of this element and are placed inside at the designated place. expects AccordionButtonBox or 1 element. multiple loose elements could be desplayed wrongly.
  * @returns an article with a h4 title. designated use is inside a AccordionBody or directly inside the Accordion.

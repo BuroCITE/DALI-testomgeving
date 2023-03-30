@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
-import { WrappedAccordion, Accordion, AccordionBody, AccordionItem, AccordionButtonBox } from "../components/accordion";
+import React, { useState } from "react";
+import { WrappedAccordion } from "../components/accordion";
 import { Sidebar } from "../components/sidebar";
 import { icons } from '../../library/res';
-import { AllBijlage, DataPerChapter, GetData, GetOrientation, getOrientatedData } from "../components/AllBijlage";
+import { GetData } from "../functions/dataFunctions"
 import { LoadingScreen } from "../components/loadingScreen";
 import { TaalbestandNL } from '../../library/res';
 import { HeaderUserNav } from "../components/prefilled/headerUserNav";
