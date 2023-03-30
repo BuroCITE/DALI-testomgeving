@@ -4,7 +4,7 @@
 
   &[open]{
     > summary{
-      border-radius: 10px 10px 0 0;
+      border-radius: 5px 5px 0 0;
       > i{
         transform: rotatex(180deg);
       }
@@ -13,6 +13,7 @@
     [class*=dali-accordion]{
       margin-bottom: 0;
       Summary{
+        border-radius: 0;
         background-color: $dali-gray-1;
         > .dali-badge{
           background-color: $dali-white;
@@ -46,7 +47,7 @@
     justify-content: space-between;
     height: 2.25rem;
     padding: .5rem;
-    border-radius: 10px;
+    border-radius: 5px;
 
     h3{
       margin: 0;

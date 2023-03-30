@@ -17,7 +17,7 @@ export class AllBijlage extends React.Component {
     else if(item.bestandsnaam  != undefined){
       console.log('works');
       return(
-      <a href={item.bestandsnaam} target="_blank" className="article-button">
+      <a href={`library/pdf/bijlagen/${item.bestandsnaam}`} download className="article-button">
         <i class="fa-solid fa-download"></i>
       </a>
       );
