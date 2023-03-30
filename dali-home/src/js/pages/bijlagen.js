@@ -33,9 +33,9 @@ export function Bijlagen() {
       <HeaderUserNav title="bijlagen" navLeft={<PopupGoHome pageAccent={pageAccent}/>} pageAccent={pageAccent} text={text} taalBestand={TaalbestandNL} icons={icons}/>
       <main className="resultaten-contentbox sidebar-adjecent">
 
-        <WrappedAccordion chapterData={bijlagePerChapter} allData={allBijlagen} pageAccent={`${pageAccent}`}>
-        </WrappedAccordion>
+        <WrappedAccordion chapterData={bijlagePerChapter} allData={allBijlagen} pageAccent={`${pageAccent}`}/>
       </main>
+      {/* <Sidebar sidebarFeatures="gray-1-closeable-right" sidebarIsVisible={true} /> */}
     </div>
   );
 }

@@ -15,6 +15,19 @@
     :focus-visible {
       mix-blend-mode: normal;
     }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba($dali-gray-3, .3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $dali-purple;
+      border-radius: 20px;
+    }
   }
 }
 
