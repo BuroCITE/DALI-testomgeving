@@ -54,13 +54,13 @@
         "id": 505,
         "omschrijving": "BRL 6000",
         "webUrl": "https://www.sikb.nl/richtlijnen/brl-6000",
-        "isAanwezig": true
+        "isAanwezig": false
       },
       {
         "id": 506,
         "omschrijving": "BRL 7000",
         "webUrl": "https://www.sikb.nl/bodembeheer/richtlijnen/brl-7000",
-        "isAanwezig": true
+        "isAanwezig": false
       },
       {
         "id": 507,
@@ -78,7 +78,7 @@
         "id": 501,
         "omschrijving": "NEN",
         "webUrl": "https://www.nen.nl",
-        "isAanwezig": true
+        "isAanwezig": false
       },
       {
         "id": 502,
