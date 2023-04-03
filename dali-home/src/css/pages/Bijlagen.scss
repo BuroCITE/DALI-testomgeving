@@ -1,0 +1,42 @@
+.bijlagen-contentbox{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+  .resultaten-contentbox{
+    min-width: 300px;
+    width:100%;
+    height: 100%;
+    padding: 2vh 4%;
+    padding-bottom: 2rem;
+    overflow-y: auto;
+    transition: all .5s ease;
+  
+    :focus-visible {
+      mix-blend-mode: normal;
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba($dali-gray-3, .3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $dali-purple;
+      border-radius: 20px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  [class*=dali-sidebar]:not(.closed){
+    &:not([class*=right]) ~ .resultaten-contentbox,
+    &:not([class*=right]) ~ [class*=dali-header]{
+      margin-left: 30%;
+      width: 70%;
+    }
+  }
+}

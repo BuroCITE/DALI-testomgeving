@@ -7,6 +7,8 @@ import { useAuth } from '../auth/useAuth';
 import PdfViewerComponent from '../externalComponents/pdfViewerComponent';
 import { TaalbestandNL } from '../../library/res';
 import { icons } from '../../library/res';
+import { InvisibleLink } from '../components/invisibleLink';
+import { HeaderUserNav } from '../components/prefilled/headerUserNav';
 const text = TaalbestandNL.home;
 
 
@@ -26,130 +28,11 @@ export function Home(props){
 
     return (
       <>
-        <div aria-label='content container' className="content-container">
-          <Header 
-            headerFeatures={`${pageAccent}`}
-            title={text.heading.title}
-            navRight={
-              <>
-                <Dropdown 
-                  dropdownFeatures={`${pageAccent}`}
-                  buttonClass="header-buttons"
-                  buttonIcon={icons.iElement.downArrow}
-                >
-                  <section 
-                    aria-label="gebruikers informatie"   className="dali-user-profile">
-                      {icons.iElement.roundUser}
-                      <h3 
-                        aria-label="gebruikers naam" 
-                        className="dali-user-name">
-                          {user.username}
-                      </h3>
-                      <p 
-                        aria-label="gebruikers rol" 
-                        className="dali-user-role">
-                          {text.userProfile.userRole.publisher} | 
-                          {text.userProfile.userRole.admin}
-                      </p>
-                      <hr/>
-                  </section>
-                  <button 
-                    id="userSettingsButton" 
-                    className="dali-dropdown-button">
-                      {icons.iElement.settings} 
-                      {text.userProfile.userSettings.buttonText}
-                  </button>
-                  <button 
-                    onClick={logout} 
-                    className="dali-dropdown-button">
-                      {icons.iElement.logout}
-                      {text.userProfile.logout.buttonText}
-                  </button>
-                </Dropdown>
-  
-                <Popup 
-                  showModalButtonClass="header-buttons"
-                  showModalButtonAriaText={text.ondersteuningPopup.showPopupButtonAriaText}
-                  showModalButtonContents={text.ondersteuningPopup.showPopupButtonText}
-                  modalAriaText = {text.ondersteuningPopup.popupAriaText}
-                  modalFeatures={`${pageAccent}-xxl`}
-                  modalHeaderFeatures="gray-2-sm"
-                  modalHeaderTitle={text.ondersteuningPopup.popupheaderTitle}
-                  modalBodyClass="ondersteuning-popup-body"
-                  modalFooterContent={
-                  <ModalFooter modalFooterFeatures="gray-2-xl">
-                    <a>{TaalbestandNL.buroCite.contactInfo.startYear}</a>
-                    <a>{TaalbestandNL.buroCite.contactInfo.address}</a>
-                    <a>{TaalbestandNL.buroCite.contactInfo.country}</a>
-                    <a 
-                      target="_blank" 
-                      href={TaalbestandNL.buroCite.contactInfo.website.link}>
-                        {TaalbestandNL.buroCite.contactInfo.website.text}
-                    </a>
-                  </ModalFooter>}>
-                    <section className="gebruikshandleidingen">
-                      <h3 
-                        className="title">
-                          {text.ondersteuningPopup.userManuals.title}
-                      </h3>
-                      <ul>
-                        <li>
-                          {text.ondersteuningPopup.userManuals.liorManual.title} 
-                          <nav className="button-box">
-                            <a
-                              href={text.liorManualPopup.downloadLink}
-                              download={text.liorManualPopup.download} 
-                              className={`dali-modal-accent ${icons.iClass.download}`}
-                            ></a>
-                            <Popup 
-                              showModalButtonClass="dali-modal-accent"
-                              showModalButtonContents={icons.iElement.eye}
-                              modalHeaderTitle={text.liorManualPopup.popupheaderTitle}
-                              modalFeatures={`${pageAccent}`}
-                              modalBodyClass="ondersteuning-popup-body">
-                                <PdfViewerComponent 
-                                  document={text.liorManualPopup.pdf}
-                                  pdfViewerClass=""
-                                  pdfViewerFeatures=""
-                                />
-                            </Popup>
-                          </nav>
-                        </li>
-                        <li>
-                          {text.ondersteuningPopup.userManuals.pveManual.title}
-                          <nav className="button-box">
-                            <a 
-                              href={text.pveManualPopup.downloadLink}
-                              download={text.pveManualPopup.download}
-                              className={`dali-modal-accent ${icons.iClass.download}`}
-                            ></a>
-                            <Popup 
-                              showModalButtonClass="dali-modal-accent"
-                              showModalButtonContents={icons.iElement.eye}
-                              modalHeaderTitle={text.pveManualPopup.popupheaderTitle}
-                              modalFeatures={`${pageAccent}`}
-                              modalBodyClass="ondersteuning-popup-body">
-                                <PdfViewerComponent 
-                                  document={text.pveManualPopup.pdf}
-                                  pdfViewerClass=""
-                                  pdfViewerFeatures=""
-                                />
-                            </Popup>
-                          </nav>
-                        </li>
-                      </ul>
-                    </section>
-                </Popup>
-              </>
-            }
-          />
+        <div id="home-content-container" aria-label='content container' className="content-container">
+          <HeaderUserNav title={text.heading.title} pageAccent={pageAccent} text={text} taalBestand={TaalbestandNL} icons={icons}/>
 
           <main id="main">
-            <a 
-              className="invisible-link card-link" 
-              href="">
-                {text.main.skipCardLink}
-            </a>
+            <InvisibleLink targetId="home-content-container" linkText={text.main.skipCardLink}/>
             <Card 
               icon={icons.iElement.book} 
               cardName={text.main.cards.lior.title}
@@ -182,8 +65,8 @@ export function Home(props){
               cardName={text.main.cards.Appendix.title}
               description={text.main.cards.Appendix.description}
               notice={text.main.cards.Appendix.notice}
-              cardFeatures="purple-disabled" 
-              cardHref="" 
+              cardFeatures="purple" 
+              cardHref="/#/Bijlagen" 
               ariaText={text.main.cards.Appendix.ariaText}
             />
             <Card 

@@ -14,8 +14,8 @@
     position: absolute;
     top: 0;
     right: 0rem;
-    width: 3rem;
-    height: 3rem;
+    width: 6.75vh;
+    height: 6.75vh;
     border: none;
     background-color: transparent;
     z-index: 10;
@@ -81,8 +81,22 @@
   min-width:0%;
 
   .sidebar-toggle{
-    right: -3rem;
+    right: -6.65vh;
     color: $dali-black;
+  }
+}
+
+@media only screen and (min-width: 518px) {
+  [class*=dali-sidebar-] .sidebar-toggle{
+    height: 7.65vh;
+    width: 7.65vh;
+  }
+
+  [class*=dali-sidebar][class*=closeable].closed{
+    .sidebar-toggle{
+      right: -7.65vh;
+      color: $dali-black;
+    }
   }
 }
 
@@ -92,7 +106,7 @@
     width:30%;
 
     &[class*=closeable] .sidebar-toggle{
-      right: -3rem;
+      right: 0;
       color: $dali-black;
     }
   }

@@ -1,10 +1,12 @@
-.dropdown-button[aria-expanded="true"]{
-  
-  &~ [class*=dali-dropdown] {
-    top: 100%;
-    .dropdown-menu, .dropdown-menu:focus-within{
-      display: block;
-      top: initial;
+.dropdown-button{
+  &[aria-expanded="true"]{
+    
+    &~ [class*=dali-dropdown] {
+      top: 100%;
+      .dropdown-menu, .dropdown-menu:focus-within{
+        display: block;
+        top: initial;
+      }
     }
   }
 }

@@ -6,6 +6,7 @@ import { Bronverwijzingen } from './js/pages/bronverwijzingen.js';
 import { Handboek } from './js/pages/handboek.js';
 import { ProtectedLayout } from './js/auth/protectedLayout';
 import { UnProtectedLayout } from './js/auth/unProtectedLayout';
+import { Bijlagen } from './js/pages/bijlagen';
 
 
 function App() {
@@ -13,8 +14,9 @@ function App() {
     <Routes>
       <Route element={<ProtectedLayout/>}>
         <Route path="/" element={<Home />}/>
-        <Route path="/bronverwijzingen" element={<Bronverwijzingen/>}/>
         <Route path="/handboek" element={<Handboek/>}/>
+        <Route path="/bronverwijzingen" element={<Bronverwijzingen/>}/>
+        <Route path="/bijlagen" element={<Bijlagen/>}/>
       </Route>
 
       <Route path="/dashboard" element={<UnProtectedLayout />}>

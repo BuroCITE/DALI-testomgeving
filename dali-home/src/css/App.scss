@@ -37,6 +37,11 @@ body{
 @import '../css/components/sidebar.scss';
 @import '../css/components/accordion.scss';
 @import '../css/components/loadingScreen.scss';
+@import '../css/components/invisibleLink.scss';
+
+// all styles here are specified styles for prefilled components.
+@import '../css/components/prefilled/dropdownUserInfo.scss';
+@import '../css/components/prefilled/popupOndersteuning.scss';
 
 @import '../css/externalComponents/pdfCiewerComponent.scss';
 
@@ -44,4 +49,5 @@ body{
 @import '../css/pages/Home.scss';
 @import '../css/pages/Inlog.scss';
 @import '../css/pages/Bronverwijzingen.scss';
+@import '../css/pages/Bijlagen.scss';
 

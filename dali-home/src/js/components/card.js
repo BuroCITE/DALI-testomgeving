@@ -45,6 +45,6 @@ export class Card extends React.Component {
  * the default values of the props called inside the Card class
  */
 Card.defaultProps = {
-  tabIndexNumber: "0",
   cardClass: "",
+  cardFeatures: "",
 }

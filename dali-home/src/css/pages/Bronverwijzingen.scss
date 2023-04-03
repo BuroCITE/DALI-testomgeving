@@ -16,38 +16,26 @@
     :focus-visible {
       mix-blend-mode: normal;
     }
-  }
 
-  .bronverwijzingen-buttonbox{
-    margin: .5rem;
-    margin-left: 0;
-    
-    button{
-      font-size: 1.1rem;
-      height: 2.5rem;
-      padding: .5rem;
-      border: 1px solid $dali-black;
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba($dali-gray-3, .3);
+    }
+
+    &::-webkit-scrollbar-thumb {
       background-color: $dali-green;
-      color: $dali-white;
-      
-      &:focus-visible{
-        outline: none;
-        border: 2px solid $dali-green;
-        background-color: $dali-white;
-        color: $dali-green;
-      }
+      border-radius: 20px;
     }
   }
-}
-.header{
-  width: 100%;
-  transition: all .5s ease;
 }
 
 @media only screen and (min-width: 1024px) {
   [class*=dali-sidebar]:not(.closed){
     &:not([class*=right]) ~ .resultaten-contentbox,
-    &:not([class*=right]) ~ .header{
+    &:not([class*=right]) ~ [class*=dali-header]{
       margin-left: 30%;
       width: 70%;
     }

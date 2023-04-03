@@ -41,7 +41,7 @@
   opacity: 0;
   
   .dali-modal-content{
-    max-height: 90vh;
+    max-height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -53,7 +53,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid rgba($dali-black, 0.1);
+      overflow-y: hidden;
       box-shadow: 0 10px 8px -2px rgba($dali-black, 0.1);
       
       h2{
@@ -62,7 +62,7 @@
       }
     
       .dali-modal-close-button{
-        height: 105%;
+        height: 100%;
         aspect-ratio: 1/1;
         font-size: 1.8rem;
         background-color: transparent;
@@ -78,14 +78,29 @@
       position: relative;
       padding: 1rem;
       height: 100%;
+      overflow: hidden;
+      overflow-y: auto;
+      display: grid;
+
+      .dali-modal-question-button{
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        padding: .5rem 1rem;
+        border: 1px solid $dali-gray-2;
+        border-radius: 5px;
+        background-color: $dali-gray-3;
+        color: $dali-white;
+        transform: translate(-50%);
+      }
     }
     
     [class*=dali-modal-footer]{
-      position: fixed;
-      bottom: 0;
       width: 100%;
       height: 0;
+      margin-top: 2rem;
       display: none;
+      align-self: flex-end;
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -126,10 +141,20 @@
   $height: map-get($value, "height");
 
   [class*=dali-modal-popup][class*=-#{$size}]{
+    max-width: 100vw;
+    max-height: 100vh;
     width: $width;
     height: $height;
   }
+
+  @media only screen and (max-width: 512px) {
+    [class*=dali-modal-popup][class*=-#{$size}]{
+      width: calc($width * 3);
+      height: calc($height * 3);
+    }
+  }
 }
+
 
 @each $size, $value in $headerFooter-sizes {
   [class*=dali-modal-header][class*=-#{$size}]{
@@ -138,9 +163,11 @@
 
   [class*=dali-][class*=modal-footer][class*=-#{$size}]{
     display: flex;
-    height: $value;
+    min-height: $value;
+    height: auto;
   }
 }
+
 
 
 
