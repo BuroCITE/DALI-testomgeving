@@ -74,7 +74,6 @@
   >button{
     font-size: 1.1rem;
     height: 2.5rem;
-    padding: .5rem;
     border: none;
     
     &:focus-visible,
@@ -106,7 +105,9 @@
 .dali-badge{
   min-width: 1.6rem;
   height: 1.6rem;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-right: 1.5rem;
   font-size: 1rem;
   background-color: $dali-gray-1;
@@ -262,6 +263,8 @@
 
 [class*=dali-accordion][class*=color-nest]{
   [class*=dali-accordion], >*{
+    border-right: 0;
+    border-bottom: 0;
     border-left-width: 10px;
     border-left-style: solid;
   }

@@ -1,0 +1,53 @@
+[class*=dali-icon-button-box]{
+  display: inline-block;
+  font-size: 1.3rem;
+  font-size: 1rem;
+  float: right;
+
+  button,
+  input[type=button],
+  a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    aspect-ratio: 1/1;
+    margin: .2rem;
+    border: 2px solid $dali-gray-1;
+    color: $dali-black;
+    text-decoration: none;
+    cursor: pointer;
+
+    &[class*=disabled]{
+      border-color: rgba($dali-gray-1, .6);
+      color: rgba($dali-black, .6);
+      cursor: auto;
+      &::before{
+        content: 'disabled';
+        position: absolute;
+        font-weight: 600;
+        color: $dali-red;
+        transform: translate(-100%);
+      }
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  $text-color: map-get($value, "foreground");
+  $background-color: map-get($value, "background");
+
+  [class*=dali-icon-button-box][class*=#{$color}]{
+
+    button,
+    input[type=button],
+    a{
+      &:focus-visible,
+      &:hover{
+        background-color: $background-color;
+        color: $text-color; 
+      }
+    }
+  }
+}

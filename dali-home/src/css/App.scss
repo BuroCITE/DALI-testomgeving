@@ -16,9 +16,10 @@
 }
 
 body{
-  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-family: 'trebuchet ms', 'century gothic', helvetica, sans-serif, verdana;
   font-size: 16px;
-  line-height: 1.1;
+  // letter-spacing: 0.12rem;
+  // word-spacing: 0.16rem;
 }
 
 #root{
@@ -42,6 +43,7 @@ body{
 // all styles here are specified styles for prefilled components.
 @import '../css/components/prefilled/dropdownUserInfo.scss';
 @import '../css/components/prefilled/popupOndersteuning.scss';
+@import '../css/components/prefilled/iconButtonBox.scss';
 
 @import '../css/externalComponents/pdfCiewerComponent.scss';
 

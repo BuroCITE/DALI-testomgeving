@@ -1,6 +1,7 @@
 import React from 'react'
 import PdfViewerComponent from '../../externalComponents/pdfViewerComponent';
 import { ModalFooter, Popup } from '../popup';
+import { IconButtonBox } from './iconButtonBox';
 
 export function PopupOndersteuning(props){
 
@@ -33,7 +34,7 @@ export function PopupOndersteuning(props){
           <ul>
             <li>
               {props.text.ondersteuningPopup.userManuals.liorManual.title} 
-              <nav className="button-box">
+              <IconButtonBox pageAccent={props.pageAccent}>
                 <a
                   href={props.text.liorManualPopup.downloadLink}
                   download={props.text.liorManualPopup.download} 
@@ -51,11 +52,11 @@ export function PopupOndersteuning(props){
                       pdfViewerFeatures=""
                     />
                 </Popup>
-              </nav>
+              </IconButtonBox>
             </li>
             <li>
               {props.text.ondersteuningPopup.userManuals.pveManual.title}
-              <nav className="button-box">
+              <IconButtonBox pageAccent={props.pageAccent}>
                 <a 
                   href={props.text.pveManualPopup.downloadLink}
                   download={props.text.pveManualPopup.download}
@@ -73,7 +74,7 @@ export function PopupOndersteuning(props){
                       pdfViewerFeatures=""
                     />
                 </Popup>
-              </nav>
+              </IconButtonBox>
             </li>
           </ul>
         </section>

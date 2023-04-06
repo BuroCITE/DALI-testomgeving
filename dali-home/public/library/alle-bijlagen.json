@@ -1,1094 +1,1094 @@
 [
   {
     "id": 101,
-    "omschrijving": "2.1.01 Trottoirkolk TM128A - bij trottoirband",
-    "bestandsnaam": "101_2.1.01_Trottoirkolk_TM128A___bij_trottoirband.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "2.1.01 Trottoirkolk TM128A - bij trottoirband",
+    "fileName": "101_2.1.01_Trottoirkolk_TM128A___bij_trottoirband.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 102,
-    "omschrijving": "2.1.02 Trottoirkolk TRK 2000 RWS - bij RWSband",
-    "bestandsnaam": "102_2.1.02_Trottoirkolk_TRK_2000_RWS___bij_RWSband.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "2.1.02 Trottoirkolk TRK 2000 RWS - bij RWSband",
+    "fileName": "102_2.1.02_Trottoirkolk_TRK_2000_RWS___bij_RWSband.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 120,
-    "omschrijving": "2.10.01 Putafdekking vierkant",
-    "bestandsnaam": "120_2.10.01_Putafdekking_vierkant.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "2.10.01 Putafdekking vierkant",
+    "fileName": "120_2.10.01_Putafdekking_vierkant.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 121,
-    "omschrijving": "2.10.02 Putafdekking rond",
-    "bestandsnaam": "121_2.10.02_Putafdekking_rond.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "2.10.02 Putafdekking rond",
+    "fileName": "121_2.10.02_Putafdekking_rond.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 122,
-    "omschrijving": "2.11.01 Speciale constructies Taludbak type B",
-    "bestandsnaam": "122_2.11.01_Speciale_constructies_Taludbak_type_B.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "2.11.01 Speciale constructies Taludbak type B",
+    "fileName": "122_2.11.01_Speciale_constructies_Taludbak_type_B.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 123,
-    "omschrijving": "2.11.02 Speciale constructies Taludbak type D",
-    "bestandsnaam": "123_2.11.02_Speciale_constructies_Taludbak_type_D.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "2.11.02 Speciale constructies Taludbak type D",
+    "fileName": "123_2.11.02_Speciale_constructies_Taludbak_type_D.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 103,
-    "omschrijving": "2.2.01 Straatkolk STR 3545 - bij betonnen molgoot",
-    "bestandsnaam": "103_2.2.01_Straatkolk_STR_3545___bij_betonnen_molgoot.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "2.2.01 Straatkolk STR 3545 - bij betonnen molgoot",
+    "fileName": "103_2.2.01_Straatkolk_STR_3545___bij_betonnen_molgoot.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 104,
-    "omschrijving": "2.2.02 Straatkolk STR 9301",
-    "bestandsnaam": "104_2.2.02_Straatkolk_STR_9301.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "2.2.02 Straatkolk STR 9301",
+    "fileName": "104_2.2.02_Straatkolk_STR_9301.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 105,
-    "omschrijving": "2.3.01 Combinatiekolk STC 100 - bij helling in trottoirband",
-    "bestandsnaam": "105_2.3.01_Combinatiekolk_STC_100___bij_helling_in_trottoirband.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "2.3.01 Combinatiekolk STC 100 - bij helling in trottoirband",
+    "fileName": "105_2.3.01_Combinatiekolk_STC_100___bij_helling_in_trottoirband.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 106,
-    "omschrijving": "2.3.02 Combinatiekolk RWS STC - bij helling in RWSband",
-    "bestandsnaam": "106_2.3.02_Combinatiekolk_RWS_STC___bij_helling_in_RWSband.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "2.3.02 Combinatiekolk RWS STC - bij helling in RWSband",
+    "fileName": "106_2.3.02_Combinatiekolk_RWS_STC___bij_helling_in_RWSband.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 107,
-    "omschrijving": "2.3.03 Combinatiekolk STC 7 20",
-    "bestandsnaam": "107_2.3.03_Combinatiekolk_STC_7_20.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "2.3.03 Combinatiekolk STC 7 20",
+    "fileName": "107_2.3.03_Combinatiekolk_STC_7_20.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 108,
-    "omschrijving": "2.4.01 Betonput 800 mm",
-    "bestandsnaam": "108_2.4.01_Betonput_800_mm.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "2.4.01 Betonput 800 mm",
+    "fileName": "108_2.4.01_Betonput_800_mm.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 109,
-    "omschrijving": "2.5.01 Kunststofput met holle bodem",
-    "bestandsnaam": "109_2.5.01_Kunststofput_met_holle_bodem.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "2.5.01 Kunststofput met holle bodem",
+    "fileName": "109_2.5.01_Kunststofput_met_holle_bodem.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 110,
-    "omschrijving": "2.6.01 Aansluitingen persleidingen op kunststof ontvangstput",
-    "bestandsnaam": "110_2.6.01_Aansluitingen_persleidingen_op_kunststof_ontvangstput.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "2.6.01 Aansluitingen persleidingen op kunststof ontvangstput",
+    "fileName": "110_2.6.01_Aansluitingen_persleidingen_op_kunststof_ontvangstput.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 111,
-    "omschrijving": "2.7.01 Aansluitingen op betonput met PVC",
-    "bestandsnaam": "111_2.7.01_Aansluitingen_op_betonput_met_PVC.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "2.7.01 Aansluitingen op betonput met PVC",
+    "fileName": "111_2.7.01_Aansluitingen_op_betonput_met_PVC.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 112,
-    "omschrijving": "2.7.02 Aansluitingen op betonput met betonbuis",
-    "bestandsnaam": "112_2.7.02_Aansluitingen_op_betonput_met_betonbuis.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "2.7.02 Aansluitingen op betonput met betonbuis",
+    "fileName": "112_2.7.02_Aansluitingen_op_betonput_met_betonbuis.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 113,
-    "omschrijving": "2.7.03 Aansluitingen op betonput met sparing in onderbak",
-    "bestandsnaam": "113_2.7.03_Aansluitingen_op_betonput_met_sparing_in_onderbak.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "2.7.03 Aansluitingen op betonput met sparing in onderbak",
+    "fileName": "113_2.7.03_Aansluitingen_op_betonput_met_sparing_in_onderbak.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 114,
-    "omschrijving": "2.8.01 Huisaansluitingen op hoofdriool PVC",
-    "bestandsnaam": "114_2.8.01_Huisaansluitingen_op_hoofdriool_PVC.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "2.8.01 Huisaansluitingen op hoofdriool PVC",
+    "fileName": "114_2.8.01_Huisaansluitingen_op_hoofdriool_PVC.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 115,
-    "omschrijving": "2.8.02 Huisaansluitingen te boren inlaat op hoofdriool beton",
-    "bestandsnaam": "115_2.8.02_Huisaansluitingen_te_boren_inlaat_op_hoofdriool_beton.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "2.8.02 Huisaansluitingen te boren inlaat op hoofdriool beton",
+    "fileName": "115_2.8.02_Huisaansluitingen_te_boren_inlaat_op_hoofdriool_beton.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 116,
-    "omschrijving": "2.8.03 Huisaansluitingen prefab inlaat op hoofdriool beton",
-    "bestandsnaam": "116_2.8.03_Huisaansluitingen_prefab_inlaat_op_hoofdriool_beton.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "2.8.03 Huisaansluitingen prefab inlaat op hoofdriool beton",
+    "fileName": "116_2.8.03_Huisaansluitingen_prefab_inlaat_op_hoofdriool_beton.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 117,
-    "omschrijving": "2.9.01 Kolkaansluitingen op hoofdriool PVC",
-    "bestandsnaam": "117_2.9.01_Kolkaansluitingen_op_hoofdriool_PVC.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "2.9.01 Kolkaansluitingen op hoofdriool PVC",
+    "fileName": "117_2.9.01_Kolkaansluitingen_op_hoofdriool_PVC.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 118,
-    "omschrijving": "2.9.02 Kolkaansluitingen te boren inlaat op hoofdriool beton",
-    "bestandsnaam": "118_2.9.02_Kolkaansluitingen_te_boren_inlaat_op_hoofdriool_beton.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "2.9.02 Kolkaansluitingen te boren inlaat op hoofdriool beton",
+    "fileName": "118_2.9.02_Kolkaansluitingen_te_boren_inlaat_op_hoofdriool_beton.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 119,
-    "omschrijving": "2.9.03 Kolkaansluitingen prefab PVC inlaat op hoofdriool beton",
-    "bestandsnaam": "119_2.9.03_Kolkaansluitingen_prefab_PVC_inlaat_op_hoofdriool_beton.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "2.9.03 Kolkaansluitingen prefab PVC inlaat op hoofdriool beton",
+    "fileName": "119_2.9.03_Kolkaansluitingen_prefab_PVC_inlaat_op_hoofdriool_beton.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 124,
-    "omschrijving": "5.1.01 Kantopsluiting met trottoirband",
-    "bestandsnaam": "124_5.1.01_Kantopsluiting_met_trottoirband.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.1.01 Kantopsluiting met trottoirband",
+    "fileName": "124_5.1.01_Kantopsluiting_met_trottoirband.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 125,
-    "omschrijving": "5.1.02 Kantopsluiting met opsluitband",
-    "bestandsnaam": "125_5.1.02_Kantopsluiting_met_opsluitband.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.1.02 Kantopsluiting met opsluitband",
+    "fileName": "125_5.1.02_Kantopsluiting_met_opsluitband.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 126,
-    "omschrijving": "5.1.03 Gefundeerde weg",
-    "bestandsnaam": "126_5.1.03_Gefundeerde_weg.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.1.03 Gefundeerde weg",
+    "fileName": "126_5.1.03_Gefundeerde_weg.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 127,
-    "omschrijving": "5.1.04 Aanduiding 30 km zone in bestrating",
-    "bestandsnaam": "127_5.1.04_Aanduiding_30_km_zone_in_bestrating.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.1.04 Aanduiding 30 km zone in bestrating",
+    "fileName": "127_5.1.04_Aanduiding_30_km_zone_in_bestrating.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 168,
-    "omschrijving": "5.10.01 Voetgangersoversteekplaats bij weg met tussenberm",
-    "bestandsnaam": "168_5.10.01_Voetgangersoversteekplaats_bij_weg_met_tussenberm.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.10.01 Voetgangersoversteekplaats bij weg met tussenberm",
+    "fileName": "168_5.10.01_Voetgangersoversteekplaats_bij_weg_met_tussenberm.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 169,
-    "omschrijving": "5.10.02 Oversteekplaats voor brom fietsers bij kruising asfaltwegen",
-    "bestandsnaam": "169_5.10.02_Oversteekplaats_voor_brom_fietsers_bij_kruising_asfaltwegen.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.10.02 Oversteekplaats voor brom fietsers bij kruising asfaltwegen",
+    "fileName": "169_5.10.02_Oversteekplaats_voor_brom_fietsers_bij_kruising_asfaltwegen.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 170,
-    "omschrijving": "5.11.01 TOV haltes",
-    "bestandsnaam": "170_5.11.01_TOV_haltes.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.11.01 TOV haltes",
+    "fileName": "170_5.11.01_TOV_haltes.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 128,
-    "omschrijving": "5.2.01 Gebiedsontsluitingsweg binnen de bebouwde kom met aanliggende fietsstrook",
-    "bestandsnaam": "128_5.2.01_Gebiedsontsluitingsweg_binnen_de_bebouwde_kom_met_aanliggende_fietsstrook.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.2.01 Gebiedsontsluitingsweg binnen de bebouwde kom met aanliggende fietsstrook",
+    "fileName": "128_5.2.01_Gebiedsontsluitingsweg_binnen_de_bebouwde_kom_met_aanliggende_fietsstrook.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 129,
-    "omschrijving": "5.2.02 Kabelsleuf in asfaltverharding",
-    "bestandsnaam": "129_5.2.02_Kabelsleuf_in_asfaltverharding.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.2.02 Kabelsleuf in asfaltverharding",
+    "fileName": "129_5.2.02_Kabelsleuf_in_asfaltverharding.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 130,
-    "omschrijving": "5.2.03 Principe opbouw asfaltconstructies",
-    "bestandsnaam": "130_5.2.03_Principe_opbouw_asfaltconstructies.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.2.03 Principe opbouw asfaltconstructies",
+    "fileName": "130_5.2.03_Principe_opbouw_asfaltconstructies.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 131,
-    "omschrijving": "5.2.04 Overgang asfalt-elementenverharding",
-    "bestandsnaam": "131_5.2.04_Overgang_asfalt_elementenverharding.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.2.04 Overgang asfalt-elementenverharding",
+    "fileName": "131_5.2.04_Overgang_asfalt_elementenverharding.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 132,
-    "omschrijving": "5.2.05 Materiaalovergang oud- nieuw asfalt",
-    "bestandsnaam": "132_5.2.05_Materiaalovergang_oud__nieuw_asfalt.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.2.05 Materiaalovergang oud- nieuw asfalt",
+    "fileName": "132_5.2.05_Materiaalovergang_oud__nieuw_asfalt.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 133,
-    "omschrijving": "5.3.01 Verkeersdrempel in max 30 km u erftoegangsweg",
-    "bestandsnaam": "133_5.3.01_Verkeersdrempel_in_max_30_km_u_erftoegangsweg.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.3.01 Verkeersdrempel in max 30 km u erftoegangsweg",
+    "fileName": "133_5.3.01_Verkeersdrempel_in_max_30_km_u_erftoegangsweg.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 134,
-    "omschrijving": "5.3.02 Verkeersdrempel in 50 km u zone gebiedsontsluitingsweg met lijnbusroute",
-    "bestandsnaam": "134_5.3.02_Verkeersdrempel_in_50_km_u_zone_gebiedsontsluitingsweg_met_lijnbusroute.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.3.02 Verkeersdrempel in 50 km u zone gebiedsontsluitingsweg met lijnbusroute",
+    "fileName": "134_5.3.02_Verkeersdrempel_in_50_km_u_zone_gebiedsontsluitingsweg_met_lijnbusroute.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 135,
-    "omschrijving": "5.3.03 Plateauconstructie in bestrating in 30km u erftoegangsweg zonder lijnbusroute",
-    "bestandsnaam": "135_5.3.03_Plateauconstructie_in_bestrating_in_30km_u_erftoegangsweg_zonder_lijnbusroute.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.3.03 Plateauconstructie in bestrating in 30km u erftoegangsweg zonder lijnbusroute",
+    "fileName": "135_5.3.03_Plateauconstructie_in_bestrating_in_30km_u_erftoegangsweg_zonder_lijnbusroute.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 136,
-    "omschrijving": "5.3.04 Plateauconstructie in asfaltweg 60 km u zone gebiedsontsluitingsweg met lijnbusroute",
-    "bestandsnaam": "136_5.3.04_Plateauconstructie_in_asfaltweg_60_km_u_zone_gebiedsontsluitingsweg_met_lijnbusroute.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.3.04 Plateauconstructie in asfaltweg 60 km u zone gebiedsontsluitingsweg met lijnbusroute",
+    "fileName": "136_5.3.04_Plateauconstructie_in_asfaltweg_60_km_u_zone_gebiedsontsluitingsweg_met_lijnbusroute.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 137,
-    "omschrijving": "5.3.05 Punaise in bestrating",
-    "bestandsnaam": "137_5.3.05_Punaise_in_bestrating.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.3.05 Punaise in bestrating",
+    "fileName": "137_5.3.05_Punaise_in_bestrating.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 138,
-    "omschrijving": "5.4.01 Haaksparkeren langs trottoir",
-    "bestandsnaam": "138_5.4.01_Haaksparkeren_langs_trottoir.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.4.01 Haaksparkeren langs trottoir",
+    "fileName": "138_5.4.01_Haaksparkeren_langs_trottoir.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 139,
-    "omschrijving": "5.4.02 Haaksparkeren langs openbaar groen",
-    "bestandsnaam": "139_5.4.02_Haaksparkeren_langs_openbaar_groen.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.4.02 Haaksparkeren langs openbaar groen",
+    "fileName": "139_5.4.02_Haaksparkeren_langs_openbaar_groen.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 140,
-    "omschrijving": "5.4.03 Haaksparkeren bij muur of erfscheiding",
-    "bestandsnaam": "140_5.4.03_Haaksparkeren_bij_muur_of_erfscheiding.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.4.03 Haaksparkeren bij muur of erfscheiding",
+    "fileName": "140_5.4.03_Haaksparkeren_bij_muur_of_erfscheiding.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 141,
-    "omschrijving": "5.4.04 Langsparkeren langs bestrating",
-    "bestandsnaam": "141_5.4.04_Langsparkeren_langs_bestrating.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.4.04 Langsparkeren langs bestrating",
+    "fileName": "141_5.4.04_Langsparkeren_langs_bestrating.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 142,
-    "omschrijving": "5.4.05 Langsparkeren langs openbaar groen",
-    "bestandsnaam": "142_5.4.05_Langsparkeren_langs_openbaar_groen.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.4.05 Langsparkeren langs openbaar groen",
+    "fileName": "142_5.4.05_Langsparkeren_langs_openbaar_groen.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 143,
-    "omschrijving": "5.4.06 Schuinparkeren 45 graden langs bestrating",
-    "bestandsnaam": "143_5.4.06_Schuinparkeren_45_graden_langs_bestrating.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.4.06 Schuinparkeren 45 graden langs bestrating",
+    "fileName": "143_5.4.06_Schuinparkeren_45_graden_langs_bestrating.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 144,
-    "omschrijving": "5.4.07 Openbare haaksparkeerplaats met zij instap voor mensen met een handicap",
-    "bestandsnaam": "144_5.4.07_Openbare_haaksparkeerplaats_met_zij_instap_voor_mensen_met_een_handicap.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.4.07 Openbare haaksparkeerplaats met zij instap voor mensen met een handicap",
+    "fileName": "144_5.4.07_Openbare_haaksparkeerplaats_met_zij_instap_voor_mensen_met_een_handicap.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 145,
-    "omschrijving": "5.4.08 Openbare haaksparkeerplaats met achter instap voor mensen met een handicap",
-    "bestandsnaam": "145_5.4.08_Openbare_haaksparkeerplaats_met_achter_instap_voor_mensen_met_een_handicap.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.4.08 Openbare haaksparkeerplaats met achter instap voor mensen met een handicap",
+    "fileName": "145_5.4.08_Openbare_haaksparkeerplaats_met_achter_instap_voor_mensen_met_een_handicap.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 146,
-    "omschrijving": "5.4.09 Openbare langssparkeerplaats met zij instap voor mensen met een handicap",
-    "bestandsnaam": "146_5.4.09_Openbare_langssparkeerplaats_met_zij_instap_voor_mensen_met_een_handicap.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.4.09 Openbare langssparkeerplaats met zij instap voor mensen met een handicap",
+    "fileName": "146_5.4.09_Openbare_langssparkeerplaats_met_zij_instap_voor_mensen_met_een_handicap.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 147,
-    "omschrijving": "5.4.10 Laad en loszone",
-    "bestandsnaam": "147_5.4.10_Laad_en_loszone.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.4.10 Laad en loszone",
+    "fileName": "147_5.4.10_Laad_en_loszone.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 148,
-    "omschrijving": "5.5.01 In- uitrit particulieren situatie met trottoir",
-    "bestandsnaam": "148_5.5.01_In_uitrit_particulieren_situatie_met_trottoir.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.5.01 In- uitrit particulieren situatie met trottoir",
+    "fileName": "148_5.5.01_In_uitrit_particulieren_situatie_met_trottoir.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 149,
-    "omschrijving": "5.5.02 In- uitrit in trottoir overgang van 30 naar 50 km u",
-    "bestandsnaam": "149_5.5.02_In_uitrit_in_trottoir_overgang_van_30_naar_50_km_u.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.5.02 In- uitrit in trottoir overgang van 30 naar 50 km u",
+    "fileName": "149_5.5.02_In_uitrit_in_trottoir_overgang_van_30_naar_50_km_u.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 150,
-    "omschrijving": "5.5.03 In- uitrit tbv personenautos in trottoir met langsparkeren",
-    "bestandsnaam": "150_5.5.03_In_uitrit_tbv_personenautos_in_trottoir_met_langsparkeren.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.5.03 In- uitrit tbv personenautos in trottoir met langsparkeren",
+    "fileName": "150_5.5.03_In_uitrit_tbv_personenautos_in_trottoir_met_langsparkeren.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 151,
-    "omschrijving": "5.6.01 vrijliggend fietspad zonder kantopsluiting",
-    "bestandsnaam": "151_5.6.01_vrijliggend_fietspad_zonder_kantopsluiting.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.6.01 vrijliggend fietspad zonder kantopsluiting",
+    "fileName": "151_5.6.01_vrijliggend_fietspad_zonder_kantopsluiting.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 152,
-    "omschrijving": "5.6.02 Fietspad met afschot naar aangrenzend trottoir",
-    "bestandsnaam": "152_5.6.02_Fietspad_met_afschot_naar_aangrenzend_trottoir.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.6.02 Fietspad met afschot naar aangrenzend trottoir",
+    "fileName": "152_5.6.02_Fietspad_met_afschot_naar_aangrenzend_trottoir.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 153,
-    "omschrijving": "5.7.01 Vrijliggend 240 en 480 onder gewijzigd dakprofiel",
-    "bestandsnaam": "153_5.7.01_Vrijliggend_240_en_480_onder_gewijzigd_dakprofiel.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.7.01 Vrijliggend 240 en 480 onder gewijzigd dakprofiel",
+    "fileName": "153_5.7.01_Vrijliggend_240_en_480_onder_gewijzigd_dakprofiel.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 154,
-    "omschrijving": "5.7.02 Vrijliggend 240 en 360 onder eenzijdig afschot",
-    "bestandsnaam": "154_5.7.02_Vrijliggend_240_en_360_onder_eenzijdig_afschot.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.7.02 Vrijliggend 240 en 360 onder eenzijdig afschot",
+    "fileName": "154_5.7.02_Vrijliggend_240_en_360_onder_eenzijdig_afschot.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 155,
-    "omschrijving": "5.7.03 Vrijliggend fietspad onder eenzijdig afschot met afwatering",
-    "bestandsnaam": "155_5.7.03_Vrijliggend_fietspad_onder_eenzijdig_afschot_met_afwatering.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.7.03 Vrijliggend fietspad onder eenzijdig afschot met afwatering",
+    "fileName": "155_5.7.03_Vrijliggend_fietspad_onder_eenzijdig_afschot_met_afwatering.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 156,
-    "omschrijving": "5.7.04 Langs rijweg met afwatering",
-    "bestandsnaam": "156_5.7.04_Langs_rijweg_met_afwatering.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.7.04 Langs rijweg met afwatering",
+    "fileName": "156_5.7.04_Langs_rijweg_met_afwatering.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 157,
-    "omschrijving": "5.7.05 Vrijliggend met bocht groter dan 6 m",
-    "bestandsnaam": "157_5.7.05_Vrijliggend_met_bocht_groter_dan_6_m.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.7.05 Vrijliggend met bocht groter dan 6 m",
+    "fileName": "157_5.7.05_Vrijliggend_met_bocht_groter_dan_6_m.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 158,
-    "omschrijving": "5.8.01 Vrijliggend 240 en 480 onder gewijzigd dakprofiel",
-    "bestandsnaam": "158_5.8.01_Vrijliggend_240_en_480_onder_gewijzigd_dakprofiel.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.8.01 Vrijliggend 240 en 480 onder gewijzigd dakprofiel",
+    "fileName": "158_5.8.01_Vrijliggend_240_en_480_onder_gewijzigd_dakprofiel.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 159,
-    "omschrijving": "5.8.02 Vrijliggend 240 en 360 onder eenzijdig afschot",
-    "bestandsnaam": "159_5.8.02_Vrijliggend_240_en_360_onder_eenzijdig_afschot.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.8.02 Vrijliggend 240 en 360 onder eenzijdig afschot",
+    "fileName": "159_5.8.02_Vrijliggend_240_en_360_onder_eenzijdig_afschot.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 160,
-    "omschrijving": "5.8.03 Vrijliggend met bocht groter dan 6 m",
-    "bestandsnaam": "160_5.8.03_Vrijliggend_met_bocht_groter_dan_6_m.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.8.03 Vrijliggend met bocht groter dan 6 m",
+    "fileName": "160_5.8.03_Vrijliggend_met_bocht_groter_dan_6_m.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 161,
-    "omschrijving": "5.8.04 Trottoir van tegelwerk met afschot naar rijweg",
-    "bestandsnaam": "161_5.8.04_Trottoir_van_tegelwerk_met_afschot_naar_rijweg.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.8.04 Trottoir van tegelwerk met afschot naar rijweg",
+    "fileName": "161_5.8.04_Trottoir_van_tegelwerk_met_afschot_naar_rijweg.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 162,
-    "omschrijving": "5.8.05 Invalidenoprit met haakse perronbanden",
-    "bestandsnaam": "162_5.8.05_Invalidenoprit_met_haakse_perronbanden.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.8.05 Invalidenoprit met haakse perronbanden",
+    "fileName": "162_5.8.05_Invalidenoprit_met_haakse_perronbanden.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 163,
-    "omschrijving": "5.8.06 Tegelwerk in bocht R 6 m bij gelijkblijvende trottoirbreedte",
-    "bestandsnaam": "163_5.8.06_Tegelwerk_in_bocht_R_6_m_bij_gelijkblijvende_trottoirbreedte.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.8.06 Tegelwerk in bocht R 6 m bij gelijkblijvende trottoirbreedte",
+    "fileName": "163_5.8.06_Tegelwerk_in_bocht_R_6_m_bij_gelijkblijvende_trottoirbreedte.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 164,
-    "omschrijving": "5.8.07 Tegelwerk in bocht R 6 m bij overgang trottoirbreedte",
-    "bestandsnaam": "164_5.8.07_Tegelwerk_in_bocht_R_6_m_bij_overgang_trottoirbreedte.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.8.07 Tegelwerk in bocht R 6 m bij overgang trottoirbreedte",
+    "fileName": "164_5.8.07_Tegelwerk_in_bocht_R_6_m_bij_overgang_trottoirbreedte.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 165,
-    "omschrijving": "5.8.08 Tegelwerk in bochten met R groter dan 6 m",
-    "bestandsnaam": "165_5.8.08_Tegelwerk_in_bochten_met_R_groter_dan_6_m.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.8.08 Tegelwerk in bochten met R groter dan 6 m",
+    "fileName": "165_5.8.08_Tegelwerk_in_bochten_met_R_groter_dan_6_m.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 166,
-    "omschrijving": "5.8.09 Hellingbaan voor rolstoelgebruikers bij afschot naar rijweg",
-    "bestandsnaam": "166_5.8.09_Hellingbaan_voor_rolstoelgebruikers_bij_afschot_naar_rijweg.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.8.09 Hellingbaan voor rolstoelgebruikers bij afschot naar rijweg",
+    "fileName": "166_5.8.09_Hellingbaan_voor_rolstoelgebruikers_bij_afschot_naar_rijweg.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 167,
-    "omschrijving": "5.9.01 Vrijliggend 150 en 240 onder eenzijdig afschot",
-    "bestandsnaam": "167_5.9.01_Vrijliggend_150_en_240_onder_eenzijdig_afschot.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "5.9.01 Vrijliggend 150 en 240 onder eenzijdig afschot",
+    "fileName": "167_5.9.01_Vrijliggend_150_en_240_onder_eenzijdig_afschot.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 171,
-    "omschrijving": "6.1.01 Leuning",
-    "bestandsnaam": "171_6.1.01_Leuning.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "6.1.01 Leuning",
+    "fileName": "171_6.1.01_Leuning.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 172,
-    "omschrijving": "6.1.02 Oplegging horizontale houten brug",
-    "bestandsnaam": "172_6.1.02_Oplegging_horizontale_houten_brug.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "6.1.02 Oplegging horizontale houten brug",
+    "fileName": "172_6.1.02_Oplegging_horizontale_houten_brug.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 173,
-    "omschrijving": "6.1.03 Oplegging getoogde houten brug",
-    "bestandsnaam": "173_6.1.03_Oplegging_getoogde_houten_brug.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "6.1.03 Oplegging getoogde houten brug",
+    "fileName": "173_6.1.03_Oplegging_getoogde_houten_brug.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 174,
-    "omschrijving": "6.1.04 Brugaanzicht Westlands model houten brug",
-    "bestandsnaam": "174_6.1.04_Brugaanzicht_Westlands_model_houten_brug.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "6.1.04 Brugaanzicht Westlands model houten brug",
+    "fileName": "174_6.1.04_Brugaanzicht_Westlands_model_houten_brug.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 175,
-    "omschrijving": "7.1.02 Beschoeiingsschotten",
-    "bestandsnaam": "175_7.1.02_Beschoeiingsschotten.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "7.1.02 Beschoeiingsschotten",
+    "fileName": "175_7.1.02_Beschoeiingsschotten.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 176,
-    "omschrijving": "7.1.05 Onderwaterbeschoeiing (golfbreking)",
-    "bestandsnaam": "176_7.1.05_Onderwaterbeschoeiing__golfbreking_.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "7.1.05 Onderwaterbeschoeiing (golfbreking)",
+    "fileName": "176_7.1.05_Onderwaterbeschoeiing__golfbreking_.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 177,
-    "omschrijving": "7.1.06 Onderwaterbeschoeiing met plasberm",
-    "bestandsnaam": "177_7.1.06_Onderwaterbeschoeiing_met_plasberm.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "7.1.06 Onderwaterbeschoeiing met plasberm",
+    "fileName": "177_7.1.06_Onderwaterbeschoeiing_met_plasberm.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 178,
-    "omschrijving": "7.2.01 Aanplant boom wortelgoed 2 boompalen laag",
-    "bestandsnaam": "178_7.2.01_Aanplant_boom_wortelgoed_2_boompalen_laag.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "7.2.01 Aanplant boom wortelgoed 2 boompalen laag",
+    "fileName": "178_7.2.01_Aanplant_boom_wortelgoed_2_boompalen_laag.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 179,
-    "omschrijving": "7.2.02 Aanplant boom wortelgoed 2 boompalen hoog",
-    "bestandsnaam": "179_7.2.02_Aanplant_boom_wortelgoed_2_boompalen_hoog.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "7.2.02 Aanplant boom wortelgoed 2 boompalen hoog",
+    "fileName": "179_7.2.02_Aanplant_boom_wortelgoed_2_boompalen_hoog.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 180,
-    "omschrijving": "7.2.03 Aanplant boom kluit 2 boompalen hoog",
-    "bestandsnaam": "180_7.2.03_Aanplant_boom_kluit_2_boompalen_hoog.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "7.2.03 Aanplant boom kluit 2 boompalen hoog",
+    "fileName": "180_7.2.03_Aanplant_boom_kluit_2_boompalen_hoog.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 181,
-    "omschrijving": "7.2.04 Aanplant boom met kluit driehoek palen in volle grond",
-    "bestandsnaam": "181_7.2.04_Aanplant_boom_met_kluit_driehoek_palen_in_volle_grond.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "7.2.04 Aanplant boom met kluit driehoek palen in volle grond",
+    "fileName": "181_7.2.04_Aanplant_boom_met_kluit_driehoek_palen_in_volle_grond.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 182,
-    "omschrijving": "7.2.05 Aanplant boom met kluit driehoek palen in verharding",
-    "bestandsnaam": "182_7.2.05_Aanplant_boom_met_kluit_driehoek_palen_in_verharding.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "7.2.05 Aanplant boom met kluit driehoek palen in verharding",
+    "fileName": "182_7.2.05_Aanplant_boom_met_kluit_driehoek_palen_in_verharding.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 183,
-    "omschrijving": "7.3.01 Met boomkranselementen in trottoir",
-    "bestandsnaam": "183_7.3.01_Met_boomkranselementen_in_trottoir.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "7.3.01 Met boomkranselementen in trottoir",
+    "fileName": "183_7.3.01_Met_boomkranselementen_in_trottoir.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 184,
-    "omschrijving": "7.3.02 Tussen haaksparkeervakken",
-    "bestandsnaam": "184_7.3.02_Tussen_haaksparkeervakken.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "7.3.02 Tussen haaksparkeervakken",
+    "fileName": "184_7.3.02_Tussen_haaksparkeervakken.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 185,
-    "omschrijving": "7.3.03 Tussen langsparkeervakken",
-    "bestandsnaam": "185_7.3.03_Tussen_langsparkeervakken.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "7.3.03 Tussen langsparkeervakken",
+    "fileName": "185_7.3.03_Tussen_langsparkeervakken.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 186,
-    "omschrijving": "7.4.01 Verrichten van graafwerkzaamheden nabij bomen",
-    "bestandsnaam": "186_7.4.01_Verrichten_van_graafwerkzaamheden_nabij_bomen.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "7.4.01 Verrichten van graafwerkzaamheden nabij bomen",
+    "fileName": "186_7.4.01_Verrichten_van_graafwerkzaamheden_nabij_bomen.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 198,
-    "omschrijving": "Aanvullende eisen opleveringsinspectie riolering",
-    "bestandsnaam": "198_Eisen_opleveringsinspectie_riolering.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Aanvullende eisen opleveringsinspectie riolering",
+    "fileName": "198_Eisen_opleveringsinspectie_riolering.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 195,
-    "omschrijving": "Afbeelding HDD op draglineschotten",
-    "bestandsnaam": "195_Afbeelding_HDD_op_draglineschotten.jpg",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Afbeelding HDD op draglineschotten",
+    "fileName": "195_Afbeelding_HDD_op_draglineschotten.jpg",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 256,
-    "omschrijving": "Algemene regels natuurvriendelijke oevers Hoogheemraadschap Delfland 2010",
-    "bestandsnaam": "256_Algemene_regels_natuurvriendelijke_oevers_Hoogheemraadschap_Delfland_2010.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Algemene regels natuurvriendelijke oevers Hoogheemraadschap Delfland 2010",
+    "fileName": "256_Algemene_regels_natuurvriendelijke_oevers_Hoogheemraadschap_Delfland_2010.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 220,
-    "omschrijving": "Alle standaard details wegen PDF",
-    "bestandsnaam": "220_Alle_standaard_details_wegen_PDF.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Alle standaard details wegen PDF",
+    "fileName": "220_Alle_standaard_details_wegen_PDF.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 206,
-    "omschrijving": "Alle Standaarddetails groen PDF",
-    "bestandsnaam": "206_Alle_standaard_details_groen_PDF.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Alle Standaarddetails groen PDF",
+    "fileName": "206_Alle_standaard_details_groen_PDF.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 191,
-    "omschrijving": "Alle Standaarddetails riolering PDF",
-    "bestandsnaam": "191_Standaarddetails_riolering_PDF.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Alle Standaarddetails riolering PDF",
+    "fileName": "191_Standaarddetails_riolering_PDF.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 190,
-    "omschrijving": "AVKL Westland dwarsprofielen",
-    "bestandsnaam": "190_AVKL_dwarsprofielen.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "AVKL Westland dwarsprofielen",
+    "fileName": "190_AVKL_dwarsprofielen.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 205,
-    "omschrijving": "AVKL-Westland dwarsprofielen",
-    "bestandsnaam": "205_AVKL_dwarsprofielen.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "AVKL-Westland dwarsprofielen",
+    "fileName": "205_AVKL_dwarsprofielen.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 228,
-    "omschrijving": "Begripsverklaringen",
-    "bestandsnaam": "228_Begripsbepalingen.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Begripsverklaringen",
+    "fileName": "228_Begripsbepalingen.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 199,
-    "omschrijving": "Beheergrenzen rioolaansluitingen",
-    "bestandsnaam": "199_Beheergrenzen_rioolaansluitingen.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Beheergrenzen rioolaansluitingen",
+    "fileName": "199_Beheergrenzen_rioolaansluitingen.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 251,
-    "omschrijving": "Beheerkader Afvalwater Hemelwater en Grondwater",
-    "bestandsnaam": "251_Beheerkader_afvalwater__hemelwater_en_grondwater.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Beheerkader Afvalwater Hemelwater en Grondwater",
+    "fileName": "251_Beheerkader_afvalwater__hemelwater_en_grondwater.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 209,
-    "omschrijving": "Beleidsplan Veranderend licht 2010",
-    "bestandsnaam": "",
-    "bestandsgrootte": 0,
-    "isAanwezig": false
+    "description": "Beleidsplan Veranderend licht 2010",
+    "fileName": "",
+    "fileSize": 0,
+    "isAccessable": false
   },
   {
     "id": 208,
-    "omschrijving": "Beleidsplan Zicht op licht 2006",
-    "bestandsnaam": "",
-    "bestandsgrootte": 0,
-    "isAanwezig": false
+    "description": "Beleidsplan Zicht op licht 2006",
+    "fileName": "",
+    "fileSize": 0,
+    "isAccessable": false
   },
   {
     "id": 189,
-    "omschrijving": "Beslisboom aan- en afkoppelen verharde oppervlakken",
-    "bestandsnaam": "189_Beslisboom_afkoppelen.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Beslisboom aan- en afkoppelen verharde oppervlakken",
+    "fileName": "189_Beslisboom_afkoppelen.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 187,
-    "omschrijving": "Bodemkwaliteitskaart",
-    "bestandsnaam": "",
-    "bestandsgrootte": 0,
-    "isAanwezig": false
+    "description": "Bodemkwaliteitskaart",
+    "fileName": "",
+    "fileSize": 0,
+    "isAccessable": false
   },
   {
     "id": 234,
-    "omschrijving": "Capitole Bammens",
-    "bestandsnaam": "234_Bammens_Capitool.jpg",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Capitole Bammens",
+    "fileName": "234_Bammens_Capitool.jpg",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 237,
-    "omschrijving": "Checklist overdracht projecten openbare buitenruimte",
-    "bestandsnaam": "237_Checklist_informatieoverdracht.docx",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Checklist overdracht projecten openbare buitenruimte",
+    "fileName": "237_Checklist_informatieoverdracht.docx",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 252,
-    "omschrijving": "Convenant Klimaatadaptief bouwen in Zuid-Holland",
-    "bestandsnaam": "252_Convenant_Klimaatadaptief_bouwen_in_Zuid-Holland.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Convenant Klimaatadaptief bouwen in Zuid-Holland",
+    "fileName": "252_Convenant_Klimaatadaptief_bouwen_in_Zuid-Holland.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 253,
-    "omschrijving": "Convenant Klimaatadaptief bouwen in Zuid-Holland - Bijlage A.1 Programma van Eisen",
-    "bestandsnaam": "253_Convenant_Klimaatadaptief_bouwen_in_Zuid-Holland_-_Bijlage_A.1_Programma_van_Eisen.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Convenant Klimaatadaptief bouwen in Zuid-Holland - Bijlage A.1 Programma van Eisen",
+    "fileName": "253_Convenant_Klimaatadaptief_bouwen_in_Zuid-Holland_-_Bijlage_A.1_Programma_van_Eisen.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 194,
-    "omschrijving": "Deelrenovatie technieken",
-    "bestandsnaam": "194_Deelrenovatie_technieken.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Deelrenovatie technieken",
+    "fileName": "194_Deelrenovatie_technieken.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 215,
-    "omschrijving": "Detail Poortconstructie naar een 30 km gebied",
-    "bestandsnaam": "215_Detail_Poortconstructie_naar_een_30_km_gebied.docx",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Detail Poortconstructie naar een 30 km gebied",
+    "fileName": "215_Detail_Poortconstructie_naar_een_30_km_gebied.docx",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 217,
-    "omschrijving": "Detail Poortconstructie naar een 60 km zone",
-    "bestandsnaam": "217_Detail_Poortconstructie_naar_een_60_km_gebied.docx",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Detail Poortconstructie naar een 60 km zone",
+    "fileName": "217_Detail_Poortconstructie_naar_een_60_km_gebied.docx",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 225,
-    "omschrijving": "Dimensionering bruggen vaarrecreatie Westland",
-    "bestandsnaam": "225_Dimensionering_bruggen_vaarrecreatie.docx",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Dimensionering bruggen vaarrecreatie Westland",
+    "fileName": "225_Dimensionering_bruggen_vaarrecreatie.docx",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 260,
-    "omschrijving": "Duurzame inrichting openbare ruimte afvalwatersysteem",
-    "bestandsnaam": "260_Duurzame_inrichting_openbare_ruimte_afvalwatersysteem.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Duurzame inrichting openbare ruimte afvalwatersysteem",
+    "fileName": "260_Duurzame_inrichting_openbare_ruimte_afvalwatersysteem.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 239,
-    "omschrijving": "Eind opnemingsformulier",
-    "bestandsnaam": "",
-    "bestandsgrootte": 0,
-    "isAanwezig": false
+    "description": "Eind opnemingsformulier",
+    "fileName": "",
+    "fileSize": 0,
+    "isAccessable": false
   },
   {
     "id": 232,
-    "omschrijving": "Eisen komportalen",
-    "bestandsnaam": "232_Eisen_komportalen.docx",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Eisen komportalen",
+    "fileName": "232_Eisen_komportalen.docx",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 231,
-    "omschrijving": "Eisen straatnaamborden",
-    "bestandsnaam": "231_Eisen_straatnaamborden.docx",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Eisen straatnaamborden",
+    "fileName": "231_Eisen_straatnaamborden.docx",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 200,
-    "omschrijving": "Figuur aansluiting persleiding op gemaal",
-    "bestandsnaam": "200_Figuur_aansluiting_persleiding_op_gemaal.jpg",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Figuur aansluiting persleiding op gemaal",
+    "fileName": "200_Figuur_aansluiting_persleiding_op_gemaal.jpg",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 204,
-    "omschrijving": "Figuur debietregeling",
-    "bestandsnaam": "204_debietregeling.jpg",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Figuur debietregeling",
+    "fileName": "204_debietregeling.jpg",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 201,
-    "omschrijving": "Figuur neergaande leiding gestuurde boring",
-    "bestandsnaam": "201_Figuur_neergaande_leiding_gestuurde_boring.jpg",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Figuur neergaande leiding gestuurde boring",
+    "fileName": "201_Figuur_neergaande_leiding_gestuurde_boring.jpg",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 202,
-    "omschrijving": "Figuur voorkoming luchtinslag bij aanvoer HWA",
-    "bestandsnaam": "202_Figuur_voorkoming_luchtinslag_bij_aanvoer_HWA.jpg",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Figuur voorkoming luchtinslag bij aanvoer HWA",
+    "fileName": "202_Figuur_voorkoming_luchtinslag_bij_aanvoer_HWA.jpg",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 241,
-    "omschrijving": "Formulier Mutatie areaalgegevens",
-    "bestandsnaam": "",
-    "bestandsgrootte": 0,
-    "isAanwezig": false
+    "description": "Formulier Mutatie areaalgegevens",
+    "fileName": "",
+    "fileSize": 0,
+    "isAccessable": false
   },
   {
     "id": 245,
-    "omschrijving": "Handreiking molenbiotopen Zuid-Holland",
-    "bestandsnaam": "245_Handreiking_Molenbiotopen_Zuid_Holland.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Handreiking molenbiotopen Zuid-Holland",
+    "fileName": "245_Handreiking_Molenbiotopen_Zuid_Holland.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 247,
-    "omschrijving": "Hemelwatermatrix 2014 (concept)",
-    "bestandsnaam": "247_Hemelwatermatrix_2014_concept_.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Hemelwatermatrix 2014 (concept)",
+    "fileName": "247_Hemelwatermatrix_2014_concept_.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 213,
-    "omschrijving": "Hoofdroutekaart hulpdiensten en openbaar vervoer",
-    "bestandsnaam": "",
-    "bestandsgrootte": 0,
-    "isAanwezig": false
+    "description": "Hoofdroutekaart hulpdiensten en openbaar vervoer",
+    "fileName": "",
+    "fileSize": 0,
+    "isAccessable": false
   },
   {
     "id": 236,
-    "omschrijving": "H-tegel",
-    "bestandsnaam": "236_H_tegel.jpg",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "H-tegel",
+    "fileName": "236_H_tegel.jpg",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 238,
-    "omschrijving": "Interne opnemingsformulier",
-    "bestandsnaam": "",
-    "bestandsgrootte": 0,
-    "isAanwezig": false
+    "description": "Interne opnemingsformulier",
+    "fileName": "",
+    "fileSize": 0,
+    "isAccessable": false
   },
   {
     "id": 230,
-    "omschrijving": "Jongeren ontmoetingsplaatsen",
-    "bestandsnaam": "230_Jongeren_ontmoetingsplekken.docx",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Jongeren ontmoetingsplaatsen",
+    "fileName": "230_Jongeren_ontmoetingsplekken.docx",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 263,
-    "omschrijving": "Kansen schoon en gezond water Westland",
-    "bestandsnaam": "263_Kansen_schoon_en_gezond_water_Westland.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Kansen schoon en gezond water Westland",
+    "fileName": "263_Kansen_schoon_en_gezond_water_Westland.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 259,
-    "omschrijving": "Klimaatadaptatie toolbox",
-    "bestandsnaam": "259_Klimaatadaptatie_toolbox.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Klimaatadaptatie toolbox",
+    "fileName": "259_Klimaatadaptatie_toolbox.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 197,
-    "omschrijving": "Kwaliteitscontrole en borging",
-    "bestandsnaam": "197_Kwaliteitscontrole_en_borging.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Kwaliteitscontrole en borging",
+    "fileName": "197_Kwaliteitscontrole_en_borging.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 262,
-    "omschrijving": "Leidraad Klimaatadaptief Bouwen",
-    "bestandsnaam": "262_Leidraad_Klimaatadaptief_Bouwen.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Leidraad Klimaatadaptief Bouwen",
+    "fileName": "262_Leidraad_Klimaatadaptief_Bouwen.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 250,
-    "omschrijving": "Mobiliteitsvisie Westland 2040",
-    "bestandsnaam": "250_Mobiliteitsvisie_Westland_2040.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Mobiliteitsvisie Westland 2040",
+    "fileName": "250_Mobiliteitsvisie_Westland_2040.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 249,
-    "omschrijving": "Monitoringsplan",
-    "bestandsnaam": "249_Monitoringsplan.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Monitoringsplan",
+    "fileName": "249_Monitoringsplan.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 244,
-    "omschrijving": "Nota Natuurwetgeving in de gemeente Westland",
-    "bestandsnaam": "",
-    "bestandsgrootte": 0,
-    "isAanwezig": false
+    "description": "Nota Natuurwetgeving in de gemeente Westland",
+    "fileName": "",
+    "fileSize": 0,
+    "isAccessable": false
   },
   {
     "id": 248,
-    "omschrijving": "Ontwateringseisen nieuwbouw",
-    "bestandsnaam": "248_Ontwateringseisen_nieuwbouw.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Ontwateringseisen nieuwbouw",
+    "fileName": "248_Ontwateringseisen_nieuwbouw.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 224,
-    "omschrijving": "Ontwerplevensduur bruggen",
-    "bestandsnaam": "224_Ontwerplevensduur_bruggen.docx",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Ontwerplevensduur bruggen",
+    "fileName": "224_Ontwerplevensduur_bruggen.docx",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 240,
-    "omschrijving": "Overdrachtformulier",
-    "bestandsnaam": "",
-    "bestandsgrootte": 0,
-    "isAanwezig": false
+    "description": "Overdrachtformulier",
+    "fileName": "",
+    "fileSize": 0,
+    "isAccessable": false
   },
   {
     "id": 193,
-    "omschrijving": "Peilregeling drainageput",
-    "bestandsnaam": "193_Peilregeling_drainageput.jpg",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Peilregeling drainageput",
+    "fileName": "193_Peilregeling_drainageput.jpg",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 235,
-    "omschrijving": "Plaberum checklist",
-    "bestandsnaam": "235_Plaberum_checklist.docx",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Plaberum checklist",
+    "fileName": "235_Plaberum_checklist.docx",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 255,
-    "omschrijving": "PlanMER Omgevingsvisie gemeente Westland",
-    "bestandsnaam": "255_PlanMER_Omgevingsvisie_gemeente_Westland.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "PlanMER Omgevingsvisie gemeente Westland",
+    "fileName": "255_PlanMER_Omgevingsvisie_gemeente_Westland.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 196,
-    "omschrijving": "Principedetails ontluchtervoorziening",
-    "bestandsnaam": "196_Detail_ontluchtervoorziening.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Principedetails ontluchtervoorziening",
+    "fileName": "196_Detail_ontluchtervoorziening.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 242,
-    "omschrijving": "Procedure verkeersmaatregelen met verkeershinder",
-    "bestandsnaam": "242_Procedure_verkeersmaatregelen_met_verkeershinder.docx",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Procedure verkeersmaatregelen met verkeershinder",
+    "fileName": "242_Procedure_verkeersmaatregelen_met_verkeershinder.docx",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 216,
-    "omschrijving": "Profielen Erftoegangswegen binnen bebouwde kom",
-    "bestandsnaam": "216_Profielen_Erftoegangswegen_binnen_bebouwde_kom.docx",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Profielen Erftoegangswegen binnen bebouwde kom",
+    "fileName": "216_Profielen_Erftoegangswegen_binnen_bebouwde_kom.docx",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 218,
-    "omschrijving": "Profielen Erftoegangswegen buiten bebouwde kom",
-    "bestandsnaam": "218_Profielen_Erftoegangswegen_buiten_bebouwde_kom.docx",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Profielen Erftoegangswegen buiten bebouwde kom",
+    "fileName": "218_Profielen_Erftoegangswegen_buiten_bebouwde_kom.docx",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 214,
-    "omschrijving": "Profielen Gebiedsontsluitingsweg binnen bebouwde kom",
-    "bestandsnaam": "214_Profielen_Gebiedsontsluitingsweg_binnen_bebouwde_kom.docx",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Profielen Gebiedsontsluitingsweg binnen bebouwde kom",
+    "fileName": "214_Profielen_Gebiedsontsluitingsweg_binnen_bebouwde_kom.docx",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 261,
-    "omschrijving": "Puntensysteem voor groen- en natuurinclusief bouwen (gemeente Den Haag)",
-    "bestandsnaam": "261_Puntensysteem_voor_groen-_en_natuurinclusief_bouwen_gemeente_Den_Haag.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Puntensysteem voor groen- en natuurinclusief bouwen (gemeente Den Haag)",
+    "fileName": "261_Puntensysteem_voor_groen-_en_natuurinclusief_bouwen_gemeente_Den_Haag.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 246,
-    "omschrijving": "PvS standaard details 2015 inclusief opmerkingen juli 2016 ",
-    "bestandsnaam": "246_PvS_details_2015_opm_juli_2016.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "PvS standaard details 2015 inclusief opmerkingen juli 2016 ",
+    "fileName": "246_PvS_details_2015_opm_juli_2016.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 212,
-    "omschrijving": "Receptenboek inrichten Woonservicezones",
-    "bestandsnaam": "",
-    "bestandsgrootte": 0,
-    "isAanwezig": false
+    "description": "Receptenboek inrichten Woonservicezones",
+    "fileName": "",
+    "fileSize": 0,
+    "isAccessable": false
   },
   {
     "id": 219,
-    "omschrijving": "Receptenboek voor het inrichten van Woonservicezones Gemeente Westland",
-    "bestandsnaam": "",
-    "bestandsgrootte": 0,
-    "isAanwezig": false
+    "description": "Receptenboek voor het inrichten van Woonservicezones Gemeente Westland",
+    "fileName": "",
+    "fileSize": 0,
+    "isAccessable": false
   },
   {
     "id": 203,
-    "omschrijving": "Richtlijnen montage debietmeter",
-    "bestandsnaam": "203_Richtlijnen_plaatsing_debietmeter.jpg",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Richtlijnen montage debietmeter",
+    "fileName": "203_Richtlijnen_plaatsing_debietmeter.jpg",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 229,
-    "omschrijving": "Speelruimtebeleidsplan",
-    "bestandsnaam": "229a_Speelruimtebeleidsplan_2009_Geef_ze_de_ruimte.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": false
+    "description": "Speelruimtebeleidsplan",
+    "fileName": "229a_Speelruimtebeleidsplan_2009_Geef_ze_de_ruimte.pdf",
+    "fileSize": 0,
+    "isAccessable": false
   },
   {
     "id": 210,
-    "omschrijving": "Standaard masten, armaturen en lampen",
-    "bestandsnaam": "210_Standaard_masten_armaturen_en_lampen.docx",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Standaard masten, armaturen en lampen",
+    "fileName": "210_Standaard_masten_armaturen_en_lampen.docx",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 254,
-    "omschrijving": "Strategie klimaatadaptatie Westland 2021 - 2024",
-    "bestandsnaam": "254_Strategie_klimaatadaptatie_Westland_2021_-_2024.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Strategie klimaatadaptatie Westland 2021 - 2024",
+    "fileName": "254_Strategie_klimaatadaptatie_Westland_2021_-_2024.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 226,
-    "omschrijving": "Toepassen FSC",
-    "bestandsnaam": "226_Toepassen_FSC.docx",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Toepassen FSC",
+    "fileName": "226_Toepassen_FSC.docx",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 233,
-    "omschrijving": "Uitneembare paal type Bado",
-    "bestandsnaam": "233_Uitneembare_paal.jpg",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Uitneembare paal type Bado",
+    "fileName": "233_Uitneembare_paal.jpg",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 222,
-    "omschrijving": "Vaarrecreatie in Westland",
-    "bestandsnaam": "222_Vaarrecreatie_Westland.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Vaarrecreatie in Westland",
+    "fileName": "222_Vaarrecreatie_Westland.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 243,
-    "omschrijving": "Verkeerskundige beoordeling",
-    "bestandsnaam": "243_Verkeerskundige_beoordeling.docx",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Verkeerskundige beoordeling",
+    "fileName": "243_Verkeerskundige_beoordeling.docx",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 258,
-    "omschrijving": "Visie Wateringen 2030",
-    "bestandsnaam": "258_Visie_Wateringen_2030.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Visie Wateringen 2030",
+    "fileName": "258_Visie_Wateringen_2030.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   },
   {
     "id": 257,
-    "omschrijving": "Waterklimaatplan Westland juli 2019",
-    "bestandsnaam": "257_Waterklimaatplan_Westland_juli_2019.pdf",
-    "bestandsgrootte": 0,
-    "isAanwezig": true
+    "description": "Waterklimaatplan Westland juli 2019",
+    "fileName": "257_Waterklimaatplan_Westland_juli_2019.pdf",
+    "fileSize": 0,
+    "isAccessable": true
   }
 ]

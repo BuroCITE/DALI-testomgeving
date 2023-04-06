@@ -1,5 +1,5 @@
 // if display flex is removed, header height won't be counted as taken. this will result in the loss of some content.
-.bronverwijzingen-contentbox{
+[class*=bronverwijzingen-contentbox]{
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,8 +26,19 @@
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: $dali-green;
+      background-color: $dali-gray-1;
       border-radius: 20px;
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  [class*=bronverwijzingen-contentbox][class*=#{$color}]{
+    $text-color: map-get($value, "foreground");
+    $background-color: map-get($value, "background");
+
+    .resultaten-contentbox::-webkit-scrollbar-thumb {
+      background-color: $background-color;
     }
   }
 }

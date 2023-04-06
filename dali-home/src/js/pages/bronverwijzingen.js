@@ -7,11 +7,12 @@ import { LoadingScreen } from "../components/loadingScreen";
 import { TaalbestandNL } from '../../library/res';
 import { HeaderUserNav } from "../components/prefilled/headerUserNav";
 import { PopupGoHome } from "../components/prefilled/popupGoHome";
+import { IconButtonBox } from "../components/prefilled/iconButtonBox";
 const text = TaalbestandNL.home;
 
 
 export function Bronverwijzingen() {
-  const [pageAccent, setPageAccent] = useState('green');
+  const [pageAccent, setPageAccent] = useState('red');
 
   var { data } = GetData('library/alle-bronnen.json');
   var allBronnen = data;
@@ -27,7 +28,7 @@ export function Bronverwijzingen() {
 
   return (
     <>
-      <div className="bronverwijzingen-contentbox" aria-label="de bronverwijzingen webpagina">
+      <div className={`bronverwijzingen-contentbox-${pageAccent}`} aria-label="de bronverwijzingen webpagina">
         <Sidebar sidebarFeatures="gray-1-closeable" sidebarIsVisible={false}/>
         <HeaderUserNav title="Bronverwijzing" navLeft={<PopupGoHome pageAccent={pageAccent}/>} pageAccent={pageAccent} text={text} taalBestand={TaalbestandNL} icons={icons}/>
         <main className="resultaten-contentbox sidebar-adjecent">
@@ -38,14 +39,14 @@ export function Bronverwijzingen() {
                 useBadge={true}
                 accordionFeatures={`${pageAccent}-color-nest`}>
               <AccordionItem title="0.2 pluto">
-                <AccordionButtonBox>
+                <IconButtonBox pageAccent={pageAccent}>
                   <button className="article-button">
                     <i class="fa-solid fa-download"></i>
                   </button>
                   <button className="article-button">
                     <i class="fa-solid fa-eye"></i>
                   </button>
-                </AccordionButtonBox>
+                </IconButtonBox>
               </AccordionItem>
               <Accordion 
                   title="milky way"
@@ -56,94 +57,94 @@ export function Bronverwijzingen() {
                   <Accordion title="planets"  useBadge={true}>
                     <AccordionBody>
                       <AccordionItem title="0.1 earth">
-                        <AccordionButtonBox>
-                          <button className="article-button">
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button className="article-button">
-                            <i class="fa-solid fa-eye"></i>
-                          </button>
-                        </AccordionButtonBox>
+                      <IconButtonBox pageAccent={pageAccent}>
+                        <button className="article-button">
+                          <i class="fa-solid fa-download"></i>
+                        </button>
+                        <button className="article-button">
+                          <i class="fa-solid fa-eye"></i>
+                        </button>
+                      </IconButtonBox>
                       </AccordionItem>
                       <AccordionItem title="0.2 pluto">
-                        <AccordionButtonBox>
+                        <IconButtonBox pageAccent={pageAccent}>
                           <button className="article-button">
                             <i class="fa-solid fa-download"></i>
                           </button>
                           <button className="article-button">
                             <i class="fa-solid fa-eye"></i>
                           </button>
-                        </AccordionButtonBox>
+                        </IconButtonBox>
                       </AccordionItem>
                       <AccordionItem title="0.3 saturnus">
-                        <AccordionButtonBox>
+                        <IconButtonBox pageAccent={pageAccent}>
                           <button className="article-button">
                             <i class="fa-solid fa-download"></i>
                           </button>
                           <button className="article-button">
                             <i class="fa-solid fa-eye"></i>
                           </button>
-                        </AccordionButtonBox>
+                        </IconButtonBox>
                       </AccordionItem>
                       <AccordionItem title="0.4 uranus">
-                        <AccordionButtonBox>
-                          <button className="article-button">
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button className="article-button">
-                            <i class="fa-solid fa-eye"></i>
-                          </button>
-                        </AccordionButtonBox>
+                        <IconButtonBox pageAccent={pageAccent}>
+                        <button className="article-button">
+                          <i class="fa-solid fa-download"></i>
+                        </button>
+                        <button className="article-button">
+                          <i class="fa-solid fa-eye"></i>
+                        </button>
+                      </IconButtonBox>
                       </AccordionItem>
                       <AccordionItem title="0.5 neptunus">
-                        <AccordionButtonBox>
-                          <button className="article-button">
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button className="article-button">
-                            <i class="fa-solid fa-eye"></i>
-                          </button>
-                        </AccordionButtonBox>
+                      <IconButtonBox pageAccent={pageAccent}>
+                        <button className="article-button">
+                          <i class="fa-solid fa-download"></i>
+                        </button>
+                        <button className="article-button">
+                          <i class="fa-solid fa-eye"></i>
+                        </button>
+                      </IconButtonBox>
                       </AccordionItem>
                       <AccordionItem title="0.6 jupiter">
-                        <AccordionButtonBox>
-                          <button className="article-button">
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button className="article-button">
-                            <i class="fa-solid fa-eye"></i>
-                          </button>
-                        </AccordionButtonBox>
+                      <IconButtonBox pageAccent={pageAccent}>
+                        <button className="article-button">
+                          <i class="fa-solid fa-download"></i>
+                        </button>
+                        <button className="article-button">
+                          <i class="fa-solid fa-eye"></i>
+                        </button>
+                      </IconButtonBox>
                       </AccordionItem>
                       <AccordionItem title="0.7 venus">
-                        <AccordionButtonBox>
-                          <button className="article-button">
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button className="article-button">
-                            <i class="fa-solid fa-eye"></i>
-                          </button>
-                        </AccordionButtonBox>
+                      <IconButtonBox pageAccent={pageAccent}>
+                        <button className="article-button">
+                          <i class="fa-solid fa-download"></i>
+                        </button>
+                        <button className="article-button">
+                          <i class="fa-solid fa-eye"></i>
+                        </button>
+                      </IconButtonBox>
                       </AccordionItem>
                       <AccordionItem title="0.8 mars">
-                        <AccordionButtonBox>
-                          <button className="article-button">
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button className="article-button">
-                            <i class="fa-solid fa-eye"></i>
-                          </button>
-                        </AccordionButtonBox>
+                      <IconButtonBox pageAccent={pageAccent}>
+                        <button className="article-button">
+                          <i class="fa-solid fa-download"></i>
+                        </button>
+                        <button className="article-button">
+                          <i class="fa-solid fa-eye"></i>
+                        </button>
+                      </IconButtonBox>
                       </AccordionItem>
                       <AccordionItem title="0.9 mercurius">
-                        <AccordionButtonBox>
-                          <button className="article-button">
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button className="article-button">
-                            <i class="fa-solid fa-eye"></i>
-                          </button>
-                        </AccordionButtonBox>
+                      <IconButtonBox pageAccent={pageAccent}>
+                        <button className="article-button">
+                          <i class="fa-solid fa-download"></i>
+                        </button>
+                        <button className="article-button">
+                          <i class="fa-solid fa-eye"></i>
+                        </button>
+                      </IconButtonBox>
                       </AccordionItem>
                     </AccordionBody>
                   </Accordion>

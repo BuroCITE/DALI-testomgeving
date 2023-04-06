@@ -2,6 +2,7 @@ import React from 'react';
 import PdfViewerComponent from '../externalComponents/pdfViewerComponent';
 import { Accordion, AccordionButtonBox, AccordionItem } from './accordion';
 import { Popup } from './popup';
+import { IconButtonBox } from './prefilled/iconButtonBox';
 import { Sidebar } from './sidebar';
 
 export class DataPerItem extends React.Component {
@@ -17,21 +18,21 @@ export class DataPerItem extends React.Component {
         </a>
       );
     }
-    else if(item.bestandsnaam  != undefined){
+    else if(item.fileName  != undefined){
       console.log('works');
       return(
         <>
-          <a href={`library/pdf/bijlagen/${item.bestandsnaam}`} download className="article-button">
+          <a href={`library/pdf/bijlagen/${item.fileName}`} download className="article-button">
             <i class="fa-solid fa-download"></i>
           </a>
           <Popup 
             showModalButtonClass="article-button"
             showModalButtonContents={<i class="fa-solid fa-eye"></i>}
-            modalHeaderTitle={item.omschrijving}
+            modalHeaderTitle={item.description}
             modalFeatures={`purple-xxl${this.props.pageAccent}`}
             modalBodyClass="ondersteuning-popup-body">
               <PdfViewerComponent
-                document={`library/pdf/bijlagen/${item.bestandsnaam}`}
+                document={`library/pdf/bijlagen/${item.fileName}`}
                 pdfViewerClass=""
                 pdfViewerFeatures=""
               />
@@ -49,23 +50,23 @@ export class DataPerItem extends React.Component {
   }
 
   elementToRender(item){
-    if(item.isAanwezig){
+    if(item.isAccessable){
       return(
-        <AccordionItem key={item.id} title={item.omschrijving} accordionItemFeatures={this.props.pageAccent}>
-          <AccordionButtonBox>
+        <AccordionItem key={item.id} title={item.description} accordionItemFeatures={this.props.pageAccent}>
+          <IconButtonBox pageAccent={this.props.pageAccent}>
             {this.buttonsToRender(item)}
-          </AccordionButtonBox>
+          </IconButtonBox>
         </AccordionItem>
       )
     }
     else{
       return(
-        <AccordionItem key={item.id} title={item.omschrijving}>
-          <AccordionButtonBox>
+        <AccordionItem key={item.id} title={item.description}>
+          <IconButtonBox pageAccent={this.props.pageAccent}>
             <a className="article-button-disabled">
             <i class="fa-solid fa-triangle-exclamation"></i>
             </a>
-          </AccordionButtonBox>
+          </IconButtonBox>
         </AccordionItem>
       ); 
   }
