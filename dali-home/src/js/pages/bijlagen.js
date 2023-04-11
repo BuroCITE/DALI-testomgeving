@@ -12,9 +12,9 @@ const text = TaalbestandNL.home;
 
 
 export function Bijlagen() {
-  const [pageAccent, setPageAccent] = useState('purple');
+  const [pageAccent, setPageAccent] = useState('red');
 
-  var { data } = GetData('library/alle-bijlagen.json');
+  var { data } = GetData('https://BRCACERV3571G01.burocite-nl.local:7158/api/getAllAttachments');
   var allBijlagen = data;
   var { data } = GetData('library/bijlagen-per-chapter.json');
   var bijlagePerChapter = data;
@@ -28,7 +28,7 @@ export function Bijlagen() {
   }
 
   return(
-    <div className="bijlagen-contentbox" aria-label="de bijlagen webpagina">
+    <div className={`bijlagen-contentbox-${pageAccent}`} aria-label="de bijlagen webpagina">
       <Sidebar sidebarFeatures="gray-1-closeable" sidebarIsVisible={false}/>
       <HeaderUserNav title="bijlagen" navLeft={<PopupGoHome pageAccent={pageAccent}/>} pageAccent={pageAccent} text={text} taalBestand={TaalbestandNL} icons={icons}/>
       <main className="resultaten-contentbox sidebar-adjecent">

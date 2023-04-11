@@ -79,7 +79,7 @@
 [class*=dali-sidebar]:not([class*=right]) + [class*=dali-header]{
 
   &>*:first-child{
-    margin-left: 3rem;
+    margin-left: 7.65vh;
     position: static;
   }
 }

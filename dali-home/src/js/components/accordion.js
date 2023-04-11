@@ -59,7 +59,7 @@ export function WrappedAccordion(props){
     if(orientation == "perChapter"){
       return (
         <DataPerChapter
-        accordionFeatures={`opage-${props.pageAccent}`}
+        accordionFeatures={`${props.pageAccent}`}
         data={props.chapterData} />
       )
     }

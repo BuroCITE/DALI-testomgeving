@@ -2,7 +2,7 @@
   height: 100%;
   padding-bottom: 3rem;
   
-  main{
+  [class*=resultaten-contentbox]{
       position: relative;
       display: grid;
       align-content: start;
@@ -11,5 +11,29 @@
       height: 100%;
       padding: 20px 10px;
       overflow: auto;
+      
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+  
+      &::-webkit-scrollbar-track {
+        background: rgba($dali-gray-3, .3);
+      }
+  
+      &::-webkit-scrollbar-thumb {
+        background-color: $dali-gray-1;
+        border-radius: 20px;
+      }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  [class*=resultaten-contentbox][class*=#{$color}]{
+    $text-color: map-get($value, "foreground");
+    $background-color: map-get($value, "background");
+
+    .resultaten-contentbox::-webkit-scrollbar-thumb {
+      background-color: $background-color;
+    }
   }
 }

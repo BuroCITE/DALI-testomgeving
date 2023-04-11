@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 export function getOrientatedData(data, orientation){
   const order = {
-    desc: (a, b) => (a.omschrijving > b.omschrijving ? -1 : 1),
-    asc: (a, b) => (a.omschrijving > b.omschrijving ? 1 : -1)
+    desc: (a, b) => (a.description > b.description ? -1 : 1),
+    asc: (a, b) => (a.description > b.description ? 1 : -1)
   }
   
   var newData = data.sort(order[orientation]);

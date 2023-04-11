@@ -16,7 +16,7 @@ const text = TaalbestandNL.home;
 export function Home(props){
   const { logout } = useAuth();
   const { user } = useAuth();
-  const [pageAccent, setPageAccent] = useState('purple');
+  const [pageAccent, setPageAccent] = useState('gray-2');
 
     useEffect(() => {
       let userSettingsButton = document.getElementById('userSettingsButton');
@@ -31,7 +31,7 @@ export function Home(props){
         <div id="home-content-container" aria-label='content container' className="content-container">
           <HeaderUserNav title={text.heading.title} pageAccent={pageAccent} text={text} taalBestand={TaalbestandNL} icons={icons}/>
 
-          <main id="main">
+          <main id="main" className={`resultaten-contentbox-${pageAccent}`}>
             <InvisibleLink targetId="home-content-container" linkText={text.main.skipCardLink}/>
             <Card 
               icon={icons.iElement.book} 
