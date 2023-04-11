@@ -12,7 +12,7 @@ export function PopupOndersteuning(props){
         showModalButtonContents={props.text.ondersteuningPopup.showPopupButtonText}
         modalAriaText = {props.text.ondersteuningPopup.popupAriaText}
         modalFeatures={`${props.pageAccent}-xxl`}
-        modalHeaderFeatures="gray-2-sm"
+        modalHeaderFeatures={`${props.pageAccent}-sm`}
         modalHeaderTitle={props.text.ondersteuningPopup.popupheaderTitle}
         modalBodyClass="ondersteuning-popup-body"
         modalFooterContent={

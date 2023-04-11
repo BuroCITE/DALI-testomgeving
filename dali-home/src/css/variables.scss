@@ -37,46 +37,57 @@ $upload-text: "Select some files";
 $theme-colors : (
   "black": (
     "foreground" : $dali-white,
+    "grayscale" : $dali-gray-3,
     "background" : $dali-black,
 	),
   "white": (
     "foreground" : $dali-black,
+    "grayscale" : $dali-gray-1,
     "background" : $dali-white,
 	),
   "red": (
     "foreground" : $dali-white,
+    "grayscale" : $dali-gray-2,
     "background" : $dali-red,
 	),
   "turquoise": (
     "foreground" : $dali-white,
+    "grayscale" : $dali-gray-2,
     "background" : $dali-turquoise,
 	),
   "green": (
     "foreground" : $dali-white,
+    "grayscale" : $dali-gray-2,
     "background" : $dali-green,
 	),
   "blue": (
     "foreground" : $dali-white,
+    "grayscale" : $dali-gray-2,
     "background" : $dali-blue,
 	),
   "purple": (
     "foreground" : $dali-white,
+    "grayscale" : $dali-gray-2,
     "background" : $dali-purple,
 	),
   "brown": (
     "foreground" : $dali-white,
+    "grayscale" : $dali-gray-2,
     "background" : $dali-brown,
 	),
   "gray-1": (
     "foreground" : $dali-white,
+    "grayscale" : $dali-gray-3,
     "background" : $dali-gray-1,
 	),
   "gray-2": (
     "foreground" : $dali-white,
+    "grayscale" : $dali-black,
     "background" : $dali-gray-2,
 	),
   "gray-3": (
     "foreground" : $dali-white,
+    "grayscale" : $dali-gray-1,
     "background" : $dali-gray-3,
 	),
 );

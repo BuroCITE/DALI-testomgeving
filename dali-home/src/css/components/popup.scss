@@ -113,23 +113,33 @@
 // variants //
 @each $color, $value in $theme-colors {
   $text-color: map-get($value, "foreground");
+  $gray-color: map-get($value, "grayscale");
   $background-color: map-get($value, "background");
 
-    [class*=dali-modal-header][class*=-#{$color}],[class*=dali-modal-footer][class*=-#{$color}],
+    [class*=dali-modal-header][class*=-#{$color}],
+    [class*=dali-modal-footer][class*=-#{$color}],
     .dali-modal-close-button{
       background-color: $background-color;
       color: $text-color;
     }
-}
 
-@each $color, $value in $theme-colors {
-  $text-color: map-get($value, "foreground");
-  $background-color: map-get($value, "background");
+    [class*=dali-modal-header][class*=-#{$color}] .dali-modal-close-button:hover{
+      background-color: $gray-color;
+    }
 
   [class*=dali-modal-popup][class*=-#{$color}]{
-    .dali-modal-close-button, .dali-modal-body .dali-modal-accent{
+    .dali-modal-body .dali-modal-accent{
       &:hover, &:focus-visible{
         background-color: $background-color;
+        color: $text-color;
+      }
+    }
+  }
+
+  [class*=dali-modal-header][class*=-#{$color}]{
+    .dali-modal-close-button{
+      &:hover, &:focus-visible{
+        background-color: $gray-color;
         color: $text-color;
       }
     }
