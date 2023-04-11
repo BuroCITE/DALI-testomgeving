@@ -140,6 +140,7 @@ export function WrappedAccordion(props){
         <button ref={ref_unfoldButton}>
           {icons.iElement.doubleDownArrow} uitklappen
         </button>
+        {props.additionalButtons}
       </section>
       {dataOrientation()}
       {props.children}

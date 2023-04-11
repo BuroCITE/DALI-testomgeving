@@ -8,6 +8,7 @@ import { TaalbestandNL } from '../../library/res';
 import { HeaderUserNav } from "../components/prefilled/headerUserNav";
 import { PopupGoHome } from "../components/prefilled/popupGoHome";
 import { IconButtonBox } from "../components/prefilled/iconButtonBox";
+import { SearchBar } from "../components/SearchBar";
 const text = TaalbestandNL.home;
 
 
@@ -32,8 +33,11 @@ export function Bronverwijzingen() {
         <Sidebar sidebarFeatures="gray-1-closeable" sidebarIsVisible={false}/>
         <HeaderUserNav title="Bronverwijzing" navLeft={<PopupGoHome pageAccent={pageAccent}/>} pageAccent={pageAccent} text={text} taalBestand={TaalbestandNL} icons={icons}/>
         <main className="resultaten-contentbox sidebar-adjecent">
-
-          <WrappedAccordion chapterData={bronnenPerChapter} allData={allBronnen} pageAccent={`${pageAccent}`}>
+          <SearchBar/>
+          <WrappedAccordion 
+              chapterData={bronnenPerChapter} 
+              allData={allBronnen} 
+              pageAccent={`${pageAccent}`}>
             <Accordion 
                 title="galaxy" 
                 useBadge={true}
