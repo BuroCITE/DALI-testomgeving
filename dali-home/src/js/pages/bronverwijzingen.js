@@ -9,7 +9,7 @@ import { HeaderUserNav } from "../components/prefilled/headerUserNav";
 import { PopupGoHome } from "../components/prefilled/popupGoHome";
 import { IconButtonBox } from "../components/prefilled/iconButtonBox";
 import { SearchBar } from "../components/SearchBar";
-const text = TaalbestandNL.home;
+const text = TaalbestandNL.bronverwijzingen;
 
 
 export function Bronverwijzingen() {
@@ -31,14 +31,17 @@ export function Bronverwijzingen() {
     <>
       <div className={`bronverwijzingen-contentbox-${pageAccent}`} aria-label="de bronverwijzingen webpagina">
         <Sidebar sidebarFeatures="gray-1-closeable" sidebarIsVisible={false}/>
-        <HeaderUserNav title="Bronverwijzing" navLeft={<PopupGoHome pageAccent={pageAccent}/>} pageAccent={pageAccent} text={text} taalBestand={TaalbestandNL} icons={icons}/>
+        <HeaderUserNav title={text.heading.title} navLeft={<PopupGoHome pageAccent={pageAccent}/>} pageAccent={pageAccent} text={TaalbestandNL.home} taalBestand={TaalbestandNL} icons={icons}/>
         <main className="resultaten-contentbox sidebar-adjecent">
-          <SearchBar/>
+          
+          <SearchBar searchBarFeatures="red-old-design"/>
+          <SearchBar searchBarFeatures="red-new-design"/>
+          
           <WrappedAccordion 
               chapterData={bronnenPerChapter} 
               allData={allBronnen} 
               pageAccent={`${pageAccent}`}>
-            <Accordion 
+            <Accordion
                 title="galaxy" 
                 useBadge={true}
                 accordionFeatures={`${pageAccent}-color-nest`}>

@@ -116,7 +116,9 @@ export const TaalbestandNL = {
     },
   },
   bronverwijzingen: {
-
+    heading: {
+      title: "Bronverwijzingen"
+    },
   },
   loadingScreen: {
     loadingText: "loading"

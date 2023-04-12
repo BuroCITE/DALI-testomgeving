@@ -1,45 +1,91 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { createElement, useEffect, useRef, useState } from "react";
 import { icons } from '../../library/res';
 import { DataPerItem, DataPerChapter } from "./AccordionFunctions";
 import {getOrientatedData} from "../functions/dataFunctions"
 import { Dropdown } from "./dropdown";
+import { InvisibleLink } from "./invisibleLink";
+
 /**
  * @param {string} accordionWrapperId provide a current ref from the accordion wrapper where all the accordions are children from. by providing values for this and unfoldButtonRef will result in the creation of an unfold button. if one of the two is missing or incorrect the button will not be made.
  * @param {ref} unfoldButtonId provide a current ref from a button to be used as the unfold button. by providing values for this and accordionWrapperRef will result in the creation of an unfold button. if one of the two is missing or incorrect the button will not be made.
  */
-export class Accordion extends React.Component{
-  constructor(props){
-    super(props);
-    this.ref_badge = React.createRef();
-    this.ref_details = React.createRef();
+export function Accordion(props){
+    const ref_badge = useRef();
+    const ref_details = useRef(null);
 
-  }
-  componentDidMount(){
-    const badge = this.ref_badge.current;
-    const details = this.ref_details.current;
-
-    // add badge to all elements where the useBadge prop is true. fill badge with number of accordion-items inside that element.
-    if(this.props.useBadge === true){
-      const items = details.querySelectorAll('.accordion-item');
-      badge.innerText = items.length;
+  const checkInvisibleLinkRequired = (details) => {
+    console.log(details)
+    var allLinks = details.querySelectorAll('a');
+    if(allLinks.length >= 3){
+      console.log('hello world! there are more then 3 items in this accordion');
+      const nextAccordion = details.nextSibling;
+      console.log(nextAccordion);
+      return (
+        <InvisibleLink targetId={nextAccordion} invisibleLinkFeatures="red-right-slide-in" linkText="test link"/>
+      );
+    }
+    else{
+      return
     }
   }
 
-  render(){
-    return (
-      <> 
-        <details className={`dali-accordion-${this.props.accordionFeatures}`} ref={this.ref_details} data-has-badge={this.props.useBadge}>
-          <summary >
-            <h3>{this.props.title}</h3>
-            <mark className="dali-badge" ref={this.ref_badge} data-usebadge={this.props.useBadge}></mark>
-            <i class="fa-solid fa-angle-down"></i>
-          </summary>
-          {this.props.children}
-        </details>
-      </>
-    );
-  }
+  // checkInvisibleLinkRequired() {
+  //   const details = this.ref_details.current;
+  //   var allLinks = details.querySelectorAll('a');
+  //   if(allLinks.length >= 3){
+  //     console.log('hello world! there are more then 3 items in this accordion');
+  //     return (
+  //       <InvisibleLink linkText="test link"/>
+  //     );
+  //   }
+  //   else{
+  //     return
+  //   }
+  // }
+
+  useEffect(() => {
+    const badge = ref_badge.current;
+    const details = ref_details.current;
+
+    // add badge to all elements where the useBadge prop is true. fill badge with number of accordion-items inside that element.
+    if(props.useBadge === true){
+      const items = details.querySelectorAll('.accordion-item');
+      badge.innerText = items.length;
+    }
+
+    // console.log(details);
+    // const allLinks = details.querySelectorAll('a');
+    // // const allLinks = [1,1,1,1,1]
+    // if(allLinks.length >= 3){
+    //   console.log('hello world! there are more then 3 items in this accordion');
+    //   const nextAccordion = details.nextSibling;
+    //   console.log(nextAccordion);
+    //   // ReactDOM.render(<InvisibleLink targetId={nextAccordion} invisibleLinkFeatures="red-right-slide-in" linkText="test link"/>, details);
+    //   let elem = React.createElement('InvisibleLink', {targetId: nextAccordion, invisibleLinkFeatures: 'red-right-slide-in', linkText: 'test link'});
+    //   console.log('here is the elem that you seek');
+    //   console.log(elem);
+    // }
+    // else{
+    //   console.log('else')
+    //   return
+    // }
+  },[]);
+
+  return (
+    <> 
+      <details className={`dali-accordion-${props.accordionFeatures}`} ref={ref_details} data-has-badge={props.useBadge}>
+        <summary>
+          <h3>{props.title}</h3>
+          <mark className="dali-badge" ref={ref_badge} data-usebadge={props.useBadge}></mark>
+          <i class="fa-solid fa-angle-down"></i>
+        </summary>
+        {/* {checkInvisibleLinkRequired(ref_details.current)} */}
+        {props.children}
+      </details>
+    </>
+  );
 }
+
 Accordion.defaultProps = {
   accordionFeatures: '',
   useBadge: false,
@@ -88,7 +134,7 @@ export function WrappedAccordion(props){
 
     const setOrientationPerChapter = () => {
       setOrientation('perChapter');
-      setState('per Hoofdstuk');
+      setState('Per Hoofdstuk');
     }
 
     const setOrientationDesc = () => {
