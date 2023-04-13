@@ -13,15 +13,35 @@ export function Accordion(props){
     const ref_badge = useRef();
     const ref_details = useRef(null);
 
-  const checkInvisibleLinkRequired = (details) => {
-    console.log(details)
-    var allLinks = details.querySelectorAll('a');
-    if(allLinks.length >= 3){
-      console.log('hello world! there are more then 3 items in this accordion');
-      const nextAccordion = details.nextSibling;
-      console.log(nextAccordion);
+  const checkInvisibleLinkRequired = (childrenJson) => {
+    // console.log(details)
+    // var allLinks = details.querySelectorAll('a');
+    // console.log(props.children.props.data);
+    // console.log(childrenJson);
+    // while newChildren < 3 {if props.children[i].isAccesable == true{newChildren++}}
+    // let countedChildren = 0;
+    // for (let i = 0; i < props.children.length; i++) {
+    //   if(props.children.props.data[i].isAccessable === true){
+    //     console.log('done')
+    //     countedChildren = 1;
+    //   }
+    //   else{
+    //     console.log('else?')
+    //   }
+    // }
+    // props.children.forEach(child => {
+    //   if(child.isAccesable == true){
+
+    //   }
+    // });
+    var allLinks = [1,1,1,1,1];
+    if(Array.isArray(props.children)){}
+    else if(props.children.props.data.length >= 3){
+      // console.log('hello world! there are more then 3 items in this accordion');
+      // const nextAccordion = details.nextSibling;
+      // console.log(nextAccordion); 
       return (
-        <InvisibleLink targetId={nextAccordion} invisibleLinkFeatures="red-right-slide-in" linkText="test link"/>
+        <InvisibleLink invisibleLinkFeatures="red-right-slide-in" linkText="test link"/>
       );
     }
     else{
@@ -79,8 +99,8 @@ export function Accordion(props){
           <mark className="dali-badge" ref={ref_badge} data-usebadge={props.useBadge}></mark>
           <i class="fa-solid fa-angle-down"></i>
         </summary>
-        {/* {checkInvisibleLinkRequired(ref_details.current)} */}
         {props.children}
+        {checkInvisibleLinkRequired(props.children)}
       </details>
     </>
   );
@@ -99,14 +119,14 @@ export function WrappedAccordion(props){
   const ref_sortPerChapter = useRef(null);
   const ref_unfoldButton = useRef();
   const [orientation, setOrientation] = useState('perChapter');
-  const [state, setState] = useState('per Hoofdstuk');
+  const [state, setState] = useState('Per Hoofdstuk');
 
   const dataOrientation = () => {
     if(orientation == "perChapter"){
       return (
         <DataPerChapter
         accordionFeatures={`${props.pageAccent}`}
-        data={props.chapterData} />
+        data={props.chapterData}  />
       )
     }
 
@@ -184,7 +204,7 @@ export function WrappedAccordion(props){
         </Dropdown>
         &nbsp; {/* //todo: this &nbsp; should be handled via css. // ? temporary fix */}
         <button ref={ref_unfoldButton}>
-          {icons.iElement.doubleDownArrow} uitklappen
+          {icons.iElement.doubleDownArrow} Uitklappen
         </button>
         {props.additionalButtons}
       </section>

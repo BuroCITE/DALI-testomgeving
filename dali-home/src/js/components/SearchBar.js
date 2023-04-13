@@ -10,9 +10,9 @@ export function SearchBar(props) {
   return(
     <section className={`dali-searchBar-${props.searchBarFeatures}`}>
       <form>
-        <input placeholder={`zoeken`}></input>
+        <input placeholder={`Zoeken`}></input>
         <button hidden={!props.searchBarFeatures.includes('new-design')} type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
       </form>
     </section>
-  )
+  );
 }
