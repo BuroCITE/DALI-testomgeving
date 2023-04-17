@@ -13,7 +13,6 @@ export function Accordion(props){
     const ref_badge = useRef();
     const ref_details = useRef(null);
 
-  const checkInvisibleLinkRequired = (childrenJson) => {
     // console.log(details)
     // var allLinks = details.querySelectorAll('a');
     // console.log(props.children.props.data);
@@ -47,21 +46,38 @@ export function Accordion(props){
     // else{
     //   return
     // }
-  }
+  // }
+  // const getValidChildren = (children: React.ReactNode) => {
+  //    return React.Children.toArray(children).filter((child) =>
+  //      React.isValidElement(child),
+  //     ) as React.ReactElement[]
+  //   }
 
   // checkInvisibleLinkRequired() {
-  //   const details = this.ref_details.current;
-  //   var allLinks = details.querySelectorAll('a');
-  //   if(allLinks.length >= 3){
-  //     console.log('hello world! there are more then 3 items in this accordion');
-  //     return (
-  //       <InvisibleLink linkText="test link"/>
-  //     );
-  //   }
-  //   else{
-  //     return
-  //   }
-  // }
+  const checkInvisibleLinkRequired = () => {
+    // const details = this.ref_details.current;
+    // var allLinks = details.querySelectorAll('a');
+    // const nextAccordion = details.nextSibling;
+    //? the above code connot be used at the moment because of a lack of insight.
+
+    var allLinks = 0
+    if(props.children.props.data != undefined){
+      allLinks = props.children.props.data.length;
+    }
+    
+    // 3 has been chosen because it will take 4 clicks with 3 elements without skiplink, and 2 clicks with skiplink. so its a number chosen for the best afficiantie but also no unnessary addons.
+    if(allLinks >= 3){
+      return (
+        <InvisibleLink
+            // target={nextAccordion}
+            invisibleLinkFeatures="red-right-slide-in" 
+            linkText="test link"/>
+      );
+    }
+    else{
+      return
+    }
+  }
 
   useEffect(() => {
     const badge = ref_badge.current;
@@ -72,23 +88,6 @@ export function Accordion(props){
       const items = details.querySelectorAll('.accordion-item');
       badge.innerText = items.length;
     }
-
-    // console.log(details);
-    // const allLinks = details.querySelectorAll('a');
-    // // const allLinks = [1,1,1,1,1]
-    // if(allLinks.length >= 3){
-    //   console.log('hello world! there are more then 3 items in this accordion');
-    //   const nextAccordion = details.nextSibling;
-    //   console.log(nextAccordion);
-    //   // ReactDOM.render(<InvisibleLink targetId={nextAccordion} invisibleLinkFeatures="red-right-slide-in" linkText="test link"/>, details);
-    //   let elem = React.createElement('InvisibleLink', {targetId: nextAccordion, invisibleLinkFeatures: 'red-right-slide-in', linkText: 'test link'});
-    //   console.log('here is the elem that you seek');
-    //   console.log(elem);
-    // }
-    // else{
-    //   console.log('else')
-    //   return
-    // }
   },[]);
 
   return (
@@ -99,8 +98,8 @@ export function Accordion(props){
           <mark className="dali-badge" ref={ref_badge} data-usebadge={props.useBadge}></mark>
           {icons.iElement.downArrow}
         </summary>
+        {checkInvisibleLinkRequired()}
         {props.children}
-        {checkInvisibleLinkRequired(props.children)}
       </details>
     </>
   );

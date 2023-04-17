@@ -41,7 +41,13 @@ export function Bronverwijzingen() {
               chapterData={bronnenPerChapter} 
               allData={allBronnen} 
               pageAccent={`${pageAccent}`}>
+              <Accordion title="hello, i'm rounded" accordionFeatures="purple-rounded-corners">
+                <AccordionItem>
+                  <h3>hello, i'm an item.</h3>
+                </AccordionItem>
+              </Accordion>
           </WrappedAccordion>
+
         </main>
       </div>
     </>
