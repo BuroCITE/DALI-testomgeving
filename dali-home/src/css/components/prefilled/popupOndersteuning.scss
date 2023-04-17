@@ -1,7 +1,8 @@
 .ondersteuning-popup-body{
   padding: 0 !important;
   
-  .gebruikshandleidingen{
+  .gebruikshandleidingen,
+  .helpdesk{
     .title{
       width: 100%;
       background-color: $dali-gray-3;
@@ -53,6 +54,37 @@
               color: $dali-white;
             }
           }
+        }
+      }
+    }
+  }
+
+  .helpdesk{
+    form{
+      padding: .3rem .5rem;
+
+      label{
+        display: block;
+      }
+
+      textArea{
+        width: 100%;
+        height: 10rem;
+        resize: vertical;
+        padding: .3rem;
+        border-color: $dali-gray-2;
+      }
+
+      button{
+        background-color: rgba($dali-red, .3);
+        width: fit-content;
+        padding: .2rem;
+        border: 1px solid $dali-gray-2;
+
+        &:focus-visible,
+        &:hover{
+          background-color: $dali-red;
+          color: $dali-white;
         }
       }
     }

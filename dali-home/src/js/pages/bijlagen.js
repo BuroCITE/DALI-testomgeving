@@ -23,20 +23,19 @@ export function Bijlagen() {
 
   if(!bijlagePerChapter || !allBijlagen) {
     return(
-      <LoadingScreen loadingScreenFeatures={`${pageAccent}-flipping-down-right-square`}
-      title="loading..."/>
+      <LoadingScreen loadingScreenFeatures={`${pageAccent}-${TaalbestandNL.loadingScreen.loadingAnimation}`}
+      title={TaalbestandNL.loadingScreen.loadingText}/>
     );
   }
 
   return(
-    <div className={`bijlagen-contentbox-${pageAccent}`} aria-label="de bijlagen webpagina">
+    <div className={`bijlagen-contentbox-${pageAccent}`} aria-label={text.pageAriaLabel}>
       <Sidebar sidebarFeatures="gray-1-closeable" sidebarIsVisible={false}/>
-      <HeaderUserNav title="bijlagen" navLeft={<PopupGoHome pageAccent={pageAccent}/>} pageAccent={pageAccent} text={text} taalBestand={TaalbestandNL} icons={icons}/>
+      <HeaderUserNav title={text.heading.title} navLeft={<PopupGoHome pageAccent={pageAccent}/>} pageAccent={pageAccent} text={text} taalBestand={TaalbestandNL} icons={icons}/>
       <main className="resultaten-contentbox sidebar-adjecent">
 
         <WrappedAccordion chapterData={bijlagePerChapter} allData={allBijlagen} pageAccent={`${pageAccent}`}/>
       </main>
-      {/* <Sidebar sidebarFeatures="gray-1-closeable-right" sidebarIsVisible={true} /> */}
     </div>
   );
 }

@@ -34,19 +34,19 @@ export function Accordion(props){
 
     //   }
     // });
-    var allLinks = [1,1,1,1,1];
-    if(Array.isArray(props.children)){}
-    else if(props.children.props.data.length >= 3){
-      // console.log('hello world! there are more then 3 items in this accordion');
-      // const nextAccordion = details.nextSibling;
-      // console.log(nextAccordion); 
-      return (
-        <InvisibleLink invisibleLinkFeatures="red-right-slide-in" linkText="test link"/>
-      );
-    }
-    else{
-      return
-    }
+    // var allLinks = [1,1,1,1,1];
+    // if(Array.isArray(props.children)){}
+    // else if(props.children.props.data.length >= 3){
+    //   // console.log('hello world! there are more then 3 items in this accordion');
+    //   // const nextAccordion = details.nextSibling;
+    //   // console.log(nextAccordion); 
+    //   return (
+    //     <InvisibleLink invisibleLinkFeatures="red-right-slide-in" linkText="test link"/>
+    //   );
+    // }
+    // else{
+    //   return
+    // }
   }
 
   // checkInvisibleLinkRequired() {
@@ -97,7 +97,7 @@ export function Accordion(props){
         <summary>
           <h3>{props.title}</h3>
           <mark className="dali-badge" ref={ref_badge} data-usebadge={props.useBadge}></mark>
-          <i class="fa-solid fa-angle-down"></i>
+          {icons.iElement.downArrow}
         </summary>
         {props.children}
         {checkInvisibleLinkRequired(props.children)}
