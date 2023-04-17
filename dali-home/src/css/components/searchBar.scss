@@ -1,0 +1,80 @@
+[class*=dali-searchBar]{
+  margin: -2vh 0 1rem -2vw;
+  width: 100vw;
+  height: 2.5rem;
+
+  form{
+    display: contents;
+    
+    input{
+      width: 99%;
+      border-radius: 5px;
+      padding: .2rem;
+
+      &:focus-visible{
+        outline: 3px solid yellow;
+      }
+    }  
+  }
+}
+
+
+//variants
+[class*=dali-searchBar][class*=old-design]{
+  background-color: $dali-gray-1;
+  position: sticky;
+  top: -2vh;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+[class*=dali-searchBar][class*=new-design]{
+  background-color: transparent;
+  position: sticky;
+  top: -1vh;
+  left: 50%;
+  transform: translate(-4.5%);
+  width: 92%;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form{
+
+    input{
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-right: 0;
+    }
+
+    button{
+      height: 86%;
+      aspect-ratio: 1/1;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border: none;
+    }
+  }
+}
+
+@each $color, $value in $theme-colors{
+  $background-color: map-get($value, "background");
+  $text-color: map-get($value, "foreground");
+
+  [class*=dali-searchBar][class*=#{$color}]{
+    form {
+      input{
+        &:focus-visible{
+          outline-color: $background-color;
+        }
+      }
+      button{
+        background-color: $background-color;
+        color: $text-color;
+      }
+    }
+  }
+}

@@ -2,6 +2,7 @@ import React from 'react'
 import PdfViewerComponent from '../../externalComponents/pdfViewerComponent';
 import { ModalFooter, Popup } from '../popup';
 import { IconButtonBox } from './iconButtonBox';
+import { Form, Textarea } from '../form';
 
 export function PopupOndersteuning(props){
 
@@ -12,7 +13,7 @@ export function PopupOndersteuning(props){
         showModalButtonContents={props.text.ondersteuningPopup.showPopupButtonText}
         modalAriaText = {props.text.ondersteuningPopup.popupAriaText}
         modalFeatures={`${props.pageAccent}-xxl`}
-        modalHeaderFeatures="gray-2-sm"
+        modalHeaderFeatures={`${props.pageAccent}-sm`}
         modalHeaderTitle={props.text.ondersteuningPopup.popupheaderTitle}
         modalBodyClass="ondersteuning-popup-body"
         modalFooterContent={
@@ -77,6 +78,23 @@ export function PopupOndersteuning(props){
               </IconButtonBox>
             </li>
           </ul>
+        </section>
+        <section className="helpdesk">
+          <h3 
+            className="title">
+              {props.text.ondersteuningPopup.helpDesk.title}
+          </h3>
+          <Form>
+            <Textarea 
+                name="Dali-Helpdesk" 
+                label={props.text.ondersteuningPopup.helpDesk.textArea.label}
+                className="ondersteuning-Helpdesk">
+
+            </Textarea>
+
+            <button>{props.text.ondersteuningPopup.helpDesk.submit}</button>
+          </Form>
+
         </section>
     </Popup>
   );

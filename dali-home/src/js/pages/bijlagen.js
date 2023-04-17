@@ -7,6 +7,8 @@ import { LoadingScreen } from "../components/loadingScreen";
 import { TaalbestandNL } from '../../library/res';
 import { HeaderUserNav } from "../components/prefilled/headerUserNav";
 import { PopupGoHome } from "../components/prefilled/popupGoHome";
+import { SearchBar } from "../components/SearchBar";
+
 const text = TaalbestandNL.home;
 
 
@@ -14,7 +16,8 @@ const text = TaalbestandNL.home;
 export function Bijlagen() {
   const [pageAccent, setPageAccent] = useState('red');
 
-  var { data } = GetData('https://BRCACERV3571G01.burocite-nl.local:7158/api/getAllAttachments');
+  var { data } = GetData('https://brcacerv3571g01.burocite-nl.local:7158/api/GetAllAttachments');
+  // var { data } = GetData('library/alle-bijlagen.json');
   var allBijlagen = data;
   var { data } = GetData('library/bijlagen-per-chapter.json');
   var bijlagePerChapter = data;
@@ -22,20 +25,21 @@ export function Bijlagen() {
 
   if(!bijlagePerChapter || !allBijlagen) {
     return(
-      <LoadingScreen loadingScreenFeatures={`${pageAccent}-flipping-down-right-square`}
-      title="loading..."/>
+      <LoadingScreen loadingScreenFeatures={`${pageAccent}-${TaalbestandNL.loadingScreen.loadingAnimation}`}
+      title={TaalbestandNL.loadingScreen.loadingText}/>
     );
   }
 
   return(
-    <div className={`bijlagen-contentbox-${pageAccent}`} aria-label="de bijlagen webpagina">
+    <div className={`bijlagen-contentbox-${pageAccent}`} aria-label={text.pageAriaLabel}>
       <Sidebar sidebarFeatures="gray-1-closeable" sidebarIsVisible={false}/>
-      <HeaderUserNav title="bijlagen" navLeft={<PopupGoHome pageAccent={pageAccent}/>} pageAccent={pageAccent} text={text} taalBestand={TaalbestandNL} icons={icons}/>
+      <HeaderUserNav title={text.heading.title} navLeft={<PopupGoHome pageAccent={pageAccent}/>} pageAccent={pageAccent} text={text} taalBestand={TaalbestandNL} icons={icons}/>
       <main className="resultaten-contentbox sidebar-adjecent">
+
+      <SearchBar searchBarFeatures="red-old-design"/>
 
         <WrappedAccordion chapterData={bijlagePerChapter} allData={allBijlagen} pageAccent={`${pageAccent}`}/>
       </main>
-      {/* <Sidebar sidebarFeatures="gray-1-closeable-right" sidebarIsVisible={true} /> */}
     </div>
   );
 }

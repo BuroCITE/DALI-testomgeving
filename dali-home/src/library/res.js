@@ -45,6 +45,13 @@ export const TaalbestandNL = {
         pveManual: {
           title: "gebruikshandleiding projecten",
         }
+      },
+      helpDesk :{
+        title: "DALI-Helpdesk",
+        textArea: {
+          label: "Heeft u een vraag of opmerking en kunt u uw antwoord niet vinden in de betreffende handleiding? stel hier uw vraag aan de DALI-Helpdesk",
+        },
+        submit: "verzenden"
       }
     },
     liorManualPopup: {
@@ -115,11 +122,21 @@ export const TaalbestandNL = {
       }
     },
   },
+  bijlagen: {
+    heading: {
+      title: "Bijlagen"
+    },
+    pageAriaLabel: "de bronverwijzingen webpagina",
+  },
   bronverwijzingen: {
-
+    heading: {
+      title: "Bronverwijzingen"
+    },
+    pageAriaLabel: "de bronverwijzingen webpagina",
   },
   loadingScreen: {
-    loadingText: "loading"
+    loadingText: "loading",
+    loadingAnimation: "flipping-down-right-square"
   },
   buroCite: {
     productName: "Dali",

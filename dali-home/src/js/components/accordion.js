@@ -1,45 +1,110 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { createElement, useEffect, useRef, useState } from "react";
 import { icons } from '../../library/res';
 import { DataPerItem, DataPerChapter } from "./AccordionFunctions";
 import {getOrientatedData} from "../functions/dataFunctions"
 import { Dropdown } from "./dropdown";
+import { InvisibleLink } from "./invisibleLink";
+
 /**
  * @param {string} accordionWrapperId provide a current ref from the accordion wrapper where all the accordions are children from. by providing values for this and unfoldButtonRef will result in the creation of an unfold button. if one of the two is missing or incorrect the button will not be made.
  * @param {ref} unfoldButtonId provide a current ref from a button to be used as the unfold button. by providing values for this and accordionWrapperRef will result in the creation of an unfold button. if one of the two is missing or incorrect the button will not be made.
  */
-export class Accordion extends React.Component{
-  constructor(props){
-    super(props);
-    this.ref_badge = React.createRef();
-    this.ref_details = React.createRef();
+export function Accordion(props){
+    const ref_badge = useRef();
+    const ref_details = useRef(null);
 
-  }
-  componentDidMount(){
-    const badge = this.ref_badge.current;
-    const details = this.ref_details.current;
+    // console.log(details)
+    // var allLinks = details.querySelectorAll('a');
+    // console.log(props.children.props.data);
+    // console.log(childrenJson);
+    // while newChildren < 3 {if props.children[i].isAccesable == true{newChildren++}}
+    // let countedChildren = 0;
+    // for (let i = 0; i < props.children.length; i++) {
+    //   if(props.children.props.data[i].isAccessable === true){
+    //     console.log('done')
+    //     countedChildren = 1;
+    //   }
+    //   else{
+    //     console.log('else?')
+    //   }
+    // }
+    // props.children.forEach(child => {
+    //   if(child.isAccesable == true){
 
-    // add badge to all elements where the useBadge prop is true. fill badge with number of accordion-items inside that element.
-    if(this.props.useBadge === true){
-      const items = details.querySelectorAll('.accordion-item');
-      badge.innerText = items.length;
+    //   }
+    // });
+    // var allLinks = [1,1,1,1,1];
+    // if(Array.isArray(props.children)){}
+    // else if(props.children.props.data.length >= 3){
+    //   // console.log('hello world! there are more then 3 items in this accordion');
+    //   // const nextAccordion = details.nextSibling;
+    //   // console.log(nextAccordion); 
+    //   return (
+    //     <InvisibleLink invisibleLinkFeatures="red-right-slide-in" linkText="test link"/>
+    //   );
+    // }
+    // else{
+    //   return
+    // }
+  // }
+  // const getValidChildren = (children: React.ReactNode) => {
+  //    return React.Children.toArray(children).filter((child) =>
+  //      React.isValidElement(child),
+  //     ) as React.ReactElement[]
+  //   }
+
+  // checkInvisibleLinkRequired() {
+  const checkInvisibleLinkRequired = () => {
+    // const details = this.ref_details.current;
+    // var allLinks = details.querySelectorAll('a');
+    // const nextAccordion = details.nextSibling;
+    //? the above code connot be used at the moment because of a lack of insight.
+
+    var allLinks = 0
+    if(props.children.props.data != undefined){
+      allLinks = props.children.props.data.length;
+    }
+    
+    // 3 has been chosen because it will take 4 clicks with 3 elements without skiplink, and 2 clicks with skiplink. so its a number chosen for the best afficiantie but also no unnessary addons.
+    if(allLinks >= 3){
+      return (
+        <InvisibleLink
+            // target={nextAccordion}
+            invisibleLinkFeatures="red-right-slide-in" 
+            linkText="test link"/>
+      );
+    }
+    else{
+      return
     }
   }
 
-  render(){
-    return (
-      <> 
-        <details className={`dali-accordion-${this.props.accordionFeatures}`} ref={this.ref_details} data-has-badge={this.props.useBadge}>
-          <summary >
-            <h3>{this.props.title}</h3>
-            <mark className="dali-badge" ref={this.ref_badge} data-usebadge={this.props.useBadge}></mark>
-            <i class="fa-solid fa-angle-down"></i>
-          </summary>
-          {this.props.children}
-        </details>
-      </>
-    );
-  }
+  useEffect(() => {
+    const badge = ref_badge.current;
+    const details = ref_details.current;
+
+    // add badge to all elements where the useBadge prop is true. fill badge with number of accordion-items inside that element.
+    if(props.useBadge === true){
+      const items = details.querySelectorAll('.accordion-item');
+      badge.innerText = items.length;
+    }
+  },[]);
+
+  return (
+    <> 
+      <details className={`dali-accordion-${props.accordionFeatures}`} ref={ref_details} data-has-badge={props.useBadge}>
+        <summary>
+          <h3>{props.title}</h3>
+          <mark className="dali-badge" ref={ref_badge} data-usebadge={props.useBadge}></mark>
+          {icons.iElement.downArrow}
+        </summary>
+        {checkInvisibleLinkRequired()}
+        {props.children}
+      </details>
+    </>
+  );
 }
+
 Accordion.defaultProps = {
   accordionFeatures: '',
   useBadge: false,
@@ -53,14 +118,14 @@ export function WrappedAccordion(props){
   const ref_sortPerChapter = useRef(null);
   const ref_unfoldButton = useRef();
   const [orientation, setOrientation] = useState('perChapter');
-  const [state, setState] = useState('per Hoofdstuk');
+  const [state, setState] = useState('Per Hoofdstuk');
 
   const dataOrientation = () => {
     if(orientation == "perChapter"){
       return (
         <DataPerChapter
         accordionFeatures={`${props.pageAccent}`}
-        data={props.chapterData} />
+        data={props.chapterData}  />
       )
     }
 
@@ -88,7 +153,7 @@ export function WrappedAccordion(props){
 
     const setOrientationPerChapter = () => {
       setOrientation('perChapter');
-      setState('per Hoofdstuk');
+      setState('Per Hoofdstuk');
     }
 
     const setOrientationDesc = () => {
@@ -138,8 +203,9 @@ export function WrappedAccordion(props){
         </Dropdown>
         &nbsp; {/* //todo: this &nbsp; should be handled via css. // ? temporary fix */}
         <button ref={ref_unfoldButton}>
-          {icons.iElement.doubleDownArrow} uitklappen
+          {icons.iElement.doubleDownArrow} Uitklappen
         </button>
+        {props.additionalButtons}
       </section>
       {dataOrientation()}
       {props.children}
