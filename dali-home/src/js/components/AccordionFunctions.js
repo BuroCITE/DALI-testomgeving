@@ -37,11 +37,6 @@ export class DataPerItem extends React.Component {
               modalHeaderTitle={item.description}
               modalFeatures={`purple-xxl${this.props.pageAccent}`}
               modalBodyClass="ondersteuning-popup-body">
-            <PdfViewerComponent
-              document={`library/pdf/bijlagen/${item.fileName}`}
-              pdfViewerClass=""
-              pdfViewerFeatures=""
-            />
           </Popup>
         </>
       );

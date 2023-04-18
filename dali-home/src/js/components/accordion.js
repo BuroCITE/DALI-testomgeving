@@ -13,47 +13,6 @@ export function Accordion(props){
     const ref_badge = useRef();
     const ref_details = useRef(null);
 
-    // console.log(details)
-    // var allLinks = details.querySelectorAll('a');
-    // console.log(props.children.props.data);
-    // console.log(childrenJson);
-    // while newChildren < 3 {if props.children[i].isAccesable == true{newChildren++}}
-    // let countedChildren = 0;
-    // for (let i = 0; i < props.children.length; i++) {
-    //   if(props.children.props.data[i].isAccessable === true){
-    //     console.log('done')
-    //     countedChildren = 1;
-    //   }
-    //   else{
-    //     console.log('else?')
-    //   }
-    // }
-    // props.children.forEach(child => {
-    //   if(child.isAccesable == true){
-
-    //   }
-    // });
-    // var allLinks = [1,1,1,1,1];
-    // if(Array.isArray(props.children)){}
-    // else if(props.children.props.data.length >= 3){
-    //   // console.log('hello world! there are more then 3 items in this accordion');
-    //   // const nextAccordion = details.nextSibling;
-    //   // console.log(nextAccordion); 
-    //   return (
-    //     <InvisibleLink invisibleLinkFeatures="red-right-slide-in" linkText="test link"/>
-    //   );
-    // }
-    // else{
-    //   return
-    // }
-  // }
-  // const getValidChildren = (children: React.ReactNode) => {
-  //    return React.Children.toArray(children).filter((child) =>
-  //      React.isValidElement(child),
-  //     ) as React.ReactElement[]
-  //   }
-
-  // checkInvisibleLinkRequired() {
   const checkInvisibleLinkRequired = () => {
     // const details = this.ref_details.current;
     // var allLinks = details.querySelectorAll('a');
