@@ -66,42 +66,46 @@ export function Login() {
         </SidebarFooter>
       }
     >
-      <Form 
-        onSubmit={handleSubmit} 
-        formId="loginForm" 
-        formAriaText={text.formAriaText}>
-          <IconInput 
-            errorId="errorUsername" 
-            errorMessage={text.userNameInput.errorMessage}
-            name="username"
-            label={text.userNameInput.label}
-            iconAriaLabel={text.userNameInput.iconAriaText}
-            iconClass={icons.iClass.users} 
-            className="icon-input dali-input" 
-            state=""
-            value={username}
-            handleChange={(e) => setUsername(e.target.value)}
-          />
-          <IconInput 
-            errorId="errorPassword" 
-            errorMessage={text.passwordInput.errorMessage}
-            name="password" 
-            label={text.passwordInput.label}
-            iconAriaLabel={text.passwordInput.iconAriaText}
-            iconClass={icons.iClass.lock}
-            className="icon-input dali-input" 
-            type="password" 
-            state=""
-            value={password}
-            handleChange={(e) => setPassword(e.target.value)}
-          />
-          <button type='submit' disabled={!validateForm()}>
-            {text.submitButtonText}
-          </button>
-          <br/>
-          {/* ! these 2 buttons don't do anything yet and are pure astatics */}
-          <button type="button">{text.forgotPasswordButtonText}</button>
-          <button type="button">{icons.iElement.envelope} {text.mailButtonText}</button>
+      <Form
+          onSubmit={handleSubmit}
+          formId="loginForm"
+          formAriaText={text.formAriaText}>
+
+        <IconInput
+          errorId="errorUsername"
+          errorMessage={text.userNameInput.errorMessage}
+          name="username"
+          label={text.userNameInput.label}
+          iconAriaLabel={text.userNameInput.iconAriaText}
+          iconClass={icons.iClass.users}
+          className="icon-input dali-input"
+          state=""
+          value={username}
+          handleChange={(e) => setUsername(e.target.value)}
+        />
+
+        <IconInput
+          errorId="errorPassword"
+          errorMessage={text.passwordInput.errorMessage}
+          name="password"
+          label={text.passwordInput.label}
+          iconAriaLabel={text.passwordInput.iconAriaText}
+          iconClass={icons.iClass.lock}
+          className="icon-input dali-input"
+          type="password"
+          state=""
+          value={password}
+          handleChange={(e) => setPassword(e.target.value)}
+        />
+
+        <button type='submit' disabled={!validateForm()}>
+          {text.submitButtonText}
+        </button>
+        <br/>
+
+        {/* ! these 2 buttons don't do anything yet and are pure astatics */}
+        <button type="button">{text.forgotPasswordButtonText}</button>
+        <button type="button">{icons.iElement.envelope} {text.mailButtonText}</button>
       </Form>
     </Sidebar>
     </>

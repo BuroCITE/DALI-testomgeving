@@ -7,7 +7,7 @@ import { LoadingScreen } from "../components/loadingScreen";
 import { TaalbestandNL } from '../../library/res';
 import { HeaderUserNav } from "../components/prefilled/headerUserNav";
 import { PopupGoHome } from "../components/prefilled/popupGoHome";
-import { SearchBar } from "../components/SearchBar";
+import { SearchBar } from "../components/searchBar";
 
 const text = TaalbestandNL.home;
 
@@ -25,20 +25,37 @@ export function Bijlagen() {
 
   if(!bijlagePerChapter || !allBijlagen) {
     return(
-      <LoadingScreen loadingScreenFeatures={`${pageAccent}-${TaalbestandNL.loadingScreen.loadingAnimation}`}
-      title={TaalbestandNL.loadingScreen.loadingText}/>
+      <LoadingScreen
+        loadingScreenFeatures={`${pageAccent}-${TaalbestandNL.loadingScreen.loadingAnimation}`}
+        title={TaalbestandNL.loadingScreen.loadingText}
+      />
     );
   }
 
   return(
-    <div className={`bijlagen-contentbox-${pageAccent}`} aria-label={text.pageAriaLabel}>
-      <Sidebar sidebarFeatures="gray-1-closeable" sidebarIsVisible={false}/>
-      <HeaderUserNav title={text.heading.title} navLeft={<PopupGoHome pageAccent={pageAccent}/>} pageAccent={pageAccent} text={text} taalBestand={TaalbestandNL} icons={icons}/>
-      <main className="resultaten-contentbox sidebar-adjecent">
+    <div
+        className={`bijlagen-contentbox-${pageAccent}`}
+        aria-label={text.pageAriaLabel}>
 
+      <Sidebar sidebarFeatures="gray-1-closeable" sidebarIsVisible={false}/>
+      <HeaderUserNav
+        title={text.heading.title}
+        navLeft={<PopupGoHome pageAccent={pageAccent}/>}
+        pageAccent={pageAccent}
+        text={text}
+        taalBestand={TaalbestandNL}
+        icons={icons}
+      />
+
+      <main className="resultaten-contentbox sidebar-adjecent">
       <SearchBar searchBarFeatures="red-old-design"/>
 
-        <WrappedAccordion chapterData={bijlagePerChapter} allData={allBijlagen} pageAccent={`${pageAccent}`}/>
+      <WrappedAccordion
+        chapterData={bijlagePerChapter}
+        allData={allBijlagen}
+        pageAccent={`${pageAccent}`}
+      />
+      
       </main>
     </div>
   );

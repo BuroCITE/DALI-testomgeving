@@ -41,8 +41,18 @@ export class Sidebar extends React.Component {
   render() {
     return (
       <>
-        <aside ref={this.ref_sidebar} aria-label={this.props.sidebarAriaText} className={`${this.props.sidebarClass} dali-sidebar-${this.props.sidebarFeatures}`}>
-          <button ref={this.ref_sidebarMenu} aria-label="toggle sidebar" className="sidebar-toggle"><i className="fa fa-solid fa-bars"></i></button>
+        <aside
+            ref={this.ref_sidebar}
+            aria-label={this.props.sidebarAriaText}
+            className={`${this.props.sidebarClass} dali-sidebar-${this.props.sidebarFeatures}`}>
+
+          <button
+              ref={this.ref_sidebarMenu}
+              aria-label="toggle sidebar"
+              className="sidebar-toggle">
+            <i className="fa fa-solid fa-bars"></i>
+          </button>
+          
           <section className="inlog-sidebar">
             {this.props.headerContent}
 

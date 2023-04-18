@@ -13,7 +13,10 @@ export class DataPerItem extends React.Component {
   buttonsToRender(item){
     if(item.webUrl != undefined){
       return(
-        <a href={item.webUrl} target="_blank" className="article-button">
+        <a
+            href={item.webUrl}
+            target="_blank"
+            className="article-button">
           <i class="fa-solid fa-eye"></i>
         </a>
       );
@@ -22,20 +25,23 @@ export class DataPerItem extends React.Component {
       console.log('works');
       return(
         <>
-          <a href={`library/pdf/bijlagen/${item.fileName}`} download className="article-button">
+          <a
+              href={`library/pdf/bijlagen/${item.fileName}`}
+              download
+              className="article-button">
             <i class="fa-solid fa-download"></i>
           </a>
-          <Popup 
-            showModalButtonClass="article-button"
-            showModalButtonContents={<i class="fa-solid fa-eye"></i>}
-            modalHeaderTitle={item.description}
-            modalFeatures={`purple-xxl${this.props.pageAccent}`}
-            modalBodyClass="ondersteuning-popup-body">
-              <PdfViewerComponent
-                document={`library/pdf/bijlagen/${item.fileName}`}
-                pdfViewerClass=""
-                pdfViewerFeatures=""
-              />
+          <Popup
+              showModalButtonClass="article-button"
+              showModalButtonContents={<i class="fa-solid fa-eye"></i>}
+              modalHeaderTitle={item.description}
+              modalFeatures={`purple-xxl${this.props.pageAccent}`}
+              modalBodyClass="ondersteuning-popup-body">
+            <PdfViewerComponent
+              document={`library/pdf/bijlagen/${item.fileName}`}
+              pdfViewerClass=""
+              pdfViewerFeatures=""
+            />
           </Popup>
         </>
       );
@@ -52,7 +58,11 @@ export class DataPerItem extends React.Component {
   elementToRender(item){
     if(item.isAccessable){
       return(
-        <AccordionItem key={item.id} title={item.description} accordionItemFeatures={this.props.pageAccent}>
+        <AccordionItem
+            key={item.id}
+            title={item.description}
+            accordionItemFeatures={this.props.pageAccent}>
+
           <IconButtonBox pageAccent={this.props.pageAccent}>
             {this.buttonsToRender(item)}
           </IconButtonBox>
@@ -61,7 +71,9 @@ export class DataPerItem extends React.Component {
     }
     else{
       return(
-        <AccordionItem key={item.id} title={item.description}>
+        <AccordionItem
+            key={item.id}
+            title={item.description}>
           <IconButtonBox pageAccent={this.props.pageAccent}>
             <a className="article-button-disabled">
             <i class="fa-solid fa-triangle-exclamation"></i>
@@ -91,7 +103,10 @@ export class DataPerChapter extends React.Component {
   elementToRender(item){
     if(item.items.length > 0){
       return(
-        <Accordion useBadge={true} title={item.groepsNaam} accordionFeatures={this.props.accordionFeatures}>
+        <Accordion
+            useBadge={true}
+            title={item.groepsNaam}
+            accordionFeatures={this.props.accordionFeatures}>
           <DataPerItem data={item.items}/>
         </Accordion>
       )

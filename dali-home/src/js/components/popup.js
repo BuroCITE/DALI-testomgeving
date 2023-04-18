@@ -46,17 +46,33 @@ export class Popup extends React.Component {
   render() {
     return (
       <>
-        <button ref={this.ref_smb} aria-label={this.props.showModalButtonAriaText} className={this.props.showModalButtonClass}> {this.props.showModalButtonContents}</button>
+        <button
+            ref={this.ref_smb}
+            aria-label={this.props.showModalButtonAriaText}
+            className={this.props.showModalButtonClass}>
+          {this.props.showModalButtonContents}
+        </button>
         <section ref={this.ref_mb} aria-hidden="true" className="dali-modal-backdrop"/>
 
-        <section aria-label={this.props.modalAriaText} className={`dali-modal-popup-${this.props.modalFeatures}`}>
+        <section
+            aria-label={this.props.modalAriaText}
+            className={`dali-modal-popup-${this.props.modalFeatures}`}>
           <div class="dali-modal-content">
-            <section aria-label="popup header" class={`dali-modal-header-${this.props.modalHeaderFeatures}`}>
+            <section
+                aria-label="popup header"
+                class={`dali-modal-header-${this.props.modalHeaderFeatures}`}>
               <h2 aria-label="title">{this.props.modalHeaderTitle}</h2>
-              <button ref={this.ref_cmb} class="dali-modal-close-button" aria-label="Close popup"><i aria-hidden="true" class="fa-sharp fa-solid fa-xmark"></i></button>
+              <button
+                  ref={this.ref_cmb}
+                  class="dali-modal-close-button"
+                  aria-label="Close popup">
+                <i aria-hidden="true" class="fa-sharp fa-solid fa-xmark"></i>
+              </button>
             </section>
 
-            <section aria-label="popup main content" class={`dali-modal-body ${this.props.modalBodyClass}`}>
+            <section
+                aria-label="popup main content"
+                class={`dali-modal-body ${this.props.modalBodyClass}`}>
               {this.props.children}
               {this.props.modalFooterContent}
             </section>
@@ -80,7 +96,9 @@ Popup.defaultProps = {
  */
 export function ModalFooter(props) {
   return (
-    <div aria-label="popup footer" class={`dali-modal-footer-${props.modalFooterFeatures}`}>
+    <div
+        aria-label="popup footer"
+        class={`dali-modal-footer-${props.modalFooterFeatures}`}>
       {props.children}
     </div>
   );

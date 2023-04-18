@@ -30,8 +30,15 @@ export class Card extends React.Component {
       // the use of article and or section comes from the need to use semantic tags. accentialy they are a replacement for div.
       // ? not much is know (yet) about region. it apears do do the same as div but is not visible in the accesibility tree.
       // TODO: research "region" and look for more like it.
-      <section aria-label="card" className={`outerCard ${this.props.cardClass} dali-card-${this.props.cardFeatures}`}>
-        <a ref={this.ref_link} aria-label={this.props.ariaText} href={this.props.cardHref} className="card">
+      <section
+          aria-label="card"
+          className={`outerCard ${this.props.cardClass} dali-card-${this.props.cardFeatures}`}>
+        <a
+            ref={this.ref_link}
+            aria-label={this.props.ariaText}
+            href={this.props.cardHref}
+            className="card">
+            
           <span>{this.props.icon}</span>
           <h2>{this.props.cardName}</h2>
           <p>{this.props.description}</p>

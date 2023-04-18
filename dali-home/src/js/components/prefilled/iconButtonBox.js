@@ -15,7 +15,9 @@ export function IconButtonBox(props){
   });
 
   return(
-    <nav ref={ref_buttonBox} className={`dali-icon-button-box-${props.pageAccent}`}>
+    <nav
+        ref={ref_buttonBox}
+        className={`dali-icon-button-box-${props.pageAccent}`}>
       {props.children}
     </nav>
   );

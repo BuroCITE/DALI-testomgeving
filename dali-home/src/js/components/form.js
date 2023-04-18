@@ -8,7 +8,10 @@ export class Form extends React.Component {
   
   render() {
     return (
-      <form aria-label={this.props.formAriaText} id={this.props.formId} onSubmit={this.props.onSubmit}>
+      <form
+          aria-label={this.props.formAriaText}
+          id={this.props.formId}
+          onSubmit={this.props.onSubmit}>
         {this.props.children}
       </form>
     );
@@ -38,15 +41,17 @@ export class Form extends React.Component {
  */
 export function Input(props) {
   return (
-    <div className={`${props.gridLocation} ${props.className}`}>
+    <div
+        className={`${props.gridLocation}
+        ${props.className}`}>
       <label htmlFor={props.name}>{props.label}</label>
       <input 
-        placeholder=" " 
-        aria-errormessage={props.errorId} 
-        id={props.name} 
-        name={props.name} 
-        type={props.type} 
-        onChange={props.handleChange} 
+        placeholder=" "
+        aria-errormessage={props.errorId}
+        id={props.name}
+        name={props.name}
+        type={props.type}
+        onChange={props.handleChange}
         defaultValue={props.state.projectName}
       />
       <p id={props.errorId} className="errormessage">{`Error: ${props.errorMessage}`}</p>
@@ -62,15 +67,19 @@ export function Input(props) {
  */
 export function IconInput(props) {
   return (
-    <div className={`${props.gridLocation} ${props.className}-icon`}>
+    <div
+        className={`${props.gridLocation}
+        ${props.className}-icon`}>
       <label htmlFor={props.name}>{props.label}</label>
-      <span><i aria-label={props.iconAriaLabel} className={props.iconClass}></i></span>
+      <span>
+        <i aria-label={props.iconAriaLabel} className={props.iconClass}></i>
+      </span>
       <input 
-        placeholder=" " 
-        aria-errormessage={props.errorId} 
-        id={props.name} 
-        name={props.name} 
-        type={props.type} 
+        placeholder=" "
+        aria-errormessage={props.errorId}
+        id={props.name}
+        name={props.name}
+        type={props.type}
         value={props.value} // temporary for inlog hook test
         onChange={props.handleChange} // temporary for inlog hook test
         // defaultValue={props.state.projectName}
@@ -91,11 +100,21 @@ export function Select(props) {
   return (
     <div className={`${props.gridLocation} ${props.className}`}>
       <label htmlFor={props.name}>{props.label}</label>
-      <select id={props.name} name={props.name} onChange={props.handleChange}>
+
+      <select
+          id={props.name}
+          name={props.name}
+          onChange={props.handleChange}>
         <option value="0" >choose a option.</option>
-        {props.variables.map(variable => (  
-          <option key={variable.name} value={variable.value} >{variable.name}</option>
+
+        {props.variables.map(variable => (
+          <option
+              key={variable.name}
+              value={variable.value}>
+            {variable.name}
+          </option>
         ))};
+      
       </select>
     </div>
   );
@@ -110,7 +129,11 @@ export function Textarea(props) {
   return (
     <div className={`${props.gridLocation} ${props.className}`}>
       <label htmlFor={props.name}>{props.label}</label>
-      <textarea placeholder=" " id={props.name} name={props.name} onChange={props.handleChange}/>
+      <textarea
+        placeholder=" "
+        id={props.name}
+        name={props.name}
+        onChange={props.handleChange}/>
     </div>
   );
 }
@@ -124,14 +147,14 @@ export function Textarea(props) {
 export function Upload(props) {
   return (
     <div className={props.gridLocation}>
-      <input 
-      title={props.title} 
-      type="file" 
-      id={props.idName} 
-      className={props.className} 
-      name={props.name} 
+      <input
+      title={props.title}
+      type="file"
+      id={props.idName}
+      className={props.className}
+      name={props.name}
       onChange={props.handleChange}
     />
-    </div> 
+    </div>
   );
 }

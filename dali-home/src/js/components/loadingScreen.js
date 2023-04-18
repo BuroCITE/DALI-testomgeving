@@ -21,7 +21,9 @@ export class LoadingScreen extends react.Component{
 
   render(){
     return(
-      <main aria-label='loading screen' className={`dali-loadingScreen-${this.props.loadingScreenFeatures}`}>
+      <main
+          aria-label='loading screen'
+          className={`dali-loadingScreen-${this.props.loadingScreenFeatures}`}>
         <section aria-hidden={true}>
           <h1>{this.props.title}</h1>
           <div className='loader-box'>

@@ -7,7 +7,11 @@ export function Handboek() {
 
 
   return(
-    <HeaderUserNav title="handboek" navLeft={<PopupGoHome pageAccent={pageAccent}/>} pageAccent={pageAccent}/>
+    <HeaderUserNav
+      title="handboek"
+      navLeft={<PopupGoHome pageAccent={pageAccent}/>}
+      pageAccent={pageAccent}
+    />
 
   );
 }

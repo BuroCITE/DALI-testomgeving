@@ -8,7 +8,7 @@ import { TaalbestandNL } from '../../library/res';
 import { HeaderUserNav } from "../components/prefilled/headerUserNav";
 import { PopupGoHome } from "../components/prefilled/popupGoHome";
 import { IconButtonBox } from "../components/prefilled/iconButtonBox";
-import { SearchBar } from "../components/SearchBar";
+import { SearchBar } from "../components/searchBar";
 const text = TaalbestandNL.bronverwijzingen;
 
 
@@ -29,11 +29,21 @@ export function Bronverwijzingen() {
 
   return (
     <>
-      <div className={`bronverwijzingen-contentbox-${pageAccent}`} aria-label={text.pageAriaLabel}>
+      <div
+          className={`bronverwijzingen-contentbox-${pageAccent}`}
+          aria-label={text.pageAriaLabel}>
+
         <Sidebar sidebarFeatures="gray-1-closeable" sidebarIsVisible={false}/>
-        <HeaderUserNav title={text.heading.title} navLeft={<PopupGoHome pageAccent={pageAccent}/>} pageAccent={pageAccent} text={TaalbestandNL.home} taalBestand={TaalbestandNL} icons={icons}/>
+        <HeaderUserNav
+          title={text.heading.title}
+          navLeft={<PopupGoHome pageAccent={pageAccent}/>}
+          pageAccent={pageAccent}
+          text={TaalbestandNL.home}
+          taalBestand={TaalbestandNL}
+          icons={icons}
+        />
+
         <main className="resultaten-contentbox sidebar-adjecent">
-          
           <SearchBar searchBarFeatures="red-old-design"/>
           <SearchBar searchBarFeatures="red-new-design"/>
           
@@ -41,11 +51,13 @@ export function Bronverwijzingen() {
               chapterData={bronnenPerChapter} 
               allData={allBronnen} 
               pageAccent={`${pageAccent}`}>
-              <Accordion title="hello, i'm rounded" accordionFeatures="purple-rounded-corners">
-                <AccordionItem>
-                  <h3>hello, i'm an item.</h3>
-                </AccordionItem>
-              </Accordion>
+            <Accordion
+                title="hello, i'm rounded"
+                accordionFeatures="purple-rounded-corners">
+              <AccordionItem>
+                <h3>hello, i'm an item.</h3>
+              </AccordionItem>
+            </Accordion>
           </WrappedAccordion>
 
         </main>

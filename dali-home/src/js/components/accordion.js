@@ -1,6 +1,6 @@
 import React, { createElement, useEffect, useRef, useState } from "react";
 import { icons } from '../../library/res';
-import { DataPerItem, DataPerChapter } from "./AccordionFunctions";
+import { DataPerItem, DataPerChapter } from "./accordionFunctions";
 import {getOrientatedData} from "../functions/dataFunctions"
 import { Dropdown } from "./dropdown";
 import { InvisibleLink } from "./invisibleLink";
@@ -62,15 +62,15 @@ export function Accordion(props){
 
     var allLinks = 0
     if(props.children.props.data != undefined){
-      allLinks = props.children.props.data.length;
+      allLinks = props.children.props.data;
     }
     
     // 3 has been chosen because it will take 4 clicks with 3 elements without skiplink, and 2 clicks with skiplink. so its a number chosen for the best afficiantie but also no unnessary addons.
-    if(allLinks >= 3){
+    if(allLinks.length >= 3){
       return (
         <InvisibleLink
             // target={nextAccordion}
-            invisibleLinkFeatures="red-right-slide-in" 
+            invisibleLinkFeatures="gray-3-right-slide-in"
             linkText="test link"/>
       );
     }
@@ -92,12 +92,17 @@ export function Accordion(props){
 
   return (
     <> 
-      <details className={`dali-accordion-${props.accordionFeatures}`} ref={ref_details} data-has-badge={props.useBadge}>
+      <details
+          className={`dali-accordion-${props.accordionFeatures}`}
+          ref={ref_details}
+          data-has-badge={props.useBadge}>
+
         <summary>
           <h3>{props.title}</h3>
           <mark className="dali-badge" ref={ref_badge} data-usebadge={props.useBadge}></mark>
           {icons.iElement.downArrow}
         </summary>
+
         {checkInvisibleLinkRequired()}
         {props.children}
       </details>
@@ -188,25 +193,37 @@ export function WrappedAccordion(props){
 
 
   return(
-    <section className={`dali-accordionWrapper-${props.pageAccent}`} ref={ref_wrapper}>
+    <section
+        className={`dali-accordionWrapper-${props.pageAccent}`}
+        ref={ref_wrapper}>
+
       <section className="bronverwijzingen-buttonbox wrapper-buttonbox">
-        <Dropdown dropdownClass="accordion-dropdown-sort" dropdownFeatures={props.pageAccent} buttonIcon={state}>
+        <Dropdown
+            dropdownClass="accordion-dropdown-sort"
+            dropdownFeatures={props.pageAccent}
+            buttonIcon={state}>
+
           <button className="dali-dropdown-button" ref={ref_sortPerChapter}>
             {icons.iElement.list} Per Hoofdstuk
           </button>
+
           <button className="dali-dropdown-button" ref={ref_sortAscButton}>
             {icons.iElement.downArrowShortWide} Oplopend (a-z)
           </button>
+
           <button className="dali-dropdown-button" ref={ref_sortButton}>
             {icons.iElement.upArrowShortWide} Aflopend (z-a)
           </button>
+
         </Dropdown>
         &nbsp; {/* //todo: this &nbsp; should be handled via css. // ? temporary fix */}
         <button ref={ref_unfoldButton}>
           {icons.iElement.doubleDownArrow} Uitklappen
         </button>
+
         {props.additionalButtons}
       </section>
+      
       {dataOrientation()}
       {props.children}
 

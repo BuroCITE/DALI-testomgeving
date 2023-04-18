@@ -51,7 +51,12 @@ export function InvisibleLink(props) {
   }, []);
 
   return (
-    <a ref={ref_link} href={`#${props.targetId}`} className={`dali-invisibleLink-${props.invisibleLinkFeatures} card-link`}>{props.linkText}</a>
+    <a
+        ref={ref_link}
+        href={`#${props.targetId}`}
+        className={`dali-invisibleLink-${props.invisibleLinkFeatures} card-link`}>
+      {props.linkText}
+    </a>
   );
 }
 InvisibleLink.defaultProps = {

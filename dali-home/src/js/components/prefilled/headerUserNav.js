@@ -17,15 +17,27 @@ const text = TaalbestandNL.home;
 export function HeaderUserNav(props){
 
   return(
-    <Header 
+    <Header
         headerFeatures={`${props.pageAccent}`}
         title={props.title}
         navLeft={props.navLeft}
         navRight={
           <>
             {props.navRight}
-            <DropdownUserInfo pageAccent={props.pageAccent}  text={text} taalBestand={TaalbestandNL} icons={icons}/>
-            <PopupOndersteuning pageAccent={props.pageAccent}  text={text} taalBestand={TaalbestandNL} icons={icons}/>
+
+            <DropdownUserInfo
+              pageAccent={props.pageAccent}
+              text={text}
+              taalBestand={TaalbestandNL}
+              icons={icons}
+            />
+            
+            <PopupOndersteuning
+              pageAccent={props.pageAccent}
+              text={text}
+              taalBestand={TaalbestandNL}
+              icons={icons}
+            />
           </>
         }
     />

@@ -126,7 +126,7 @@ export const TaalbestandNL = {
     heading: {
       title: "Bijlagen"
     },
-    pageAriaLabel: "de bronverwijzingen webpagina",
+    pageAriaLabel: "de bijlagen webpagina",
   },
   bronverwijzingen: {
     heading: {
