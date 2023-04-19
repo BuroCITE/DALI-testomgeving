@@ -10,6 +10,9 @@ const text = TaalbestandNL.pve;
 
 export function Pve(){
   const [pageAccent, setPageAccent] = useState('red');
+  const [leftPageAccent, setLeftPageAccent] = useState('red');
+  const [rightPageAccent, setRightPageAccent] = useState('turquoise');
+
 
   var { data } = GetData('library/alle-bronnen.json');
   var allBronnen = data;
@@ -41,30 +44,35 @@ export function Pve(){
           />
 
           <main>
-            <section>
+            <section className={`splitscreen-contenbox-${leftPageAccent}`}>
               <header>
                 <button>handboek raadplegen</button>
                 <button>eis informatie</button>
               </header>
+              <section className={`splitscreen-body`}>
 
               <WrappedAccordion 
                 chapterData={bronnenPerChapter} 
                 allData={allBronnen} 
-                pageAccent={`red`}>
+                pageAccent={leftPageAccent}>
               </WrappedAccordion>
+              </section>
             </section>
 
-            <section>
+            <section className={`splitscreen-contenbox-${rightPageAccent}`}>
               <header>
                 <button>acties</button>
                 <button>eis informatie</button>
               </header>
 
-              <WrappedAccordion 
-                chapterData={bronnenPerChapter} 
-                allData={allBronnen} 
-                pageAccent={`turquoise`}>
-              </WrappedAccordion>
+              <section className={`splitscreen-body`}>
+
+                <WrappedAccordion 
+                  chapterData={bronnenPerChapter} 
+                  allData={allBronnen} 
+                  pageAccent={rightPageAccent}>
+                </WrappedAccordion>
+              </section>
             </section>
           </main>
 
