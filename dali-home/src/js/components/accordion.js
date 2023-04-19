@@ -6,8 +6,10 @@ import { Dropdown } from "./dropdown";
 import { InvisibleLink } from "./invisibleLink";
 
 /**
- * @param {string} accordionWrapperId provide a current ref from the accordion wrapper where all the accordions are children from. by providing values for this and unfoldButtonRef will result in the creation of an unfold button. if one of the two is missing or incorrect the button will not be made.
- * @param {ref} unfoldButtonId provide a current ref from a button to be used as the unfold button. by providing values for this and accordionWrapperRef will result in the creation of an unfold button. if one of the two is missing or incorrect the button will not be made.
+ * 
+ * @param {boolean} useBadge when true will provide a badge with the amount of items inside represented.
+ * @param {string} accordionFeatures 
+ * @param {string} title
  */
 export function Accordion(props){
     const ref_badge = useRef();
@@ -74,7 +76,14 @@ Accordion.defaultProps = {
   useBadge: false,
 }
 
-
+/**
+ * 
+ * @param {string} pageAccent
+ * @param {array} chapterData
+ * @param {array} allData
+ * @param {*} additionalButtons
+ * @returns 
+ */
 export function WrappedAccordion(props){
   const ref_wrapper = useRef();
   const ref_sortButton = useRef(null);
@@ -89,7 +98,7 @@ export function WrappedAccordion(props){
       return (
         <DataPerChapter
         accordionFeatures={`${props.pageAccent}`}
-        data={props.chapterData}  />
+        data={props.chapterData}/>
       )
     }
 
