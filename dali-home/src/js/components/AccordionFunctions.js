@@ -22,7 +22,6 @@ export class DataPerItem extends React.Component {
       );
     }
     else if(item.fileName  != undefined){
-      console.log('works');
       return(
         <>
           <a
@@ -32,8 +31,7 @@ export class DataPerItem extends React.Component {
             <i class="fa-solid fa-download"></i>
           </a>
           <button onClick={() => {
-            console.log('open popup')
-            this.props.setIsPdfAvailable('show')
+            this.props.setPopupOpenState(true);
             this.props.changePdfViewerUrl(`library/pdf/bijlagen/${item.fileName}`)
             }}></button>
         </>
@@ -95,14 +93,19 @@ export class DataPerChapter extends React.Component {
 
   elementToRender(item){
     if(item.items.length > 0){
-      return(
+      return (
         <Accordion
-            useBadge={true}
-            title={item.groepsNaam}
-            accordionFeatures={this.props.accordionFeatures}>
-          <DataPerItem data={item.items} changePdfViewerUrl={this.props.changePdfViewerUrl} setIsPdfAvailable={this.props.setIsPdfAvailable}/>
+          useBadge={true}
+          title={item.groepsNaam}
+          accordionFeatures={this.props.accordionFeatures}
+        >
+          <DataPerItem
+            data={item.items}
+            changePdfViewerUrl={this.props.changePdfViewerUrl}
+            setPopupOpenState={this.props.setPopupOpenState}
+          />
         </Accordion>
-      )
+      );
     }
   }
 
