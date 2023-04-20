@@ -4,6 +4,8 @@ import { DataPerItem, DataPerChapter } from "./accordionFunctions";
 import {getOrientatedData} from "../functions/dataFunctions"
 import { Dropdown } from "./dropdown";
 import { InvisibleLink } from "./invisibleLink";
+import { Popup } from "./popup";
+import PdfViewerComponent from "../externalComponents/pdfViewerComponent";
 
 /**
  * 
@@ -92,27 +94,86 @@ export function WrappedAccordion(props){
   const ref_unfoldButton = useRef();
   const [orientation, setOrientation] = useState('perChapter');
   const [state, setState] = useState('Per Hoofdstuk');
+  const [pdfUrl, setPdfUrl] = useState(null)
+  const [isPdfAvailable, setIsPdfAvailable ] = useState('amahoela');
+
+  const PdfPopup = (url) => {
+    if(url != null){
+      return(
+        <Popup
+          showModalButtonClass="dali-modal-accent"
+          showModalButtonContents={icons.iElement.eye}
+          modalHeaderTitle="functions"
+          modalFeatures={`${props.pageAccent}`}
+          modalBodyClass="ondersteuning-popup-body"
+          isModalOpen={isPdfAvailable}
+          setAvailable={setIsPdfAvailable}
+        >
+          <PdfViewerComponent
+            document={url}
+            pdfViewerClass=""
+            pdfViewerFeatures=""
+          />
+        </Popup>
+      );
+    }
+    else{
+      return (
+        <Popup
+          showModalButtonClass="dali-modal-accent"
+          showModalButtonContents={icons.iElement.eye}
+          modalHeaderTitle="functions"
+          modalFeatures={`${props.pageAccent}`}
+          modalBodyClass="ondersteuning-popup-body"
+          isModalOpen={isPdfAvailable}
+          setAvailable={setIsPdfAvailable}
+        >
+          <h3>no pdf available</h3>
+          <p>{url}</p>
+        </Popup>
+      );
+    }
+  }
+
+  const setData = (url) => {
+    console.log(url)
+    setPdfUrl(url)
+    console.log(pdfUrl)
+  }
 
   const dataOrientation = () => {
     if(orientation == "perChapter"){
       return (
         <DataPerChapter
-        accordionFeatures={`${props.pageAccent}`}
-        data={props.chapterData}/>
-      )
+          accordionFeatures={`${props.pageAccent}`}
+          data={props.chapterData}
+          changePdfViewerUrl={setData}
+          setIsPdfAvailable={setIsPdfAvailable}
+        />
+      );
     }
 
     else if(orientation == "desc"){
       const { data } = getOrientatedData(props.allData, orientation);
       return (
-        <DataPerItem pageAccent={props.pageAccent} data={data} />
+        <DataPerItem
+          pageAccent={props.pageAccent}
+          data={data}
+          changePdfViewerUrl={setData}
+          setIsPdfAvailable={setIsPdfAvailable}
+        />
       );
     }
 
     else if(orientation == "asc"){
       const { data } = getOrientatedData(props.allData, orientation);
       return (
-        <DataPerItem pageAccent={props.pageAccent} data={data} />
+        <DataPerItem
+          pageAccent={props.pageAccent}
+          data={data}
+          changePdfViewerUrl={setData}
+          setIsPdfAvailable={setIsPdfAvailable}
+        />
       );
     }
   }
@@ -159,18 +220,27 @@ export function WrappedAccordion(props){
     } 
   }, [orientation]);
 
+  useEffect( () => {
+    console.log('times run')
+    // if(pdfUrl == null) return
+ 
+    console.log(pdfUrl)
+    // setIsPdfAvailable(true); 
+    console.log('value= ' + isPdfAvailable)
+  }, [pdfUrl, isPdfAvailable]);
 
-  return(
+
+  return (
     <section
-        className={`dali-accordionWrapper-${props.pageAccent}`}
-        ref={ref_wrapper}>
-
+      className={`dali-accordionWrapper-${props.pageAccent}`}
+      ref={ref_wrapper}
+    >
       <section className="bronverwijzingen-buttonbox wrapper-buttonbox">
         <Dropdown
-            dropdownClass="accordion-dropdown-sort"
-            dropdownFeatures={props.pageAccent}
-            buttonIcon={state}>
-
+          dropdownClass="accordion-dropdown-sort"
+          dropdownFeatures={props.pageAccent}
+          buttonIcon={state}
+        >
           <button className="dali-dropdown-button" ref={ref_sortPerChapter}>
             {icons.iElement.list} Per Hoofdstuk
           </button>
@@ -182,19 +252,18 @@ export function WrappedAccordion(props){
           <button className="dali-dropdown-button" ref={ref_sortButton}>
             {icons.iElement.upArrowShortWide} Aflopend (z-a)
           </button>
-
         </Dropdown>
-        &nbsp; {/* //todo: this &nbsp; should be handled via css. // ? temporary fix */}
+        &nbsp;{" "}
+        {/* //todo: this &nbsp; should be handled via css. // ? temporary fix */}
         <button ref={ref_unfoldButton}>
           {icons.iElement.doubleDownArrow} Uitklappen
         </button>
-
         {props.additionalButtons}
       </section>
-      
+
+      {PdfPopup(pdfUrl)}
       {dataOrientation()}
       {props.children}
-
     </section>
   );
 }

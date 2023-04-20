@@ -31,13 +31,11 @@ export class DataPerItem extends React.Component {
               className="article-button">
             <i class="fa-solid fa-download"></i>
           </a>
-          <Popup
-              showModalButtonClass="article-button"
-              showModalButtonContents={<i class="fa-solid fa-eye"></i>}
-              modalHeaderTitle={item.description}
-              modalFeatures={`purple-xxl${this.props.pageAccent}`}
-              modalBodyClass="ondersteuning-popup-body">
-          </Popup>
+          <button onClick={() => {
+            console.log('open popup')
+            this.props.setIsPdfAvailable('show')
+            this.props.changePdfViewerUrl(`library/pdf/bijlagen/${item.fileName}`)
+            }}></button>
         </>
       );
     }
@@ -102,7 +100,7 @@ export class DataPerChapter extends React.Component {
             useBadge={true}
             title={item.groepsNaam}
             accordionFeatures={this.props.accordionFeatures}>
-          <DataPerItem data={item.items}/>
+          <DataPerItem data={item.items} changePdfViewerUrl={this.props.changePdfViewerUrl} setIsPdfAvailable={this.props.setIsPdfAvailable}/>
         </Accordion>
       )
     }
