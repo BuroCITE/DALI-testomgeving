@@ -21,7 +21,7 @@ useEffect(() => {
 	})();
 
 	return () => PSPDFKit && PSPDFKit.unload(container);
-}, []);
+}, [props.document]);
 
 return (
 	<section className={`PDF-viewer dali-pdf-viewer-headerless-${props.pdfViewerFeatures}`}>

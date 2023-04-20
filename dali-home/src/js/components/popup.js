@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 /**
  * 
+ * @param {boolean} useShowModalButton
  * @param {string} showModalButtonClass a class to style the show popup button
  * @param {string} showModalButtonAriaText REQUIRED (for accesibility) - the text that wil be loaded in the aria label of the show modal button.
  * @param {*} showModalButtonContents the contents of the show popup button
@@ -12,81 +13,111 @@ import React from 'react';
  * @param {string} modalBodyClass a class that can be added to the body of the popup.
  * @param {*} children all elements placed in between 2 popup tags will be send as children of this element and are placed inside the popup under the header
  * @param {function} modalFooterContent expects the ModalFooter component.
+ * @param {boolean} isModalOpen
  * @returns an functional popup with custom content
  */
-export class Popup extends React.Component {
-  // construct and createRef are react functies that can be used in class components. for an explanation, google is our friend.
-  constructor(props){
-    super(props);
-    this.state = {};
-    this.ref_smb = React.createRef();
-    this.ref_mb = React.createRef();
-    this.ref_cmb = React.createRef();
+export function Popup(props) {
+  const ref_smb = useRef();
+  const ref_mb = useRef();
+  const ref_cmb = useRef();
+
+  const renderShowModalButton = () => {
+    if(!props.useShowModalButton) return
+
+    return (
+      <button
+        ref={ref_smb}
+        aria-label={props.showModalButtonAriaText}
+        className={props.showModalButtonClass}
+      >
+        {props.showModalButtonContents}
+      </button>
+    );
   }
 
-  componentDidMount(){
+  useEffect(() => {
     //these eventlisteners will open and close the popups on different ocassions
-    const showModalButton = this.ref_smb.current;
-    const modalBackdrop = this.ref_mb.current;
-    const closeModalButton = this.ref_cmb.current;
+    const showModalButton = ref_smb.current;
+    const modalBackdrop = ref_mb.current;
+    const closeModalButton = ref_cmb.current;
 
-    showModalButton.addEventListener('click', (event) => {
-      modalBackdrop.classList.add('show');
+    if(props.isModalOpen) {
+      modalBackdrop.classList.add("show");
+    }
+
+    /**
+     * 
+     * @param {boolean} boolean expects a boolean to be presented to parent element if setAvailable was send in through props. will default to false
+     */
+    const changePopupOpenState = (boolean = false) => {
+      if (props.setPopupOpenState) {
+        props.setPopupOpenState(boolean);
+      }
+    }
+
+    if (showModalButton != undefined){
+      showModalButton.addEventListener("click", (event) => {
+        modalBackdrop.classList.add("show");
+      });
+    }
+
+    modalBackdrop.addEventListener("click", () => {
+      {changePopupOpenState(false)}
+      modalBackdrop.classList.remove("show");
     });
 
-    modalBackdrop.addEventListener('click', () => {
-      modalBackdrop.classList.remove('show');
+    closeModalButton.addEventListener("click", () => {
+      {changePopupOpenState(false)}
+      modalBackdrop.classList.remove("show");
     });
+  }, [props.isModalOpen]);
 
-    closeModalButton.addEventListener('click', () => {
-      modalBackdrop.classList.remove('show');
-    });
-  }
-
-  render() {
     return (
       <>
-        <button
-            ref={this.ref_smb}
-            aria-label={this.props.showModalButtonAriaText}
-            className={this.props.showModalButtonClass}>
-          {this.props.showModalButtonContents}
-        </button>
-        <section ref={this.ref_mb} aria-hidden="true" className="dali-modal-backdrop"/>
+        {renderShowModalButton()}
+        <section
+          ref={ref_mb}
+          aria-hidden="true"
+          className={`dali-modal-backdrop`}
+        />
 
         <section
-            aria-label={this.props.modalAriaText}
-            className={`dali-modal-popup-${this.props.modalFeatures}`}>
+          aria-label={props.modalAriaText}
+          className={`dali-modal-popup-${props.modalFeatures}`}
+        >
           <div class="dali-modal-content">
             <section
-                aria-label="popup header"
-                class={`dali-modal-header-${this.props.modalHeaderFeatures}`}>
-              <h2 aria-label="title">{this.props.modalHeaderTitle}</h2>
+              aria-label="popup header"
+              class={`dali-modal-header-${props.modalHeaderFeatures}`}
+            >
+              <h2 aria-label="title">{props.modalHeaderTitle}</h2>
               <button
-                  ref={this.ref_cmb}
-                  class="dali-modal-close-button"
-                  aria-label="Close popup">
+                ref={ref_cmb}
+                class="dali-modal-close-button"
+                aria-label="Close popup"
+              >
                 <i aria-hidden="true" class="fa-sharp fa-solid fa-xmark"></i>
               </button>
             </section>
 
             <section
-                aria-label="popup main content"
-                class={`dali-modal-body ${this.props.modalBodyClass}`}>
-              {this.props.children}
-              {this.props.modalFooterContent}
+              aria-label="popup main content"
+              class={`dali-modal-body ${props.modalBodyClass}`}
+            >
+              {props.children}
+              {props.modalFooterContent}
             </section>
-
           </div>
         </section>
       </>
     );
   }
-}
 Popup.defaultProps = {
   modalFeatures: "red-md",
   modalHeaderFeatures: "gray-2-sm",
-}
+  isModalOpen: false,
+  useShowModalButton: true,
+};
 
 /**
  * 
