@@ -20,7 +20,6 @@ export function Bijlagen() {
     "https://brcacerv3571g01.burocite-nl.local:7158/api/GetAllAttachments"
   );
   // var { data } = GetData('library/alle-bijlagen.json');
-  console.log(data)
   var allBijlagen = data;
   // var { data } = GetData("https://brcacerv3571g01.burocite-nl.local:7158/api/GetAllAttachmentsPerChapter");
   var { data } = GetData("library/bijlagen-per-chapter.json");
@@ -51,7 +50,7 @@ export function Bijlagen() {
       />
 
       <main className="resultaten-contentbox sidebar-adjecent">
-        <SearchBar searchBarFeatures="red-old-design" />
+        <SearchBar searchBarFeatures="red-new-design" />
 
         <WrappedAccordion
           chapterData={bijlagePerChapter}
