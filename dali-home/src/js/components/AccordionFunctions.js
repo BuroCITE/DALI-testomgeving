@@ -22,27 +22,25 @@ export class DataPerItem extends React.Component {
       );
     }
     else if(item.fileName  != undefined){
-      console.log('works');
-      return(
+      return (
         <>
           <a
-              href={`library/pdf/bijlagen/${item.fileName}`}
-              download
-              className="article-button">
+            href={`library/pdf/bijlagen/${item.fileName}`}
+            download
+            className="article-button"
+          >
             <i class="fa-solid fa-download"></i>
           </a>
-          <Popup
-              showModalButtonClass="article-button"
-              showModalButtonContents={<i class="fa-solid fa-eye"></i>}
-              modalHeaderTitle={item.description}
-              modalFeatures={`purple-xxl${this.props.pageAccent}`}
-              modalBodyClass="ondersteuning-popup-body">
-            <PdfViewerComponent
-              document={`library/pdf/bijlagen/${item.fileName}`}
-              pdfViewerClass=""
-              pdfViewerFeatures=""
-            />
-          </Popup>
+          <button
+            onClick={() => {
+              this.props.setPopupOpenState(true);
+              this.props.changePdfViewerUrl(
+                `library/pdf/bijlagen/${item.fileName}`
+              );
+            }}
+          >
+            <i class="fa-solid fa-eye"></i>
+          </button>
         </>
       );
     }
@@ -102,14 +100,19 @@ export class DataPerChapter extends React.Component {
 
   elementToRender(item){
     if(item.items.length > 0){
-      return(
+      return (
         <Accordion
-            useBadge={true}
-            title={item.groepsNaam}
-            accordionFeatures={this.props.accordionFeatures}>
-          <DataPerItem data={item.items}/>
+          useBadge={true}
+          title={item.groepsNaam}
+          accordionFeatures={this.props.accordionFeatures}
+        >
+          <DataPerItem
+            data={item.items}
+            changePdfViewerUrl={this.props.changePdfViewerUrl}
+            setPopupOpenState={this.props.setPopupOpenState}
+          />
         </Accordion>
-      )
+      );
     }
   }
 

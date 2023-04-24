@@ -44,20 +44,12 @@ export function Bronverwijzingen() {
         />
 
         <main className="resultaten-contentbox sidebar-adjecent">
-          <SearchBar searchBarFeatures="red-old-design"/>
           <SearchBar searchBarFeatures="red-new-design"/>
           
           <WrappedAccordion 
               chapterData={bronnenPerChapter} 
               allData={allBronnen} 
               pageAccent={`${pageAccent}`}>
-            <Accordion
-                title="hello, i'm rounded"
-                accordionFeatures="purple-rounded-corners">
-              <AccordionItem>
-                <h3>hello, i'm an item.</h3>
-              </AccordionItem>
-            </Accordion>
           </WrappedAccordion>
 
         </main>

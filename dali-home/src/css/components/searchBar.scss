@@ -1,26 +1,26 @@
-[class*=dali-searchBar]{
+[class*=dali-searchBar] {
   margin: -2vh 0 1rem -2vw;
   width: 100vw;
   height: 2.5rem;
 
-  form{
+  form {
     display: contents;
-    
-    input{
+
+    input {
       width: 99%;
       border-radius: 5px;
       padding: .2rem;
 
-      &:focus-visible{
+      &:focus-visible {
         outline: 3px solid yellow;
       }
-    }  
+    }
   }
 }
 
 
 //variants
-[class*=dali-searchBar][class*=old-design]{
+[class*=dali-searchBar][class*=old-design] {
   background-color: $dali-gray-1;
   position: sticky;
   top: -2vh;
@@ -30,7 +30,7 @@
   align-items: center;
 }
 
-[class*=dali-searchBar][class*=new-design]{
+[class*=dali-searchBar][class*=new-design] {
   background-color: transparent;
   position: sticky;
   top: -1vh;
@@ -42,15 +42,15 @@
   justify-content: center;
   align-items: center;
 
-  form{
+  form {
 
-    input{
+    input {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
       border-right: 0;
     }
 
-    button{
+    button {
       height: 86%;
       aspect-ratio: 1/1;
       border-top-right-radius: 5px;
@@ -60,18 +60,20 @@
   }
 }
 
-@each $color, $value in $theme-colors{
+@each $color,
+$value in $theme-colors {
   $background-color: map-get($value, "background");
   $text-color: map-get($value, "foreground");
 
-  [class*=dali-searchBar][class*=#{$color}]{
+  [class*=dali-searchBar][class*=#{$color}] {
     form {
-      input{
-        &:focus-visible{
+      input {
+        &:focus-visible {
           outline-color: $background-color;
         }
       }
-      button{
+
+      button {
         background-color: $background-color;
         color: $text-color;
       }

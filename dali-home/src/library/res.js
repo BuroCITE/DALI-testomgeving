@@ -122,6 +122,12 @@ export const TaalbestandNL = {
       }
     },
   },
+  pve: {
+    heading: {
+      title: "Programma van Eisen"
+    },
+    pageAriaLabel: "de programma van eisen webpagina",
+  },
   bijlagen: {
     heading: {
       title: "Bijlagen"

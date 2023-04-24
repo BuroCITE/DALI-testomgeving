@@ -68,8 +68,8 @@ export function Home(props){
               cardName={text.main.cards.pve.title}
               description={text.main.cards.pve.description}
               notice={text.main.cards.pve.notice}
-              cardFeatures="turquoise-disabled" 
-              cardHref=""
+              cardFeatures="turquoise"
+              cardHref="/#/programmaVanEisen"
               ariaText={text.main.cards.pve.ariaText}
             />
             

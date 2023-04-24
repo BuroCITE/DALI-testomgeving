@@ -1,0 +1,72 @@
+.pve{
+  main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    :focus-visible{
+      mix-blend-mode: normal;
+    }
+
+    >:first-child{//? temporary ----- temporary ----- temporary ----- temporary ----- temporary ----- temporary -----
+      border-right: 1px solid rgba($dali-gray-1, .3);
+    }
+
+    [class*=splitscreen-contenbox]{
+      border-bottom: 1px solid rgba($dali-gray-1, .3);
+      position: relative;
+      
+      .splitscreen-body{
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        height: 82vh;
+        overflow: hidden;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+          width: 8px;
+        }
+    
+        &::-webkit-scrollbar-track {
+          background: rgba($dali-gray-3, .3);
+        }
+    
+        &::-webkit-scrollbar-thumb {
+          background-color: $dali-gray-1;
+          border-radius: 20px;
+        }
+      }
+
+      header{
+        background-color: $dali-gray-1;
+        padding: .2rem 1rem;
+        display: flex;
+        justify-content: space-between;
+
+        button,
+        a{
+          padding: .1rem .4rem;
+          border: 1px solid $dali-gray-2;
+          margin-right: 1rem;
+          background-color: $dali-red;
+          color: $dali-white;
+          text-transform: capitalize;
+        }
+      }
+
+      .article-text{
+        max-width: 54ch;
+      }
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  $text-color: map-get($value, "foreground");
+  $background-color: map-get($value, "background");
+
+  .pve{
+    [class*=splitscreen-contenbox][class*=#{$color}] [class*=splitscreen-body]::-webkit-scrollbar-thumb {
+      background-color: $background-color;
+    }
+  }
+}

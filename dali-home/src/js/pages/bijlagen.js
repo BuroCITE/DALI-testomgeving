@@ -14,17 +14,19 @@ const text = TaalbestandNL.home;
 
 
 export function Bijlagen() {
-  const [pageAccent, setPageAccent] = useState('red');
+  const [pageAccent, setPageAccent] = useState("red");
 
-  var { data } = GetData('https://brcacerv3571g01.burocite-nl.local:7158/api/GetAllAttachments');
+  var { data } = GetData(
+    "https://brcacerv3571g01.burocite-nl.local:7158/api/GetAllAttachments"
+  );
   // var { data } = GetData('library/alle-bijlagen.json');
   var allBijlagen = data;
-  var { data } = GetData('library/bijlagen-per-chapter.json');
+  // var { data } = GetData("https://brcacerv3571g01.burocite-nl.local:7158/api/GetAllAttachmentsPerChapter");
+  var { data } = GetData("library/bijlagen-per-chapter.json");
   var bijlagePerChapter = data;
 
-
-  if(!bijlagePerChapter || !allBijlagen) {
-    return(
+  if (!bijlagePerChapter || !allBijlagen) {
+    return (
       <LoadingScreen
         loadingScreenFeatures={`${pageAccent}-${TaalbestandNL.loadingScreen.loadingAnimation}`}
         title={TaalbestandNL.loadingScreen.loadingText}
@@ -32,15 +34,15 @@ export function Bijlagen() {
     );
   }
 
-  return(
+  return (
     <div
-        className={`bijlagen-contentbox-${pageAccent}`}
-        aria-label={text.pageAriaLabel}>
-
-      <Sidebar sidebarFeatures="gray-1-closeable" sidebarIsVisible={false}/>
+      className={`bijlagen-contentbox-${pageAccent}`}
+      aria-label={text.pageAriaLabel}
+    >
+      <Sidebar sidebarFeatures="gray-1-closeable" sidebarIsVisible={false} />
       <HeaderUserNav
         title={text.heading.title}
-        navLeft={<PopupGoHome pageAccent={pageAccent}/>}
+        navLeft={<PopupGoHome pageAccent={pageAccent} />}
         pageAccent={pageAccent}
         text={text}
         taalBestand={TaalbestandNL}
@@ -48,14 +50,13 @@ export function Bijlagen() {
       />
 
       <main className="resultaten-contentbox sidebar-adjecent">
-      <SearchBar searchBarFeatures="red-old-design"/>
+        <SearchBar searchBarFeatures="red-new-design" />
 
-      <WrappedAccordion
-        chapterData={bijlagePerChapter}
-        allData={allBijlagen}
-        pageAccent={`${pageAccent}`}
-      />
-      
+        <WrappedAccordion
+          chapterData={bijlagePerChapter}
+          allData={allBijlagen}
+          pageAccent={`${pageAccent}`}
+        />
       </main>
     </div>
   );

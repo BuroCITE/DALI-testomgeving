@@ -16,6 +16,7 @@ export function SearchBar(props) {
             type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
+        
       </form>
     </section>
   );
