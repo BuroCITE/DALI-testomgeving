@@ -22,18 +22,25 @@ export class DataPerItem extends React.Component {
       );
     }
     else if(item.fileName  != undefined){
-      return(
+      return (
         <>
           <a
-              href={`library/pdf/bijlagen/${item.fileName}`}
-              download
-              className="article-button">
+            href={`library/pdf/bijlagen/${item.fileName}`}
+            download
+            className="article-button"
+          >
             <i class="fa-solid fa-download"></i>
           </a>
-          <button onClick={() => {
-            this.props.setPopupOpenState(true);
-            this.props.changePdfViewerUrl(`library/pdf/bijlagen/${item.fileName}`)
-            }}></button>
+          <button
+            onClick={() => {
+              this.props.setPopupOpenState(true);
+              this.props.changePdfViewerUrl(
+                `library/pdf/bijlagen/${item.fileName}`
+              );
+            }}
+          >
+            <i class="fa-solid fa-eye"></i>
+          </button>
         </>
       );
     }
