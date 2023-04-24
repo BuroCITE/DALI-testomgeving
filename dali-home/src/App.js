@@ -7,6 +7,7 @@ import { Handboek } from './js/pages/handboek.js';
 import { ProtectedLayout } from './js/auth/protectedLayout';
 import { UnProtectedLayout } from './js/auth/unProtectedLayout';
 import { Bijlagen } from './js/pages/bijlagen';
+import { Pve } from './js/pages/pve';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/handboek" element={<Handboek/>}/>
         <Route path="/bronverwijzingen" element={<Bronverwijzingen/>}/>
         <Route path="/bijlagen" element={<Bijlagen/>}/>
+        <Route path="/programmaVanEisen" element={<Pve/>}/>
       </Route>
 
       <Route path="/dashboard" element={<UnProtectedLayout />}>
