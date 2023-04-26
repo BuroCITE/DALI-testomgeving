@@ -24,7 +24,7 @@ export function Accordion(props){
     //? the above code connot be used at the moment because of a lack of insight.
 
     var allLinks = 0
-    if(props.children.props.data != undefined){
+    if(props.children.props != undefined){
       allLinks = props.children.props.data;
     }
     
@@ -188,6 +188,7 @@ export function WrappedAccordion(props){
           dropdownClass="accordion-dropdown-sort"
           dropdownFeatures={props.pageAccent}
           buttonIcon={state}
+          dropdownIcon={icons.iElement.downArrow}
         >
           <button className="dali-dropdown-button" ref={ref_sortPerChapter}>
             {icons.iElement.list} Per Hoofdstuk
