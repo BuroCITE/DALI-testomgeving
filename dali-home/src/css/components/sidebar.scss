@@ -6,7 +6,7 @@
   height:100%;
   background-color: $dali-black;
   box-shadow: rgb(0 0 0 / 50%) 4px 4px 4px -1px;
-  z-index: 100;
+  z-index: 10;
 
   .sidebar-toggle{
     display: none;
@@ -23,6 +23,10 @@
 
   header{
     width: 100%;
+  }
+
+  .sidebar-main-content{
+    width: 85%;
   }
 
   footer{
@@ -73,7 +77,8 @@
 
 // closeable sidebar - will allow the sidebar to open and close.
 [class*=dali-sidebar][class*=closeable].closed{
-  transform: translate(-100%);
+  width:0%;
+  min-width:0%;
 
   .sidebar-toggle{
     right: -6.65vh;

@@ -12,7 +12,6 @@ import PdfViewerComponent from "../externalComponents/pdfViewerComponent";
  * @param {boolean} useBadge when true will provide a badge with the amount of items inside represented.
  * @param {string} accordionFeatures 
  * @param {string} title
- * @param {boolean} isOpen
  */
 export function Accordion(props){
     const ref_badge = useRef();
@@ -25,7 +24,7 @@ export function Accordion(props){
     //? the above code connot be used at the moment because of a lack of insight.
 
     var allLinks = 0
-    if(props.children.props != undefined){
+    if(props.children.props.data != undefined){
       allLinks = props.children.props.data;
     }
     
@@ -55,19 +54,15 @@ export function Accordion(props){
   },[]);
 
   return (
-    <>
+    <> 
       <details
-        className={`dali-accordion-${props.accordionFeatures}`}
-        ref={ref_details}
-        data-has-badge={props.useBadge}
-        open={props.isOpen}>
+          className={`dali-accordion-${props.accordionFeatures}`}
+          ref={ref_details}
+          data-has-badge={props.useBadge}>
+
         <summary>
           <h3>{props.title}</h3>
-          <mark
-            className="dali-badge"
-            ref={ref_badge}
-            data-usebadge={props.useBadge}
-          ></mark>
+          <mark className="dali-badge" ref={ref_badge} data-usebadge={props.useBadge}></mark>
           {icons.iElement.downArrow}
         </summary>
 
@@ -81,7 +76,6 @@ export function Accordion(props){
 Accordion.defaultProps = {
   accordionFeatures: '',
   useBadge: false,
-  isOpen: false,
 }
 
 // /**
@@ -100,7 +94,7 @@ export function WrappedAccordion(props){
   const ref_unfoldButton = useRef();
   const [orientation, setOrientation] = useState('perChapter');
   const [state, setState] = useState('Per Hoofdstuk');
-  const [pdfUrl, setPdfUrl] = useState(null);
+  const [pdfUrl, setPdfUrl] = useState(null)
   const [PopupOpenState, setPopupOpenState] = useState(false);
   ;
 
@@ -194,7 +188,6 @@ export function WrappedAccordion(props){
           dropdownClass="accordion-dropdown-sort"
           dropdownFeatures={props.pageAccent}
           buttonIcon={state}
-          dropdownIcon={icons.iElement.downArrow}
         >
           <button className="dali-dropdown-button" ref={ref_sortPerChapter}>
             {icons.iElement.list} Per Hoofdstuk
@@ -219,7 +212,7 @@ export function WrappedAccordion(props){
       <Popup
         showModalButtonClass="dali-modal-accent"
         showModalButtonContents={icons.iElement.eye}
-        modalHeaderTitle={pdfUrl}
+        modalHeaderTitle="functions"
         modalFeatures={`${props.pageAccent}`}
         modalBodyClass="ondersteuning-popup-body"
         isModalOpen={PopupOpenState}

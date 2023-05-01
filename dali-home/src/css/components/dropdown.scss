@@ -9,18 +9,6 @@
       }
     }
   }
-  .dropdown-icon {
-    display: inline;
-    margin-left: 1ch;
-    *{
-      transition: all 0.3s;
-    }
-  }
-  &[aria-expanded="true"]{
-    .dropdown-icon *{
-      transform: rotatex(180deg);
-    }
-  }
 }
 
 [class*=dali-dropdown]{

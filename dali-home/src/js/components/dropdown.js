@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { icons } from '../../library/res';
 /**
  * @param {string} dropdownFeatures expects a class attribute for the variants of the dropdown. can choose from: all colors in theme-colors (this can be found in the variables.scss) this will default to red.
  * @param {string} buttonClass a class that you can assign to the dropdown button. expects a string
@@ -27,23 +26,18 @@ export function Dropdown(props) {
     // we use ref here bacause if we use id this component wouldn't be reusable in the same webpage because of 2 or more simular id's. but with ref we wont have this because it connects the event to the current ref holder and not all ref holders.
     <>
       <button
-        ref={ref_dib}
-        aria-expanded={expanded}
-        className={`dropdown-button ${props.buttonClass}`}
-      >
+          ref={ref_dib}
+          aria-expanded={expanded}
+          className={`dropdown-button ${props.buttonClass}`}>
         {props.buttonIcon}
-        <div className="dropdown-icon" aria-hidden>
-          {props.dropdownIcon}
-        </div>
       </button>
       <section
-        className={`dali-dropdown-${props.dropdownFeatures}`}
-        aria-label="dropdown"
-      >
+          className={`dali-dropdown-${props.dropdownFeatures}`}
+          aria-label="dropdown">
+
         <article
-          aria-label="dropdown body"
-          className={`dropdown-menu ${props.dropdownClass}`}
-        >
+            aria-label="dropdown body"
+            className={`dropdown-menu ${props.dropdownClass}`}>
           {/* when placing more then 1 element it is recommended to wrap it in a section first. */}
           {props.children}
         </article>
@@ -53,5 +47,4 @@ export function Dropdown(props) {
 }
 Dropdown.defaultProps = {
   dropdownFeatures: "red",
-  dropdownIcon: icons.iElement.downArrow,
 }
