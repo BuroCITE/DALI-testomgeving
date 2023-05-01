@@ -5,7 +5,9 @@ import { HeaderUserNav } from "../components/prefilled/headerUserNav";
 import { PopupGoHome } from "../components/prefilled/popupGoHome";
 import { GetData } from "../functions/dataFunctions";
 import { LoadingScreen } from "../components/loadingScreen";
-import { WrappedAccordion } from "../components/accordion";
+import { Accordion, WrappedAccordion } from "../components/accordion";
+import { Sidebar } from "../components/sidebar";
+import { Popup } from "../components/popup";
 const text = TaalbestandNL.pve;
 
 export function Pve(){
@@ -33,10 +35,21 @@ export function Pve(){
     return (
       <>
         <div className="pve" aria-label={text.pageAriaLabel}>
+          <Sidebar sidebarFeatures="gray-1-closeable" sidebarIsVisible={false}>
+            <h2 className="dali-title-sidebar">PvE Project</h2>
+            <Accordion title="MENU" accordionFeatures="gray-3 dali-test-menu" isOpen={true}>
+              <Popup showModalButtonContents={`Nieuw PvE project`} />
+              <button>
+                <i class="fas fa-solid fa-o"></i> Actueel overzicht
+              </button>
+              <button>
+                <i class="fas fa-solid fa-box"></i> Archief
+              </button>
+            </Accordion>
+          </Sidebar>
           <HeaderUserNav
             title={text.heading.title}
-            navLeft={<PopupGoHome
-            pageAccent={pageAccent}/>}
+            navLeft={<PopupGoHome pageAccent={pageAccent} />}
             pageAccent={pageAccent}
             text={TaalbestandNL.home}
             taalBestand={TaalbestandNL}
@@ -50,12 +63,11 @@ export function Pve(){
                 <button>eis informatie</button>
               </header>
               <section className={`splitscreen-body`}>
-
-              <WrappedAccordion 
-                chapterData={bronnenPerChapter} 
-                allData={allBronnen} 
-                pageAccent={leftPageAccent}>
-              </WrappedAccordion>
+                <WrappedAccordion
+                  chapterData={bronnenPerChapter}
+                  allData={allBronnen}
+                  pageAccent={leftPageAccent}
+                ></WrappedAccordion>
               </section>
             </section>
 
@@ -66,16 +78,14 @@ export function Pve(){
               </header>
 
               <section className={`splitscreen-body`}>
-
-                <WrappedAccordion 
-                  chapterData={bronnenPerChapter} 
-                  allData={allBronnen} 
-                  pageAccent={rightPageAccent}>
-                </WrappedAccordion>
+                <WrappedAccordion
+                  chapterData={bronnenPerChapter}
+                  allData={allBronnen}
+                  pageAccent={rightPageAccent}
+                ></WrappedAccordion>
               </section>
             </section>
           </main>
-
         </div>
       </>
     );

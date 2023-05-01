@@ -16,10 +16,10 @@ const text = TaalbestandNL.home;
 export function Bijlagen() {
   const [pageAccent, setPageAccent] = useState("red");
 
-  var { data } = GetData(
-    "https://brcacerv3571g01.burocite-nl.local:7158/api/GetAllAttachments"
-  );
-  // var { data } = GetData('library/alle-bijlagen.json');
+  // var { data } = GetData(
+  //   "https://brcacerv3571g01.burocite-nl.local:7158/api/GetAllAttachments"
+  // );
+  var { data } = GetData('library/alle-bijlagen.json');
   var allBijlagen = data;
   // var { data } = GetData("https://brcacerv3571g01.burocite-nl.local:7158/api/GetAllAttachmentsPerChapter");
   var { data } = GetData("library/bijlagen-per-chapter.json");
