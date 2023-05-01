@@ -12,6 +12,7 @@ import PdfViewerComponent from "../externalComponents/pdfViewerComponent";
  * @param {boolean} useBadge when true will provide a badge with the amount of items inside represented.
  * @param {string} accordionFeatures 
  * @param {string} title
+ * @param {boolean} isOpen
  */
 export function Accordion(props){
     const ref_badge = useRef();
@@ -54,15 +55,19 @@ export function Accordion(props){
   },[]);
 
   return (
-    <> 
+    <>
       <details
-          className={`dali-accordion-${props.accordionFeatures}`}
-          ref={ref_details}
-          data-has-badge={props.useBadge}>
-
+        className={`dali-accordion-${props.accordionFeatures}`}
+        ref={ref_details}
+        data-has-badge={props.useBadge}
+        open={props.isOpen}>
         <summary>
           <h3>{props.title}</h3>
-          <mark className="dali-badge" ref={ref_badge} data-usebadge={props.useBadge}></mark>
+          <mark
+            className="dali-badge"
+            ref={ref_badge}
+            data-usebadge={props.useBadge}
+          ></mark>
           {icons.iElement.downArrow}
         </summary>
 
@@ -76,6 +81,7 @@ export function Accordion(props){
 Accordion.defaultProps = {
   accordionFeatures: '',
   useBadge: false,
+  isOpen: false,
 }
 
 // /**

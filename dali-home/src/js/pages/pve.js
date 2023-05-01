@@ -36,11 +36,15 @@ export function Pve(){
       <>
         <div className="pve" aria-label={text.pageAriaLabel}>
           <Sidebar sidebarFeatures="gray-1-closeable" sidebarIsVisible={false}>
-            <h2>PvE Project</h2>
-            <Accordion title="MENU" accordionFeatures="gray-3 dali-test-menu">
-              <Popup showModalButtonContents={`Nieuw PvE project`}/>
-              <button><i class="fas fa-solid fa-o"></i> Actueel overzicht</button>
-              <button><i class="fas fa-solid fa-box"></i> Archief</button>
+            <h2 className="dali-title-sidebar">PvE Project</h2>
+            <Accordion title="MENU" accordionFeatures="gray-3 dali-test-menu" isOpen={true}>
+              <Popup showModalButtonContents={`Nieuw PvE project`} />
+              <button>
+                <i class="fas fa-solid fa-o"></i> Actueel overzicht
+              </button>
+              <button>
+                <i class="fas fa-solid fa-box"></i> Archief
+              </button>
             </Accordion>
           </Sidebar>
           <HeaderUserNav

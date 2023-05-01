@@ -25,10 +25,6 @@
     width: 100%;
   }
 
-  .sidebar-main-content{
-    width: 85%;
-  }
-
   footer{
     height: 100%;
     width: 90%;
@@ -77,8 +73,7 @@
 
 // closeable sidebar - will allow the sidebar to open and close.
 [class*=dali-sidebar][class*=closeable].closed{
-  width:0%;
-  min-width:0%;
+  transform: translate(-100%);
 
   .sidebar-toggle{
     right: -6.65vh;
